@@ -13,37 +13,19 @@ window.COMPUTRAX_CONFIG = Object.freeze({
 });
 
 // Spoločná kompatibilná vrstva pre verejnú stránku aj admin na GitHub Pages.
-const computraxEnhancements = document.createElement('script');
-computraxEnhancements.src = 'site-enhancements.js?v=20260709aiBot';
-computraxEnhancements.async = false;
-document.head.appendChild(computraxEnhancements);
+const computraxRuntimeBase = new URL('.', document.currentScript?.src || location.href).href;
+function loadComputraxScript(file, version) {
+  const script = document.createElement('script');
+  script.src = computraxRuntimeBase + file + '?v=' + version;
+  script.async = false;
+  document.head.appendChild(script);
+}
 
-const computraxHardened = document.createElement('script');
-computraxHardened.src = 'site-hardened.js?v=20260708revenueSecurity';
-computraxHardened.async = false;
-document.head.appendChild(computraxHardened);
-
-const computraxNine = document.createElement('script');
-computraxNine.src = 'site-9.js?v=20260709aiBot';
-computraxNine.async = false;
-document.head.appendChild(computraxNine);
-
-const computraxDeployFix = document.createElement('script');
-computraxDeployFix.src = 'site-deploy-fix.js?v=20260708deploy95';
-computraxDeployFix.async = false;
-document.head.appendChild(computraxDeployFix);
-
-const computraxSlovakCompact = document.createElement('script');
-computraxSlovakCompact.src = 'site-overrides.js?v=20260709aiBot';
-computraxSlovakCompact.async = false;
-document.head.appendChild(computraxSlovakCompact);
-
-const computraxAiPicker = document.createElement('script');
-computraxAiPicker.src = 'site-ai-picker.js?v=20260709aiBot';
-computraxAiPicker.async = false;
-document.head.appendChild(computraxAiPicker);
-
-const computraxAiBot = document.createElement('script');
-computraxAiBot.src = 'site-ai-bot.js?v=20260709aiBot';
-computraxAiBot.async = false;
-document.head.appendChild(computraxAiBot);
+loadComputraxScript('site-enhancements.js', '20260709finalPolish');
+loadComputraxScript('site-hardened.js', '20260709finalPolish');
+loadComputraxScript('site-9.js', '20260709finalPolish');
+loadComputraxScript('site-deploy-fix.js', '20260709finalPolish');
+loadComputraxScript('site-overrides.js', '20260709finalPolish');
+loadComputraxScript('site-ai-picker.js', '20260709finalPolish');
+loadComputraxScript('site-ai-bot.js', '20260709finalPolish');
+loadComputraxScript('site-final-polish.js', '20260709finalPolish');
