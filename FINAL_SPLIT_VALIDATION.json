@@ -1,0 +1,25 @@
+{
+  "final_result": "split optimized 9/10 build",
+  "html_files": 29,
+  "jsonld_blocks": 28,
+  "inline_executable_scripts": 0,
+  "inline_style_tags": 0,
+  "missing_internal_links": [],
+  "private_key_like_hits": [],
+  "key_file_sizes": {
+    "index.html": 100574,
+    "admin_2.html": 100179,
+    "assets/js/admin-2-1.js": 262186,
+    "assets/js/index-2-1.js": 164581,
+    "assets/css/index-1.css": 82488,
+    "assets/css/admin-1.css": 19969
+  },
+  "checks": [
+    "JS syntax OK",
+    "JSON-LD OK",
+    "internal links OK",
+    "no inline executable scripts",
+    "no inline style tags",
+    "private key scan OK"
+  ]
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "from": "doprava-a-vratenie/index.html",
+    "type": "style",
+    "to": "../assets/css/doprava-a-vratenie-1.css",
+    "bytes": 1702
+  },
+  {
+    "from": "garancia/index.html",
+    "type": "style",
+    "to": "../assets/css/garancia-1.css",
+    "bytes": 1702
+  },
+  {
+    "from": "herne-pc/index.html",
+    "type": "style",
+    "to": "../assets/css/herne-pc-1.css",
+    "bytes": 3319
+  },
+  {
+    "from": "informacie.html",
+    "type": "style",
+    "to": "assets/css/informacie-html-1.css",
+    "bytes": 2166
+  },
+  {
+    "from": "kancelarske-pc/index.html",
+    "type": "style",
+    "to": "../assets/css/kancelarske-pc-1.css",
+    "bytes": 3319
+  },
+  {
+    "from": "kontakt/index.html",
+    "type": "style",
+    "to": "../assets/css/kontakt-1.css",
+    "bytes": 1702
+  },
+  {
+    "from": "lacne-pc/index.html",
+    "type": "style",
+    "to": "../assets/css/lacne-pc-1.css",
+    "bytes": 3319
+  },
+  {
+    "from": "offline.html",
+    "type": "style",
+    "to": "assets/css/offline-html-1.css",
+    "bytes": 417
+  },
+  {
+    "from": "pocitace-pre-firmy-a-skoly/index.html",
+    "type": "style",
+    "to": "../assets/css/pocitace-pre-firmy-a-skoly-1.css",
+    "bytes": 3319
+  },
+  {
+    "from": "poradna/ako-spoznat-dobry-repas/index.html",
+    "type": "style",
+    "to": "../../assets/css/poradna-ako-spoznat-dobry-repas-1.css",
+    "bytes": 1702
+  },
+  {
+    "from": "poradna/ako-vybrat-repasovane-pc/index.html",
+    "type": "style",
+    "to": "../../assets/css/poradna-ako-vybrat-repasovane-pc-1.css",
+    "bytes": 1448
+  },
+  {
+    "from": "poradna/bezpecny-nakup-repasovaneho-pc/index.html",
+    "type": "style",
+    "to": "../../assets/css/poradna-bezpecny-nakup-repasovaneho-pc-1.css",
+    "bytes": 1702
+  },
+  {
+    "from": "poradna/herny-pc-do-500-eur/index.html",
+    "type": "style",
+    "to": "../../assets/css/poradna-herny-pc-do-500-eur-1.css",
+    "bytes": 1448
+  },
+  {
+    "from": "poradna/pc-pre-firmy-a-skoly/index.html",
+    "type": "style",
+    "to": "../../assets/css/poradna-pc-pre-firmy-a-skoly-1.css",
+    "bytes": 1448
+  },
+  {
+    "from": "poradna/repasovane-pc-vs-nove-pc/index.html",
+    "type": "style",
+    "to": "../../assets/css/poradna-repasovane-pc-vs-nove-pc-1.css",
+    "bytes": 1448
+  },
+  {
+    "from": "pravne.html",
+    "type": "style",
+    "to": "assets/css/pravne-html-1.css",
+    "bytes": 1988
+  },
+  {
+    "from": "pravne.html",
+    "type": "script",
+    "to": "assets/js/pravne-html-1.js",
+    "bytes": 2193
+  },
+  {
+    "from": "preco-computrax/index.html",
+    "type": "style",
+    "to": "../assets/css/preco-computrax-1.css",
+    "bytes": 1702
+  },
+  {
+    "from": "produkt/alienware-aurora-r14/index.html",
+    "type": "style",
+    "to": "../../assets/css/produkt-alienware-aurora-r14-1.css",
+    "bytes": 3319
+  },
+  {
+    "from": "produkt/dell-optiplex-7090/index.html",
+    "type": "style",
+    "to": "../../assets/css/produkt-dell-optiplex-7090-1.css",
+    "bytes": 3319
+  },
+  {
+    "from": "produkt/hp-omen-40l/index.html",
+    "type": "style",
+    "to": "../../assets/css/produkt-hp-omen-40l-1.css",
+    "bytes": 3319
+  },
+  {
+    "from": "recenzie/index.html",
+    "type": "style",
+    "to": "../assets/css/recenzie-1.css",
+    "bytes": 1448
+  },
+  {
+    "from": "repasovane-herne-pc/index.html",
+    "type": "style",
+    "to": "../assets/css/repasovane-herne-pc-1.css",
+    "bytes": 3319
+  },
+  {
+    "from": "repasovane-pc/index.html",
+    "type": "style",
+    "to": "../assets/css/repasovane-pc-1.css",
+    "bytes": 3319
+  },
+  {
+    "from": "repasovane-pc-pre-podnikatelov/index.html",
+    "type": "style",
+    "to": "../assets/css/repasovane-pc-pre-podnikatelov-1.css",
+    "bytes": 1702
+  },
+  {
+    "from": "repasovane-pc-pre-studentov/index.html",
+    "type": "style",
+    "to": "../assets/css/repasovane-pc-pre-studentov-1.css",
+    "bytes": 1702
+  },
+  {
+    "from": "repasovane-pocitace-so-zarukou/index.html",
+    "type": "style",
+    "to": "../assets/css/repasovane-pocitace-so-zarukou-1.css",
+    "bytes": 3319
+  },
+  {
+    "from": "testovanie/index.html",
+    "type": "style",
+    "to": "../assets/css/testovanie-1.css",
+    "bytes": 1448
+  }
+]

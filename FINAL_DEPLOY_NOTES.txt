@@ -1,0 +1,22 @@
+Computrax final revenue + security hardening package
+
+What changed:
+- Added site-hardened.js as a separate production enhancement layer.
+- Added real-photo/test-protocol trust section on the public site.
+- Added real-review ready section without fake reviews.
+- Added optional Microsoft Clarity config field.
+- Added admin panel: Dôvera, fotky a security.
+- Added pages: /testovanie/, /recenzie/, and four poradna SEO pages.
+- Updated sitemap.xml and robots.txt.
+- Added Supabase SECURITY_HARDENING.sql.
+- Updated warehouse-sync Edge Function source in ZIP.
+
+Supabase live action already done:
+- warehouse-sync deployed to project aryjaqexfgalxaiseqtp as version 3.
+- verify_jwt is enabled, so it requires a valid Supabase auth token.
+
+Still manual:
+- Set WAREHOUSE_API_URL, WAREHOUSE_API_KEY and COMPUTRAX_ADMIN_EMAILS as Supabase Edge Function secrets.
+- Enable leaked password protection in Supabase Dashboard.
+- Review and run supabase/SECURITY_HARDENING.sql.
+- Add real product photos and real reviews after actual orders.

@@ -1,0 +1,357 @@
+[
+  {
+    "path": ".well-known/security.txt",
+    "bytes": 165,
+    "sha256": "f7603016b01ba72c0426753e1f3ed4b226b221af237118e19a443d6ddaf07d1d"
+  },
+  {
+    "path": "FILE_MANIFEST.json",
+    "bytes": 10121,
+    "sha256": "2c661bddd28f04c6ee1da29d52f088a9438733d6ae5dd282a3464ee76f99d34e"
+  },
+  {
+    "path": "FINAL_9_READINESS.txt",
+    "bytes": 941,
+    "sha256": "89d991adf33bfc8231f478363b8d1ca9b45b5f07ad5420c2005cf9e55bf4ed1e"
+  },
+  {
+    "path": "FINAL_DEPLOY_NOTES.txt",
+    "bytes": 1029,
+    "sha256": "62331166a7867c3994c4a0e5d05858ef516ce247d405f2722b07858eff026fcb"
+  },
+  {
+    "path": "FINAL_VALIDATION.txt",
+    "bytes": 412,
+    "sha256": "af69b4471ef3482d4ac2697ba33306ec90e2b4c600baf531b2744aaeb7454ec6"
+  },
+  {
+    "path": "OPTIMIZATION_SUMMARY.txt",
+    "bytes": 335,
+    "sha256": "27392419494bace7457123eb51b169caffe6c7b260751bd47ead9b568c72d790"
+  },
+  {
+    "path": "SECURITY.md",
+    "bytes": 501,
+    "sha256": "0d14859318f9f09311d10181cf2f2b7f30074913a621a37736da23b8e8203f14"
+  },
+  {
+    "path": "SPLIT_OPTIMIZATION_REPORT.json",
+    "bytes": 1139,
+    "sha256": "03e131ae0dda931ff91cb8d5ed8732f0bdd15eb871ed1f8fc9e629f71fb14b04"
+  },
+  {
+    "path": "SUPABASE_SETUP.txt",
+    "bytes": 843,
+    "sha256": "e5f8d91b9b672362e0b2daa422822a9ff74d51c1cf111afdf3a53b43f4823f37"
+  },
+  {
+    "path": "admin_2.html",
+    "bytes": 100179,
+    "sha256": "57b904317c5f941644398f55fb0f908149103d781abe75087c97fe186b51e930"
+  },
+  {
+    "path": "apple-touch-icon.png",
+    "bytes": 3996,
+    "sha256": "37112dbb54ce2ba4762219c12c619373009aded498c0fea5985f6bf1526ceae8"
+  },
+  {
+    "path": "assets/css/admin-1.css",
+    "bytes": 19969,
+    "sha256": "d3ed81c889e5e68f10fde71e7aef9fd131f4b58299c1409d10790f808ba2d7ea"
+  },
+  {
+    "path": "assets/css/admin-2.css",
+    "bytes": 916,
+    "sha256": "b7663dc940dcdf129013d500fa2cd7a73bd696ff637f2d7665a45d99f07e7e4b"
+  },
+  {
+    "path": "assets/css/admin-3.css",
+    "bytes": 408,
+    "sha256": "e08811ac19521ab035b27963c5be7e39a26edf014d0174b1ca743ae3ea91cc0d"
+  },
+  {
+    "path": "assets/css/index-1.css",
+    "bytes": 82488,
+    "sha256": "cbe9d57d51c11acca5adfb50b248e75a91ce952d23ccc9fe6a57e759851b28b7"
+  },
+  {
+    "path": "assets/js/admin-1-1.js",
+    "bytes": 980,
+    "sha256": "bc90f28dcd732a89c117ab33750083a684d43678ec1f1c0706cec64b67754bcc"
+  },
+  {
+    "path": "assets/js/admin-2-1.js",
+    "bytes": 262186,
+    "sha256": "9570faf9705ee634f0ccfd8caa39679fca2cc36da6c530b236c3f2ec5bd8c0fa"
+  },
+  {
+    "path": "assets/js/index-1-1.js",
+    "bytes": 980,
+    "sha256": "bc90f28dcd732a89c117ab33750083a684d43678ec1f1c0706cec64b67754bcc"
+  },
+  {
+    "path": "assets/js/index-2-1.js",
+    "bytes": 164581,
+    "sha256": "24e6a4c0264e4f3a311e21717622b5260a826dc1343a229b76429e4a4cc3e0e0"
+  },
+  {
+    "path": "assets/js/performance-polish.js",
+    "bytes": 1007,
+    "sha256": "362ecb8b960623ffaffe98e5947fc218de8038021fd5c858bf843304b26fb213"
+  },
+  {
+    "path": "computrax-logo.png",
+    "bytes": 12945,
+    "sha256": "f7860eb7177784f6666f7c9baba94b7d293ecae0784dd45cb432dbf4594d685b"
+  },
+  {
+    "path": "config.example.js",
+    "bytes": 660,
+    "sha256": "b74fcd4042868dd43affc354f37d9eb1128cdf02bb48a77b3fd6657cf29ca3fe"
+  },
+  {
+    "path": "config.js",
+    "bytes": 1445,
+    "sha256": "496334b7903ca53a2358978f6df12fc1a3a76cbf164bcbaefb75c28ea1ecbc7d"
+  },
+  {
+    "path": "doprava-a-vratenie/index.html",
+    "bytes": 4373,
+    "sha256": "6322c136202217b7e20f9a61e1c66024fe68e2c3216ae8a6879d32a4a4234ca8"
+  },
+  {
+    "path": "favicon-32.png",
+    "bytes": 1353,
+    "sha256": "5c91e33a84fa32e427f0996169482019036724baa32025fb39b95402df43d722"
+  },
+  {
+    "path": "garancia/index.html",
+    "bytes": 4845,
+    "sha256": "b503bc85f5cf67c8d9845ddb2176c4d6615d431822c1889cd2da775c98b955db"
+  },
+  {
+    "path": "herne-pc/index.html",
+    "bytes": 7786,
+    "sha256": "307eb55c694aa6832a6498379712b0abde025310b8643f967d56d1a4d96a87e1"
+  },
+  {
+    "path": "icon-192.png",
+    "bytes": 4496,
+    "sha256": "478a2aeadb8dc6200c48f5a8c17108a020369f6d28534df5b3405c62357f0107"
+  },
+  {
+    "path": "icon-512.png",
+    "bytes": 5750,
+    "sha256": "4f0cca65a11d7e6b2a200bede7bb0348c9b1841f099761eb46c5a6d6cbf9c64d"
+  },
+  {
+    "path": "index.html",
+    "bytes": 100574,
+    "sha256": "6976829e6e014573a02b6f33d954ddb6fc11819e131d6c820ae922e3b1f4ec3e"
+  },
+  {
+    "path": "informacie.html",
+    "bytes": 5732,
+    "sha256": "e407d496a6e424a4d88de7883b7f5e2c0cf086f3df4b0b8f3a405b4f2722f981"
+  },
+  {
+    "path": "kancelarske-pc/index.html",
+    "bytes": 7180,
+    "sha256": "308eb261115d4e29ffa5b5dbf3f6d04fbae330ea577b11e231ec0d73508bee0f"
+  },
+  {
+    "path": "kontakt/index.html",
+    "bytes": 4342,
+    "sha256": "910a5acec33dda0d83c7c18ee26d0140e5846b58183e4c527c96a347508a2d5d"
+  },
+  {
+    "path": "lacne-pc/index.html",
+    "bytes": 8290,
+    "sha256": "554c2c47aac94b4adc72cfee80546f92d329dca2f20caa77e620b5fca4877b76"
+  },
+  {
+    "path": "merchant-feed.csv",
+    "bytes": 863,
+    "sha256": "b0dcab371cba35511a2066d32eb82872c40e2b68fda8876d03953de22a1e9d46"
+  },
+  {
+    "path": "offline.html",
+    "bytes": 786,
+    "sha256": "bd9504363083204760dd2d3f3fbd153294fb9bba65550a6b46293d711f79fa8a"
+  },
+  {
+    "path": "og-image.png",
+    "bytes": 96754,
+    "sha256": "2117e3277d3547fb50c1ffb8e8cc55e4c2946ac21a6af0601b0e8a8eb30f623f"
+  },
+  {
+    "path": "pocitace-pre-firmy-a-skoly/index.html",
+    "bytes": 8313,
+    "sha256": "397d16b5f6312a8c81767c0fa08dedd8b6e4bf5368b169a51fa2f2045eb227ae"
+  },
+  {
+    "path": "poradna/ako-spoznat-dobry-repas/index.html",
+    "bytes": 4507,
+    "sha256": "84c10a760cf536d31be8e1436385d966c3c8d03e26bf4f370f5c6437a1bd053c"
+  },
+  {
+    "path": "poradna/ako-vybrat-repasovane-pc/index.html",
+    "bytes": 3593,
+    "sha256": "6ddb312e1070aaa16d7de3fa4f64800cbdc96c0da0af3e6730ec0635cdbba168"
+  },
+  {
+    "path": "poradna/bezpecny-nakup-repasovaneho-pc/index.html",
+    "bytes": 4540,
+    "sha256": "724e66f70dab9db42f643155f1761ef14f209b4d07d4e8a46bf4d1743f17141e"
+  },
+  {
+    "path": "poradna/herny-pc-do-500-eur/index.html",
+    "bytes": 3432,
+    "sha256": "4a6f510e94e1c0b1a0c5bf4a42020f0fca253bbe0f0a0dedb07bb0d87cb99b18"
+  },
+  {
+    "path": "poradna/pc-pre-firmy-a-skoly/index.html",
+    "bytes": 3588,
+    "sha256": "013529f08b4de47e546663c13910d75ae0438a9f72fc6a944c3d14cc01241653"
+  },
+  {
+    "path": "poradna/repasovane-pc-vs-nove-pc/index.html",
+    "bytes": 3389,
+    "sha256": "3a4b004b1bd076afca5a4cdeb023e49a15d4f72ea1b66feb04f02e4aec216292"
+  },
+  {
+    "path": "pravne.html",
+    "bytes": 12576,
+    "sha256": "17a6470a81c440c0de791dc9b37b502c27b5a12a0e8c3325cb89067cd637ecba"
+  },
+  {
+    "path": "preco-computrax/index.html",
+    "bytes": 4485,
+    "sha256": "37bdf38d12317e02e00b0795ffab78b4afce6ea328c1acc86a369a41635346a8"
+  },
+  {
+    "path": "product-feed.xml",
+    "bytes": 1622,
+    "sha256": "f297d75559a3ee9c1a1111eab569511094152c27d56938477eb3b81d9a673427"
+  },
+  {
+    "path": "produkt/alienware-aurora-r14/index.html",
+    "bytes": 9180,
+    "sha256": "028101e4c30b095bb81ccbbf727d11ec79a310b3b2d46dcf45df8fabac35f207"
+  },
+  {
+    "path": "produkt/dell-optiplex-7090/index.html",
+    "bytes": 9167,
+    "sha256": "be0778ace5166bdfdcc52d860ad5e5717b45b2c91aa9c382f07c11c1e5013a7c"
+  },
+  {
+    "path": "produkt/hp-omen-40l/index.html",
+    "bytes": 9116,
+    "sha256": "a07c6b009da0fb72512a5bea06a697a3552a8125f4eaa2fdc79f5649e0a60f04"
+  },
+  {
+    "path": "recenzie/index.html",
+    "bytes": 3760,
+    "sha256": "f5899949d1ad0e95d75d486e90ee7f4dbb4c804c1fa481f8c25e4cd6eb5d3c36"
+  },
+  {
+    "path": "repasovane-herne-pc/index.html",
+    "bytes": 7677,
+    "sha256": "d0b1a0e6fa43dc001cfac6e483ccd14b596b6d596d868d679e080501b958ad95"
+  },
+  {
+    "path": "repasovane-pc/index.html",
+    "bytes": 8358,
+    "sha256": "8171f7772fcaec2480a43dd86f4eb21f4aa797b2808ffa702b795039f9e643a7"
+  },
+  {
+    "path": "repasovane-pc-pre-podnikatelov/index.html",
+    "bytes": 4434,
+    "sha256": "7dce81c24af0b6c9dacd04b263cc7796933c3e406c89703e78857a738e8ba6a5"
+  },
+  {
+    "path": "repasovane-pc-pre-studentov/index.html",
+    "bytes": 4453,
+    "sha256": "1e6c5392cebc912b68958bfa82b9693f00cda82f0c85aba5d9302c61b707b507"
+  },
+  {
+    "path": "repasovane-pocitace-so-zarukou/index.html",
+    "bytes": 8252,
+    "sha256": "2828fa72c0b3e2b7686875c08c01365613c287c03a298ea2cd995090cb848200"
+  },
+  {
+    "path": "robots.txt",
+    "bytes": 151,
+    "sha256": "f795ad61538e4e7cbffa37faeda46c7567afe5dafffdd15cc1c13907520334b3"
+  },
+  {
+    "path": "site-9.js",
+    "bytes": 16620,
+    "sha256": "5351d0b8c7deeff1d124a207b4052bd051f85ae09f38c48c17a17fc93ccdd63d"
+  },
+  {
+    "path": "site-enhancements.js",
+    "bytes": 170362,
+    "sha256": "2b0abdff9dbfd3163bb35865dc6d53e0f81daaf5426ff2fb1e5137e0f7658315"
+  },
+  {
+    "path": "site-hardened.js",
+    "bytes": 11342,
+    "sha256": "beefe759376198221ee5f8869c6bac56f9d0c9857668c58bf8774780fbc15ce5"
+  },
+  {
+    "path": "site.webmanifest",
+    "bytes": 857,
+    "sha256": "92453e90b8412f81b410692f46902e17bc6fb9491e0f897a9dc92fc9a5606826"
+  },
+  {
+    "path": "sitemap.xml",
+    "bytes": 3907,
+    "sha256": "60f8dd7428a6541387a7bd60e4aa6613d99f30cd0fe054ca9720984bb3e75bb9"
+  },
+  {
+    "path": "supabase/SECURITY_FIXES.sql",
+    "bytes": 1242,
+    "sha256": "629b040f41be022c9e32caab9ff4b4ef3d5e9d024425f1145d9302c332765f7c"
+  },
+  {
+    "path": "supabase/SECURITY_HARDENING.sql",
+    "bytes": 1878,
+    "sha256": "def916e6b6f890855630bc86d4dab7f823ebc3ec2ed89f62c67eea2bb2dcf224"
+  },
+  {
+    "path": "supabase/SECURITY_HARDENING_STRICT.sql",
+    "bytes": 500,
+    "sha256": "3eb24c16a64236374b7d6a2f3e30609ae03a2f906d86fa704adcf5d1115e4b6d"
+  },
+  {
+    "path": "supabase/functions/warehouse-sync/README.md",
+    "bytes": 882,
+    "sha256": "dc0ed8d00386b68bd1a9a8d511c4961708577de954818997d9bf649d9d071477"
+  },
+  {
+    "path": "supabase/functions/warehouse-sync/deno.json",
+    "bytes": 15,
+    "sha256": "ba8f022b49605d495b2de6a3ba014cfb9945e23db0e7fb13a36203dbadb337bd"
+  },
+  {
+    "path": "supabase/functions/warehouse-sync/index.ts",
+    "bytes": 4317,
+    "sha256": "aaa307259d120ec8c55a1289f91ce9009c3e58bd46050f312eefcb08e2c07f22"
+  },
+  {
+    "path": "sw.js",
+    "bytes": 1284,
+    "sha256": "45576ec1294035355bde671a2828ddb820f4491772e0df0b93a8795914c3997a"
+  },
+  {
+    "path": "testovanie/index.html",
+    "bytes": 3773,
+    "sha256": "82362e674d98bade77020ef30584f6c9da339525da543847ccc6c6ba01b996e6"
+  },
+  {
+    "path": "vercel.json",
+    "bytes": 2953,
+    "sha256": "7a9f54e838a2636b0e0d6b4c3755338d1e2f07c025c90ba2d2c424a1b6bb1942"
+  }
+]

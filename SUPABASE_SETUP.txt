@@ -1,0 +1,22 @@
+Computrax live Supabase setup
+
+Project ref:
+aryjaqexfgalxaiseqtp
+
+Public URL used by the website:
+https://aryjaqexfgalxaiseqtp.supabase.co
+
+Deployed Edge Function:
+warehouse-sync
+https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/warehouse-sync
+
+Set warehouse secrets in Supabase Edge Function secrets, not in HTML:
+
+supabase secrets set WAREHOUSE_API_URL="<URL_SKLADOVEHO_API>"
+supabase secrets set WAREHOUSE_API_KEY="<API_KLUC_SKLADU>"
+supabase secrets set COMPUTRAX_WAREHOUSE_SYNC_TOKEN="<SILNY_NAHODNY_TOKEN>"
+
+Security notes:
+- Public/publishable Supabase key can be in config.js when RLS is correct.
+- service_role, SMTP, GoPay, iDoklad, warehouse provider API keys must never be in GitHub Pages files.
+- Supabase advisors found SECURITY DEFINER warnings for selected RPC functions; review supabase/SECURITY_FIXES.sql before running.

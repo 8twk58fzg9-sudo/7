@@ -1,0 +1,8 @@
+-- Computrax hardening status
+-- Safe parts were already applied via migrations:
+-- 1) log_search, save_abandoned_cart and has_role are no longer executable by public frontend roles.
+-- 2) track_product_view was changed to SECURITY INVOKER.
+-- 3) FK indexes were added for customer_notes, email_templates and order_status_notifications.
+--
+-- Manual remaining task: enable leaked password protection in Supabase Auth settings.
+-- Do not paste service_role or private provider keys into GitHub Pages.

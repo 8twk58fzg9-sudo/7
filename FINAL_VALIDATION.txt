@@ -1,0 +1,14 @@
+site-enhancements.js: OK
+site-hardened.js: OK
+config.js: OK
+index.html inline JS: OK
+index.html JSON-LD blocks: 4, errors: 0
+admin_2.html inline JS: OK
+admin_2.html JSON-LD blocks: 0, errors: 0
+sitemap.xml: OK
+testovanie/index.html: OK
+recenzie/index.html: OK
+poradna/ako-vybrat-repasovane-pc/index.html: OK
+supabase/functions/warehouse-sync/index.ts: OK
+supabase/SECURITY_HARDENING.sql: OK
+private key scan: OK

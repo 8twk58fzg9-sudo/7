@@ -1,0 +1,7 @@
+Computrax split/optimization final report
+
+index.html: 411,542 B -> 100,574 B (75.6% smaller)
+admin_2.html: 443,205 B -> 100,179 B (77.4% smaller)
+
+Preserved functionality: code was moved into assets/css and assets/js, not deleted.
+Compressed JS/CSS and added a small performance polish script for lazy images and safer external links.

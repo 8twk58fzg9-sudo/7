@@ -1,0 +1,25 @@
+Computrax 9/10 readiness build
+
+Applied in files:
+- stronger guided conversion path and sticky CTA
+- lead helper modal
+- trust strip and revenue blocks
+- extra SEO/content pages
+- service worker and offline fallback
+- Merchant Center CSV/XML feeds
+- security.txt and stricter security docs
+- admin 9/10 readiness center
+
+Applied in Supabase:
+- warehouse-sync is deployed with verify_jwt=true
+- safe migration computrax_safe_rpc_and_fk_hardening applied
+- unused public SECURITY DEFINER execute grants removed for log_search, save_abandoned_cart, has_role
+- track_product_view changed to SECURITY INVOKER
+- FK indexes added for customer_notes, email_templates, order_status_notifications
+
+Still required outside code:
+- enable leaked password protection in Supabase Auth UI
+- add real product photos
+- add real customer reviews after real purchases
+- connect Search Console and Merchant Center
+- run PageSpeed on live domain after deployment

@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin_2.html
-
-Sitemap: https://8twk58fzg9-sudo.github.io/real/sitemap.xml
+Disallow: /supabase/
+Disallow: /*.sql$
+Disallow: /SECURITY.md
+Sitemap: https://computrax.sk/sitemap.xml

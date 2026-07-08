@@ -1,0 +1,15 @@
+Computrax split optimized final validation
+
+index.html: 100,574 B
+admin_2.html: 100,179 B
+assets/js/admin-2-1.js: 262,186 B
+assets/js/index-2-1.js: 164,581 B
+assets/css/index-1.css: 82,488 B
+assets/css/admin-1.css: 19,969 B
+
+HTML files: 29
+JSON-LD blocks: 28
+Inline executable scripts: 0
+Inline style tags: 0
+Missing internal links: 0
+Private key-like hits: 0

@@ -1,0 +1,37 @@
+{
+  "result": "split optimized version",
+  "html_size_reduction": {
+    "index.html": {
+      "before_bytes": 411542,
+      "after_bytes": 100574,
+      "reduction_percent": 75.6
+    },
+    "admin_2.html": {
+      "before_bytes": 443205,
+      "after_bytes": 100179,
+      "reduction_percent": 77.4
+    }
+  },
+  "split_assets": {
+    "assets/css/admin-1.css": 19969,
+    "assets/css/admin-2.css": 916,
+    "assets/css/admin-3.css": 408,
+    "assets/css/index-1.css": 82488,
+    "assets/js/admin-1-1.js": 980,
+    "assets/js/admin-2-1.js": 262186,
+    "assets/js/index-1-1.js": 980,
+    "assets/js/index-2-1.js": 164581,
+    "assets/js/performance-polish.js": 1007
+  },
+  "checks": [
+    "JS moved out of large HTML files",
+    "CSS moved out of large HTML files",
+    "Execution order preserved",
+    "External JS compressed with Terser without top-level mangling",
+    "CSS compressed",
+    "No feature intentionally removed"
+  ],
+  "notes": [
+    "Overall ZIP size can stay similar because the same code is still included, only split and compressed. The important win is much smaller index/admin HTML and browser-cacheable assets."
+  ]
+}

@@ -5,11 +5,25 @@ window.COMPUTRAX_CONFIG = Object.freeze({
   SUPABASE_URL: 'https://aryjaqexfgalxaiseqtp.supabase.co',
   SUPABASE_ANON_KEY: 'sb_publishable_x6sSWhw3on9bi_C1EQdTCg_nz09VWoX',
   SUPPORT_EMAIL: 'computerax.sk@gmail.com',
-  EMAIL_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/send-notification'
+  EMAIL_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/send-notification',
+  WAREHOUSE_SYNC_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/warehouse-sync',
+  // Optional: after creating Microsoft Clarity, paste only the public project ID here.
+  CLARITY_PROJECT_ID: ''
 });
 
 // Small compatibility layer shared by the storefront and admin on GitHub Pages.
 const computraxEnhancements = document.createElement('script');
-computraxEnhancements.src = 'site-enhancements.js?v=20260702e';
+computraxEnhancements.src = 'site-enhancements.js?v=20260708finalLiveSupabase';
 computraxEnhancements.async = false;
 document.head.appendChild(computraxEnhancements);
+
+const computraxHardened = document.createElement('script');
+computraxHardened.src = 'site-hardened.js?v=20260708revenueSecurity';
+computraxHardened.async = false;
+document.head.appendChild(computraxHardened);
+
+
+const computraxNine = document.createElement('script');
+computraxNine.src = 'site-9.js?v=20260708nineReady';
+computraxNine.async = false;
+document.head.appendChild(computraxNine);
