@@ -1,0 +1,61 @@
+COMPUTRAX – DEEP CHECK: VYNECHANÉ / ZMENENÉ SÚBORY
+Dátum: 2026-07-08
+
+Tento balík je zákaznícky pripravená STATICKÁ verzia pre GitHub Pages.
+Je použiteľná na prezentáciu, katalóg, košík, lokálne objednávky a admin export product-data.js.
+
+DÔLEŽITÉ:
+Pôvodný GitHub projekt 8twk58fzg9-sudo/real bol väčší a obsahoval pokročilú Supabase logiku.
+Ak chceš zachovať úplne všetko zo starého projektu, neprepisuj starý repozitár týmto balíkom bez zálohy.
+
+1) SÚBORY V TOMTO BALÍKU
+- index.html
+- admin_2.html
+- styles.css
+- app.js
+- admin.js
+- config.js
+- product-data.js
+- informacie.html
+- pravne.html
+- computrax-logo.svg
+- favicon.svg
+- site.webmanifest
+- site-enhancements.js
+- README.txt
+- MISSING_FROM_ORIGINAL_REPORT.txt
+
+2) ZNÁME SÚBORY Z PÔVODNÉHO REPOZITÁRA, KTORÉ TENTO BALÍK NAHRÁDZA ALEBO NEOBSAHUJE
+Tieto súbory boli v pôvodnom projekte alebo boli referencované:
+- computrax-logo.png
+- favicon-32.png
+- apple-touch-icon.png
+- icon-192.png
+- icon-512.png
+- og-image.png
+- pôvodný veľký index.html
+- pôvodný veľký admin_2.html
+- pôvodný site-enhancements.js
+
+3) ČO JE V TEJTO VERZII ZÁMERNE ZJEDNODUŠENÉ
+- Supabase Auth a databázové objednávky sú nahradené lokálnym ukladaním v prehliadači.
+- Supabase Storage upload produktových fotiek je nahradený URL/base64 obrázkom v produkte.
+- Edge Functions pre emaily/GoPay/iDoklad nie sú súčasťou tejto statickej verzie.
+- Zákaznícky účet je lokálny v prehliadači, nie serverový účet.
+- Objednávky v admine sú lokálne v prehliadači, nie centrálna databáza.
+
+4) ČO JE VYLEPŠENÉ V TEJTO VERZII
+- Admin heslo je nastavené v config.js na: Mackbook.neo
+- Premium Apple-style hero s jedným hlavným PC.
+- Marketplace / Allegro-style rýchle kategórie.
+- Dôveryhodnostné bloky, porovnanie s bazárovým nákupom, recenzie placeholder.
+- Katalóg, filtre, triedenie, košík, obľúbené, porovnanie, poradca výberom.
+- Admin na produkty, hlavný PC, objednávky, export product-data.js a backup.
+
+5) ODPORÚČANIE PRED NAHRATÍM NA GITHUB
+Najbezpečnejšie:
+- urob zálohu starého repozitára,
+- nahraj tento balík na testovaciu vetvu alebo nový repozitár,
+- až potom prepíš ostrý web.
+
+Ak chceš zachovať pôvodnú Supabase/objednávkovú logiku, treba upravovať pôvodný index.html/admin_2.html namiesto tohto statického balíka.

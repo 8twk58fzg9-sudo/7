@@ -1,28 +1,30 @@
-Computrax Premium Apple + Allegro upgrade
+COMPUTRAX – CUSTOMER READY V2 BUILD
 
-Toto je bezpečný upgrade pôvodného Computrax webu.
-Nahrádza sa iba súbor: site-enhancements.js
+Nahraj na GitHub Pages všetky súbory z tohto priečinka.
 
-NEPREPISUJ index.html ani admin_2.html.
-Košík, objednávky, účet, filtre, admin a Supabase ostávajú pôvodné.
+Hlavné súbory:
+- index.html – verejná stránka pre zákazníkov
+- admin_2.html – admin panel
+- styles.css – dizajn
+- app.js – košík, katalóg, objednávka, účet, porovnanie
+- admin.js – správa produktov, objednávok, export dát
+- config.js – verejné nastavenia webu
+- product-data.js – verejný katalóg produktov
+- informacie.html – informačná stránka
+- pravne.html – právne texty
+- computrax-logo.svg, favicon.svg, site.webmanifest
+- site-enhancements.js – kompatibilita pre budúce doplnky
+- DEEP_SEARCH_REPORT.txt – kontrola vynechaných/zmazaných súborov
 
-Čo je nové:
-- Apple-style hlavný PC na úvode
-- prémiový hero, trust strip a microbar
-- marketplace katalógový panel ako Allegro
-- lepšie produktové karty cez CSS
-- rýchle kategórie a CTA
-- sticky mobilný bar Počítače / Košík
-- admin panel na výber jedného hlavného PC
-- performance-friendly bez externých knižníc
+Admin:
+1. Otvor admin_2.html
+2. Heslo je: Mackbook.neo
+3. Uprav produkty alebo hlavný PC na úvode
+4. Klikni Stiahnuť product-data.js
+5. Nahraj nový product-data.js na GitHub namiesto starého
 
-Použitie:
-1. V repozitári/hostingu nahraď existujúci site-enhancements.js týmto súborom.
-2. Nechaj pôvodné index.html a admin_2.html.
-3. Otvor admin_2.html.
-4. V paneli „Apple štýl úvodu — 1 hlavný PC“ vyber počítač.
-5. Klikni „Nastaviť na úvod“.
-
-Poznámka:
-Ak chceš, aby hlavný PC videli všetci návštevníci, ulož výber so zapnutým Supabase admin zápisom.
-Lokálne uloženie platí iba pre tvoj prehliadač.
+Dôležité:
+- Toto je statický GitHub Pages e-shop. Admin zmeny sú lokálne, kým neexportuješ product-data.js.
+- Heslo v statickom HTML nie je skutočná bezpečnosť. Na ostrý veľký predaj použi backend/Supabase.
+- Pred reálnym predajom doplň firemné údaje v pravne.html a config.js.
+- Online platby GoPay/Stripe nie sú zapojené, aby tajné kľúče neboli v HTML.

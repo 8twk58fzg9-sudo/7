@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="160" viewBox="0 0 720 160" fill="none">
-  <rect width="720" height="160" rx="34" fill="#F8FAFC"/>
-  <rect x="26" y="26" width="108" height="108" rx="28" fill="#0F172A"/>
-  <path d="M55 81c0-18.8 14.8-33.5 35-33.5 11.5 0 21.4 4.6 27.6 12.2L104.8 71c-3.6-4.2-8.5-6.7-14.5-6.7-9.5 0-16.5 7-16.5 16.7s7 16.7 16.5 16.7c6 0 10.9-2.5 14.5-6.7l12.8 11.3c-6.2 7.6-16.1 12.2-27.6 12.2-20.2 0-35-14.7-35-33.5Z" fill="#fff"/>
-  <path d="M166 59h44v15h-26v12h22v15h-22v25h-18V59Z" fill="#0F172A"/>
-  <text x="225" y="104" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800" letter-spacing="-2" fill="#0F172A">Computrax</text>
-  <circle cx="627" cy="78" r="8" fill="#2563EB"/>
-  <circle cx="654" cy="78" r="8" fill="#22C55E"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" role="img" aria-label="Computrax">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs>
+  <rect width="720" height="180" rx="42" fill="#fff"/>
+  <rect x="30" y="32" width="116" height="116" rx="30" fill="url(#g)"/>
+  <path d="M62 71h52c17 0 29 12 29 29s-12 29-29 29H62V71zm25 23v12h23c5 0 8-2 8-6s-3-6-8-6H87z" fill="#fff"/>
+  <circle cx="126" cy="54" r="9" fill="#60a5fa"/>
+  <text x="170" y="104" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900" fill="#0f172a" letter-spacing="-2">Computrax</text>
+  <text x="174" y="134" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#64748b">Premium refurbished computers</text>
 </svg>
