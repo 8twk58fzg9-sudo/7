@@ -6,6 +6,9 @@ window.COMPUTRAX_CONFIG = Object.freeze({
   SUPABASE_ANON_KEY: 'sb_publishable_x6sSWhw3on9bi_C1EQdTCg_nz09VWoX',
   SUPPORT_EMAIL: 'computerax.sk@gmail.com',
   EMAIL_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/send-notification',
+  ORDER_STATUS_EMAIL_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/notify-order-status',
+  CREATE_PAYMENT_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/create-payment',
+  CREATE_INVOICE_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/create-invoice',
   WAREHOUSE_SYNC_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/warehouse-sync',
   PC_ASSISTANT_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/pc-assistant',
   // Voliteľné: po vytvorení Microsoft Clarity vlož iba verejné ID projektu.
