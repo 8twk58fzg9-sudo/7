@@ -1,38 +1,62 @@
--- Computrax final commerce setup for Supabase
--- Run in Supabase SQL Editor after reviewing with your accountant/developer.
--- This file contains no secrets. Provider API keys belong in Supabase Edge Function Secrets.
--- Safe to run more than once: policies are dropped/re-created because PostgreSQL does not support CREATE POLICY IF NOT EXISTS.
+-- Computrax final commerce setup for your current Supabase schema.
+-- Safe to run more than once.
+-- No secrets here. GoPay/SuperFaktura/Resend keys belong only in Supabase Edge Function Secrets.
 
--- 1) Orders: payment + invoice readiness
-alter table if exists public.orders add column if not exists payment_status text not null default 'unpaid';
-alter table if exists public.orders add column if not exists payment_provider text;
-alter table if exists public.orders add column if not exists payment_reference text;
-alter table if exists public.orders add column if not exists payment_checkout_url text;
-alter table if exists public.orders add column if not exists paid_at timestamptz;
-alter table if exists public.orders add column if not exists invoice_status text not null default 'not_created';
-alter table if exists public.orders add column if not exists invoice_provider text;
-alter table if exists public.orders add column if not exists invoice_provider_id text;
-alter table if exists public.orders add column if not exists invoice_number text;
-alter table if exists public.orders add column if not exists invoice_pdf_url text;
-alter table if exists public.orders add column if not exists invoice_created_at timestamptz;
-alter table if exists public.orders add column if not exists company_name text;
-alter table if exists public.orders add column if not exists company_id text;
-alter table if exists public.orders add column if not exists tax_id text;
-alter table if exists public.orders add column if not exists vat_id text;
-alter table if exists public.orders add column if not exists terms_version text;
-alter table if exists public.orders add column if not exists privacy_version text;
-alter table if exists public.orders add column if not exists updated_at timestamptz default now();
+-- Your current schema:
+-- public.orders.id = bigint
+-- public.products.id = integer
+-- public.orders currently has payment_url/invoice_url compatibility columns
 
+-- 1) Orders: auth/account, payment and invoice readiness
+alter table public.orders add column if not exists user_id uuid references auth.users(id) on delete set null;
+alter table public.orders add column if not exists payment_status text not null default 'unpaid';
+alter table public.orders add column if not exists payment_provider text;
+alter table public.orders add column if not exists payment_reference text;
+alter table public.orders add column if not exists payment_checkout_url text;
+alter table public.orders add column if not exists paid_at timestamptz;
+alter table public.orders add column if not exists invoice_status text not null default 'not_created';
+alter table public.orders add column if not exists invoice_provider text;
+alter table public.orders add column if not exists invoice_provider_id text;
+alter table public.orders add column if not exists invoice_number text;
+alter table public.orders add column if not exists invoice_pdf_url text;
+alter table public.orders add column if not exists invoice_created_at timestamptz;
+alter table public.orders add column if not exists company_name text;
+alter table public.orders add column if not exists company_id text;
+alter table public.orders add column if not exists tax_id text;
+alter table public.orders add column if not exists vat_id text;
+alter table public.orders add column if not exists terms_version text;
+alter table public.orders add column if not exists privacy_version text;
+alter table public.orders add column if not exists updated_at timestamptz default now();
+
+-- Compatibility with your older columns.
+update public.orders
+set payment_checkout_url = coalesce(payment_checkout_url, payment_url)
+where payment_checkout_url is null and payment_url is not null;
+
+update public.orders
+set invoice_pdf_url = coalesce(invoice_pdf_url, invoice_url)
+where invoice_pdf_url is null and invoice_url is not null;
+
+update public.orders
+set invoice_provider_id = coalesce(invoice_provider_id, invoice_reference)
+where invoice_provider_id is null and invoice_reference is not null;
+
+update public.orders set payment_status = 'unpaid' where payment_status is null or payment_status = '';
+update public.orders set invoice_status = 'not_created' where invoice_status is null or invoice_status = '';
+
+-- Add CHECK constraints without failing on old data. They will enforce new/updated rows.
 do $$ begin
   alter table public.orders add constraint orders_payment_status_check
-    check (payment_status in ('unpaid','pending','paid','failed','refunded','cancelled'));
+    check (payment_status in ('unpaid','pending','paid','failed','refunded','cancelled')) not valid;
 exception when duplicate_object then null; end $$;
 
 do $$ begin
   alter table public.orders add constraint orders_invoice_status_check
-    check (invoice_status in ('not_created','pending','created','sent','failed','cancelled'));
+    check (invoice_status in ('not_created','pending','created','sent','failed','cancelled')) not valid;
 exception when duplicate_object then null; end $$;
 
+create index if not exists idx_orders_user_id on public.orders(user_id);
+create index if not exists idx_orders_customer_email on public.orders(customer_email);
 create index if not exists idx_orders_payment_reference on public.orders(payment_reference);
 create index if not exists idx_orders_payment_status on public.orders(payment_status);
 create index if not exists idx_orders_invoice_status on public.orders(invoice_status);
@@ -136,8 +160,8 @@ on public.commerce_settings for update to authenticated
 using (public.is_admin())
 with check (public.is_admin());
 
--- 7) Atomic inventory reservation. Call only from trusted Edge Functions.
-create or replace function public.reserve_inventory(p_product_id bigint, p_qty int)
+-- 7) Atomic inventory reservation. products.id is integer in your DB.
+create or replace function public.reserve_inventory(p_product_id integer, p_qty integer)
 returns void
 language plpgsql
 security definer
@@ -162,11 +186,11 @@ begin
 end;
 $$;
 
-revoke all on function public.reserve_inventory(bigint, int) from public, anon, authenticated;
+revoke all on function public.reserve_inventory(integer, integer) from public, anon, authenticated;
 
--- 8) Optional: public products should be read-only. Keep writes admin/server-side.
-alter table if exists public.products enable row level security;
-alter table if exists public.orders enable row level security;
+-- 8) Public read policies and admin order updates.
+alter table public.products enable row level security;
+alter table public.orders enable row level security;
 
 drop policy if exists "Public can read active products" on public.products;
 create policy "Public can read active products"
@@ -176,7 +200,10 @@ using (status = 'active' and stock >= 0);
 drop policy if exists "Customers can read own orders" on public.orders;
 create policy "Customers can read own orders"
 on public.orders for select to authenticated
-using (user_id = (select auth.uid()) or public.is_admin());
+using (
+  user_id = (select auth.uid())
+  or public.is_admin()
+);
 
 drop policy if exists "Admins can update orders" on public.orders;
 create policy "Admins can update orders"
@@ -184,16 +211,17 @@ on public.orders for update to authenticated
 using (public.is_admin())
 with check (public.is_admin());
 
--- 9) Edge Function secrets to add manually in Supabase Dashboard or CLI:
+-- 9) Secrets to add manually in Supabase Edge Function Secrets later:
 -- GOPAY_CLIENT_ID
 -- GOPAY_CLIENT_SECRET
 -- GOPAY_GOID
 -- GOPAY_MODE=test or live
 -- GOPAY_RETURN_URL=https://computrax.sk/objednavka.html
--- GOPAY_NOTIFICATION_URL=https://<project>.supabase.co/functions/v1/payment-webhook
+-- GOPAY_NOTIFICATION_URL=https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/payment-webhook
 -- SUPERFAKTURA_EMAIL
 -- SUPERFAKTURA_API_KEY
--- SUPERFAKTURA_COMPANY_ID (if your account/API needs it)
+-- SUPERFAKTURA_COMPANY_ID if required
+-- COMMERCE_INTERNAL_KEY
 -- RESEND_API_KEY
 -- NOTIFICATION_FROM_EMAIL
 -- NOTIFICATION_TO_EMAIL=computerax.sk@gmail.com
