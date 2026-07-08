@@ -1,3 +1,28 @@
+Computrax final package - logo fixed + better site
+==================================================
+
+Upload all files in this ZIP to the GitHub repository root and replace the old files.
+
+Admin URL: admin_2.html
+Admin password: Mackbook.neo
+
+This package keeps the original full index.html and the original full admin_2.html.
+The visual upgrades are applied through site-enhancements.js and updated logo assets.
+
+Important fixed issue:
+The previous generated logo had a baked-in dark/blue background. This version uses a transparent black/blue logo so it fits the light premium navigation.
+
+Changed assets:
+- computrax-logo.png
+- favicon-32.png
+- apple-touch-icon.png
+- icon-192.png
+- icon-512.png
+- og-image.png
+- site-enhancements.js
+
+Original README content below:
+
 COMPUTRAX FINAL - PÔVODNÝ ADMIN + PREMIUM INDEX
 
 Admin heslo: Mackbook.neo

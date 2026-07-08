@@ -89,6 +89,27 @@
       @media(max-width:1320px){html{scroll-padding-top:11.5rem}}
       @media(max-width:900px){.ctrax-premium-strip{grid-template-columns:repeat(2,minmax(0,1fr));width:min(92%,1180px)}body.ctrax-premium .hero-paths{flex-direction:column}.ctrax-topbar{font-size:.72rem;gap:.45rem;overflow:hidden;white-space:nowrap}.ctrax-topbar .hide-sm{display:none}.ctrax-mobile-commerce{display:flex}}
       @media(max-width:720px){html{scroll-padding-top:13.5rem}.mobile-filter-toggle{display:flex}.filter-details:not(.mobile-open){display:none}.filter-details.mobile-open{display:grid}.ctrax-featured-specs{grid-template-columns:1fr}.ctrax-featured-actions{align-items:stretch}.ctrax-featured-actions a,.ctrax-featured-actions button{width:100%;justify-content:center;text-align:center}.ctrax-featured-price{width:100%;text-align:center;margin-right:0}.ctrax-featured-device{min-height:210px}.ctrax-premium-strip{grid-template-columns:1fr}.ctrax-marketplace-assist{border-radius:22px}.ctrax-marketplace-head strong{font-size:1.08rem}body.ctrax-premium .hero h1{font-size:clamp(2.65rem,16vw,4.5rem)}}
+      /* FINAL 2026 POLISH: clean logo, balanced nav, better customer hero */
+      body.ctrax-premium nav{padding:.72rem max(5vw,2rem);gap:1.15rem;align-items:center}
+      body.ctrax-premium nav .logo{display:flex;align-items:center;justify-content:flex-start;min-width:178px;max-width:210px;overflow:hidden}
+      body.ctrax-premium nav .logo img{width:190px!important;max-width:100%!important;height:auto!important;max-height:66px!important;object-fit:contain!important;background:transparent!important;border-radius:0!important;filter:none!important}
+      body.ctrax-premium .nav-right{gap:.72rem;align-items:center}
+      body.ctrax-premium .nav-search input{height:48px;border-radius:999px;background:rgba(255,255,255,.86);border:1px solid rgba(15,23,42,.12);box-shadow:0 8px 24px rgba(15,23,42,.05)}
+      body.ctrax-premium .cart-btn{height:48px;border-radius:999px;padding:.62rem 1.08rem;font-weight:850}
+      body.ctrax-premium nav ul a{font-size:.95rem;font-weight:800;color:#475569}
+      body.ctrax-premium nav ul a:hover{color:#1d4ed8}
+      body:not(.ctrax-admin-page) .ctrax-featured-admin{display:none!important}
+      body.ctrax-premium .hero{position:relative;display:grid!important;grid-template-columns:minmax(420px,1fr) minmax(360px,.92fr);gap:clamp(2rem,4vw,4.8rem);min-height:calc(100vh - 118px);padding-inline:max(6vw,3rem);padding-top:clamp(8rem,10vw,9.5rem)}
+      body.ctrax-premium .hero-content{position:relative;z-index:2;align-self:center;min-width:0;display:block!important}
+      body.ctrax-premium .hero-visual{align-self:center;min-width:0;width:100%;max-width:680px;justify-self:end}
+      body.ctrax-premium .ctrax-featured-hero{grid-template-columns:1fr!important;padding:clamp(1.15rem,2vw,1.7rem);border-radius:30px}
+      body.ctrax-premium .ctrax-featured-name{font-size:clamp(2.1rem,4.2vw,4.6rem);word-break:normal;overflow-wrap:anywhere}
+      body.ctrax-premium .ctrax-featured-device{min-height:300px;background:linear-gradient(145deg,rgba(255,255,255,.86),rgba(225,237,255,.82))}
+      body.ctrax-premium .ctrax-featured-sub{font-size:1rem;max-width:610px}
+      body.ctrax-premium .ctrax-topbar{font-size:.8rem}
+      @media(max-width:1180px){body.ctrax-premium nav{padding-inline:1.2rem}body.ctrax-premium nav .logo{min-width:148px;max-width:170px}body.ctrax-premium nav .logo img{width:164px!important}body.ctrax-premium nav ul{gap:.85rem}.nav-search input{width:150px!important}.nav-search input:focus{width:190px!important}}
+      @media(max-width:980px){body.ctrax-premium .hero{grid-template-columns:1fr;min-height:auto;padding-inline:1.25rem;padding-top:8.5rem}.ctrax-featured-hero{max-width:760px;margin-inline:auto}body.ctrax-premium .hero-visual{justify-self:stretch;max-width:none}}
+      @media(max-width:760px){body.ctrax-premium nav .logo{min-width:116px;max-width:140px}body.ctrax-premium nav .logo img{width:132px!important;max-height:52px!important}.ctrax-topbar{display:none!important}body.ctrax-premium .ctrax-topbar+nav,body.ctrax-premium nav.ctrax-offset{top:0}.nav-search input{width:100%!important}.nav-right{width:100%;justify-content:flex-start;overflow-x:auto;padding-bottom:.25rem}body.ctrax-premium .hero{padding-top:6.8rem}.ctrax-featured-device{min-height:220px!important}.ctrax-featured-fallback{font-size:2rem}}
       @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}.mobile-filter-toggle .filter-toggle-icon{transition:none}.ctrax-marketplace-chip:hover,body.ctrax-premium .pc-card:hover{transform:none!important}}
     `;
     document.head.appendChild(style);
@@ -213,7 +234,7 @@
       '<div class="ctrax-featured-copy">' +
         '<div class="ctrax-featured-eyebrow">★ Odporúčaný kus skladom</div>' +
         '<h2 class="ctrax-featured-name">' + safeName + '</h2>' +
-        '<p class="ctrax-featured-sub">Jeden vybraný počítač dostane pozornosť ako Apple produkt. Zvyšok ponuky ostáva v plnom katalógu s filtrami, detailom, košíkom a objednávkou.</p>' +
+        '<p class="ctrax-featured-sub">Odporúčaný skladový kus s jasnými parametrami, zárukou a rýchlym nákupom. Celý katalóg, filtre, detail, košík aj objednávka ostávajú dostupné nižšie.</p>' +
         '<div class="ctrax-featured-specs">' +
           '<div class="ctrax-featured-spec"><span>Procesor</span><b>' + safeHtml(product.cpu || 'Neuvedené') + '</b></div>' +
           '<div class="ctrax-featured-spec"><span>Grafika</span><b>' + safeHtml(product.gpu || 'Neuvedené') + '</b></div>' +
@@ -590,6 +611,7 @@
   }
 
   function installFeaturedAdminPanel() {
+    if (!isComputraxAdminPage()) return;
     if (document.getElementById('ctrax-featured-admin')) return;
     const dashboard = document.querySelector('.orders-wrap.admin-section[data-admin-section~="dashboard"]');
     const settings = document.querySelector('.admin-section[data-admin-section~="settings"]');
@@ -626,7 +648,14 @@
     }, 800);
   }
 
+  function isComputraxAdminPage() {
+    return /admin_2(?:\.html)?$/i.test(location.pathname) ||
+      Boolean(document.querySelector('[data-admin-action], #gate, .gate, #stats-bar, .admin-nav'));
+  }
+
   function enhanceAdmin() {
+    if (!isComputraxAdminPage()) return;
+    document.body.classList.add('ctrax-admin-page');
     installFeaturedAdminPanel();
     if (typeof saveProduct === 'function' && !window.__COMPUTRAX_IMAGE_SAVE_GUARD__) {
       window.__COMPUTRAX_IMAGE_SAVE_GUARD__ = true;

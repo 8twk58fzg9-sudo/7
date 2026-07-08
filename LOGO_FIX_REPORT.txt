@@ -1,0 +1,16 @@
+Computrax logo + site fix report
+================================
+
+What changed:
+- Replaced the baked-in dark/blue logo block with a transparent black/blue logo based on the original Computrax mark.
+- White parts of the old logo were recolored to dark navy/black so it fits the light premium navigation.
+- Blue accents were kept, green check was converted to blue to match the black/blue style.
+- Rebuilt favicon, Apple touch icon, 192/512 icons and OG image.
+- Fixed the public page bug where the admin featured-PC preview could appear on the customer site.
+- Improved nav logo sizing, hero balance and mobile layout through site-enhancements.js.
+
+Preserved:
+- Original large index.html.
+- Original large admin_2.html.
+- Original cart, account, orders, Supabase, products, admin tools, analytics, audit, exports/imports.
+- Admin password remains Mackbook.neo.
