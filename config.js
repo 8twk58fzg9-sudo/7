@@ -27,3 +27,8 @@ const computraxNine = document.createElement('script');
 computraxNine.src = 'site-9.js?v=20260708nineReady';
 computraxNine.async = false;
 document.head.appendChild(computraxNine);
+
+const computraxDeployFix = document.createElement('script');
+computraxDeployFix.src = 'site-deploy-fix.js?v=20260708deploy95';
+computraxDeployFix.async = false;
+document.head.appendChild(computraxDeployFix);

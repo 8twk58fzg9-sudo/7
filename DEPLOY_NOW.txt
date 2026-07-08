@@ -1,0 +1,7 @@
+Computrax deploy-ready package
+
+1. Upload every file and folder from this ZIP to the root of the GitHub repository.
+2. Keep .nojekyll in the root. It helps GitHub Pages serve .well-known/security.txt and all static folders.
+3. Admin: /admin_2.html, password: Mackbook.neo.
+4. Supabase sklad/API key must be set only as Edge Function secrets, never in HTML.
+5. After deploy: hard refresh, test index.html, admin_2.html, product pages, cart, checkout, invoice preview, warehouse endpoint.

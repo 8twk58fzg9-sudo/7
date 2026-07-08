@@ -1,0 +1,17 @@
+Computrax final deploy validation
+
+Files: 108
+Previous package files: 102
+Missing from previous package: 0
+Added files: 6
+HTML pages: 30
+JS files: 13
+CSS files: 31
+JSON-LD blocks: 28
+Internal links checked: 337
+Inline executable scripts: 1
+External script tags: 9
+data-action attributes: 98
+data-admin-action attributes: 115
+Errors: 0
+Warnings: 0

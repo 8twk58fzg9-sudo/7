@@ -1,0 +1,17 @@
+{
+  "files": 108,
+  "previous_files": 102,
+  "missing_from_previous": 0,
+  "added_files": 6,
+  "html_pages": 30,
+  "js_files": 13,
+  "css_files": 31,
+  "jsonld_blocks": 28,
+  "internal_links_checked": 337,
+  "inline_executable_scripts": 1,
+  "external_script_tags": 9,
+  "data_action_attrs": 98,
+  "data_admin_action_attrs": 115,
+  "errors": [],
+  "warnings": []
+}
