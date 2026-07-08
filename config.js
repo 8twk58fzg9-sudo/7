@@ -29,3 +29,4 @@ loadComputraxScript('site-overrides.js', '20260709finalPolish');
 loadComputraxScript('site-ai-picker.js', '20260709finalPolish');
 loadComputraxScript('site-ai-bot.js', '20260709aiBot2');
 loadComputraxScript('site-final-polish.js', '20260709finalPolish');
+loadComputraxScript('site-premium-upgrade.js', '20260709premium1');
