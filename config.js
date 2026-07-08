@@ -7,13 +7,14 @@ window.COMPUTRAX_CONFIG = Object.freeze({
   SUPPORT_EMAIL: 'computerax.sk@gmail.com',
   EMAIL_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/send-notification',
   WAREHOUSE_SYNC_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/warehouse-sync',
+  PC_ASSISTANT_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/pc-assistant',
   // Voliteľné: po vytvorení Microsoft Clarity vlož iba verejné ID projektu.
   CLARITY_PROJECT_ID: ''
 });
 
 // Spoločná kompatibilná vrstva pre verejnú stránku aj admin na GitHub Pages.
 const computraxEnhancements = document.createElement('script');
-computraxEnhancements.src = 'site-enhancements.js?v=20260709aiPicker';
+computraxEnhancements.src = 'site-enhancements.js?v=20260709aiBot';
 computraxEnhancements.async = false;
 document.head.appendChild(computraxEnhancements);
 
@@ -23,7 +24,7 @@ computraxHardened.async = false;
 document.head.appendChild(computraxHardened);
 
 const computraxNine = document.createElement('script');
-computraxNine.src = 'site-9.js?v=20260709aiPicker';
+computraxNine.src = 'site-9.js?v=20260709aiBot';
 computraxNine.async = false;
 document.head.appendChild(computraxNine);
 
@@ -33,11 +34,16 @@ computraxDeployFix.async = false;
 document.head.appendChild(computraxDeployFix);
 
 const computraxSlovakCompact = document.createElement('script');
-computraxSlovakCompact.src = 'site-overrides.js?v=20260709aiPicker';
+computraxSlovakCompact.src = 'site-overrides.js?v=20260709aiBot';
 computraxSlovakCompact.async = false;
 document.head.appendChild(computraxSlovakCompact);
 
 const computraxAiPicker = document.createElement('script');
-computraxAiPicker.src = 'site-ai-picker.js?v=20260709aiPicker';
+computraxAiPicker.src = 'site-ai-picker.js?v=20260709aiBot';
 computraxAiPicker.async = false;
 document.head.appendChild(computraxAiPicker);
+
+const computraxAiBot = document.createElement('script');
+computraxAiBot.src = 'site-ai-bot.js?v=20260709aiBot';
+computraxAiBot.async = false;
+document.head.appendChild(computraxAiBot);
