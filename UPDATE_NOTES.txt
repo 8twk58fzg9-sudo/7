@@ -1,0 +1,11 @@
+Computrax high-level guided sales update
+
+Implemented:
+1. Stronger product cards with use-case, warranty, delivery and savings.
+5. Product detail sales blocks: use case, Computrax Protect, delivery and preparation.
+6. Admin product merchandising helper without breaking Supabase product save flow.
+8. Checkout reassurance and B2B billing guidance.
+9. Business/school CTA section.
+10. Guided customer path: all PCs, gaming, work/school, business/school.
+
+Admin password remains Mackbook.neo. Public Supabase publishable key remains in config.js; no private service-role key added.

@@ -1936,8 +1936,8 @@ USING (bucket_id = 'product-images' AND public.is_admin());</pre>
       <div class="form-group form-full">
         <label class="form-label">Poznámka ku stavu PC</label>
         <textarea class="form-input" id="f-condition-note" rows="3" maxlength="320" placeholder="napr. Vyčistený, bez výrazných škrabancov, skontrolovaný disk a pamäť."></textarea>
-        <button type="button" class="btn btn-ghost btn-sm" data-admin-action="generateProductDescription" style="margin-top:0.5rem">✨ Navrhnúť popis (AI)</button>
-        <small style="color:var(--muted);display:block;margin-top:0.3rem">Vyplň najprv názov a parametre. AI navrhne text — ty ho skontroluješ a upravíš pred uložením.</small>
+        <button type="button" class="btn btn-ghost btn-sm" data-admin-action="generateProductDescription" style="margin-top:0.5rem">✨ Navrhnúť predajný popis</button>
+        <small style="color:var(--muted);display:block;margin-top:0.3rem">Vyplň najprv názov a parametre. Systém pripraví návrh textu — ty ho skontroluješ a upravíš pred uložením.</small>
       </div>
       <div class="form-group">
         <label class="form-label">Tag / Nálepka</label>
@@ -6837,10 +6837,10 @@ async function quickStock(id, delta) {
     } catch(e) { showToast('❌ ' + e.message, true); }
 }
 
-// #2 (idea) AI product-description draft — fills fields, admin approves before saving
+// #2 product-description draft — fills fields, admin approves before saving
 const ADMIN_ASSISTANT_ENDPOINT = `${SB_URL}/functions/v1/admin-assistant`;
 async function generateProductDescription() {
-    if (useLocalStorage) { showToast('⚠️ AI návrh je dostupný v Supabase režime', true); return; }
+    if (useLocalStorage) { showToast('⚠️ Návrh popisu je dostupný v Supabase režime', true); return; }
     if (!(await ensureSupabaseWriteAuth(false))) { showToast('⚠️ Najprv pripoj Supabase admin zápis', true); return; }
     const name = String(document.getElementById('f-name')?.value || '').trim();
     if (name.length < 3) { showToast('⚠️ Najprv vyplň názov produktu', true); document.getElementById('f-name')?.focus(); return; }
@@ -6865,7 +6865,7 @@ async function generateProductDescription() {
         }, 25000);
         const data = parseResponseJson(await res.text(), {}) || {};
         if (!res.ok || !data.note) {
-            showToast('⚠️ ' + cleanImportedText(data.message || 'AI návrh sa nepodaril', 160), true);
+            showToast('⚠️ ' + cleanImportedText(data.message || 'Návrh popisu sa nepodaril', 160), true);
             return;
         }
         const noteField = document.getElementById('f-condition-note');
@@ -6875,7 +6875,7 @@ async function generateProductDescription() {
         }
         showToast('✨ Návrh doplnený — skontroluj a uprav pred uložením');
     } catch (e) {
-        showToast('❌ ' + (e.message || 'AI služba je nedostupná'), true);
+        showToast('❌ ' + (e.message || 'Služba návrhu popisu je nedostupná'), true);
     } finally {
         if (btn) { btn.textContent = original; btn.disabled = false; }
     }
