@@ -1,26 +1,28 @@
-COMPUTRAX – Apple-style homepage + viac počítačov v katalógu
+Computrax Premium Apple + Allegro upgrade
 
-Čo je v tejto verzii:
-1. Keď zákazník otvorí index.html, hore vidí jeden hlavný počítač ako pri Apple.
-2. Tento jeden hlavný počítač nastavíš v admin_2.html.
-3. Tlačidlo „Viac počítačov“ ide do katalógu, kde je viac PC kariet.
-4. Katalógové PC sú predvolené v computrax-store.js, takže ponuka nie je prázdna.
+Toto je bezpečný upgrade pôvodného Computrax webu.
+Nahrádza sa iba súbor: site-enhancements.js
 
-Ako používať:
-1. Otvor admin_2.html
-2. Heslo: computrax
-3. Nastav hlavný PC na úvodnej stránke
-4. Klikni „Uložiť odporúčaný PC“
-5. Otvor index.html
+NEPREPISUJ index.html ani admin_2.html.
+Košík, objednávky, účet, filtre, admin a Supabase ostávajú pôvodné.
 
-Dôležité pre hosting/GitHub Pages:
-- Lokálne uloženie funguje iba v tvojom prehliadači.
-- Aby nový hlavný PC videli všetci, v admine klikni „Stiahnuť product-data.js“.
-- Týmto súborom nahraď pôvodný product-data.js na hostingu.
+Čo je nové:
+- Apple-style hlavný PC na úvode
+- prémiový hero, trust strip a microbar
+- marketplace katalógový panel ako Allegro
+- lepšie produktové karty cez CSS
+- rýchle kategórie a CTA
+- sticky mobilný bar Počítače / Košík
+- admin panel na výber jedného hlavného PC
+- performance-friendly bez externých knižníc
 
-Súbory:
-- index.html – verejná stránka: 1 hlavný PC + viac PC v katalógu
-- admin_2.html – admin na nastavenie hlavného PC na úvode
-- computrax-store.js – dáta a logika
-- product-data.js – publikovaný hlavný PC
-- config.js – email a heslo adminu
+Použitie:
+1. V repozitári/hostingu nahraď existujúci site-enhancements.js týmto súborom.
+2. Nechaj pôvodné index.html a admin_2.html.
+3. Otvor admin_2.html.
+4. V paneli „Apple štýl úvodu — 1 hlavný PC“ vyber počítač.
+5. Klikni „Nastaviť na úvod“.
+
+Poznámka:
+Ak chceš, aby hlavný PC videli všetci návštevníci, ulož výber so zapnutým Supabase admin zápisom.
+Lokálne uloženie platí iba pre tvoj prehliadač.
