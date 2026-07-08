@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://aryjaqexfgalxaiseqtp.supabase.co https://*.supabase.co; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+  <title>Všetky repasované počítače | Computrax</title>
+  <meta name="description" content="Kompletná ponuka repasovaných a použitých počítačov Computrax. Filtrujte podľa rozpočtu, využitia, ceny a skladu.">
+  <link rel="canonical" href="https://computrax.sk/produkty/">
+  <link rel="icon" href="../favicon-32.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="produkty.css?v=20260709final">
+  <script src="../config.js?v=20260709final"></script>
+  <script src="../assets/js/admin-1-1.js?v=20260708split9"></script>
+</head>
+<body>
+  <header class="top">
+    <nav class="nav" aria-label="Hlavná navigácia">
+      <a class="logo" href="../"><img src="../computrax-logo.png" alt="Computrax"><span>Computrax</span></a>
+      <div class="navlinks">
+        <a href="../">Úvod</a>
+        <a href="../sluzba-vyber-pc/">AI výber PC</a>
+        <a href="../kontakt/">Kontakt</a>
+        <a class="primary" href="../index.html#kosik">Košík</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <span class="kicker">Samostatná ponuka</span>
+        <h1>Všetky počítače na jednom mieste.</h1>
+        <p>Úvod necháva zákazníka rýchlo pochopiť službu. Tu je kompletná ponuka: filtrujte podľa rozpočtu, využitia a dostupnosti.</p>
+      </div>
+      <div class="hero-panel">
+        <div class="hero-card"><b>AI poradca ostáva dostupný</b><span>Ak zákazník nevie, čo kúpiť, bot odporučí vhodný kus podľa rozpočtu.</span></div>
+        <div class="hero-card"><b>Reálne kusy zo skladu</b><span>Každý produkt má cenu, parametre, stav a dostupnosť.</span></div>
+      </div>
+    </section>
+    <section class="wrap" aria-label="Filtre a produkty">
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Hľadať podľa modelu, CPU, GPU, RAM...">
+        <select id="category" aria-label="Kategória"><option value="all">Všetky typy</option><option value="gaming">Herné PC</option><option value="office">Práca / škola</option><option value="retro">Retro</option></select>
+        <select id="budget" aria-label="Rozpočet"><option value="99999">Bez limitu</option><option value="300">do 300 €</option><option value="500">do 500 €</option><option value="800">do 800 €</option></select>
+        <select id="sort" aria-label="Zoradenie"><option value="recommended">Odporúčané</option><option value="price-asc">Najlacnejšie</option><option value="price-desc">Najdrahšie</option><option value="stock">Skladom prvé</option></select>
+      </div>
+      <div class="meta"><span id="count">Načítavam...</span><a href="../sluzba-vyber-pc/">Neviete vybrať? Otvoriť službu výberu PC →</a></div>
+      <div class="grid" id="productGrid"></div>
+    </section>
+  </main>
+  <script src="produkty.js?v=20260709final"></script>
+</body>
+</html>
