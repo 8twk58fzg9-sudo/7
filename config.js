@@ -13,7 +13,7 @@ window.COMPUTRAX_CONFIG = Object.freeze({
 
 // Spoločná kompatibilná vrstva pre verejnú stránku aj admin na GitHub Pages.
 const computraxEnhancements = document.createElement('script');
-computraxEnhancements.src = 'site-enhancements.js?v=20260709slovakCompact';
+computraxEnhancements.src = 'site-enhancements.js?v=20260709aiPicker';
 computraxEnhancements.async = false;
 document.head.appendChild(computraxEnhancements);
 
@@ -23,7 +23,7 @@ computraxHardened.async = false;
 document.head.appendChild(computraxHardened);
 
 const computraxNine = document.createElement('script');
-computraxNine.src = 'site-9.js?v=20260709slovakCompact';
+computraxNine.src = 'site-9.js?v=20260709aiPicker';
 computraxNine.async = false;
 document.head.appendChild(computraxNine);
 
@@ -33,6 +33,11 @@ computraxDeployFix.async = false;
 document.head.appendChild(computraxDeployFix);
 
 const computraxSlovakCompact = document.createElement('script');
-computraxSlovakCompact.src = 'site-overrides.js?v=20260709slovakCompact';
+computraxSlovakCompact.src = 'site-overrides.js?v=20260709aiPicker';
 computraxSlovakCompact.async = false;
 document.head.appendChild(computraxSlovakCompact);
+
+const computraxAiPicker = document.createElement('script');
+computraxAiPicker.src = 'site-ai-picker.js?v=20260709aiPicker';
+computraxAiPicker.async = false;
+document.head.appendChild(computraxAiPicker);
