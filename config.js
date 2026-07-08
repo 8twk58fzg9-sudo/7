@@ -1,19 +1,15 @@
-// Computrax public config – safe for GitHub Pages.
-// Do NOT put secret API keys, SMTP passwords, GoPay secrets or service_role keys here.
-window.CT_CONFIG = Object.freeze({
-  shopName: 'Computrax',
-  tagline: 'Prémiové repasované počítače',
-  supportEmail: 'computerax.sk@gmail.com',
-  supportPhone: '+421 949 835 923',
-  whatsappPhone: '421949835923',
-  publicSiteUrl: 'https://8twk58fzg9-sudo.github.io/real',
-  adminPassword: 'Mackbook.neo',
-  currency: '€',
-  warrantyText: '12 mesiacov záruka',
-  returnText: '14 dní na vrátenie',
-  shippingOptions: [
-    { id: 'packeta', name: 'Packeta / výdajné miesto', price: 3.90, eta: '1–3 pracovné dni' },
-    { id: 'courier', name: 'Kuriér po Slovensku', price: 5.90, eta: '1–2 pracovné dni' },
-    { id: 'pickup', name: 'Osobný odber po dohode', price: 0, eta: 'po dohode' }
-  ]
+// Computrax public runtime config.
+// This file may be uploaded to GitHub Pages only with public/publishable values.
+// Never paste service_role, SMTP, GoPay, iDoklad, provider private, or other secret keys here.
+window.COMPUTRAX_CONFIG = Object.freeze({
+  SUPABASE_URL: 'https://aryjaqexfgalxaiseqtp.supabase.co',
+  SUPABASE_ANON_KEY: 'sb_publishable_x6sSWhw3on9bi_C1EQdTCg_nz09VWoX',
+  SUPPORT_EMAIL: 'computerax.sk@gmail.com',
+  EMAIL_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/send-notification'
 });
+
+// Small compatibility layer shared by the storefront and admin on GitHub Pages.
+const computraxEnhancements = document.createElement('script');
+computraxEnhancements.src = 'site-enhancements.js?v=20260702e';
+computraxEnhancements.async = false;
+document.head.appendChild(computraxEnhancements);

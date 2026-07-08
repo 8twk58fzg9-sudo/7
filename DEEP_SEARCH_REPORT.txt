@@ -1,52 +1,37 @@
-COMPUTRAX – DEEP SEARCH / VYNECHANÉ A ZMAZANÉ SÚBORY
+DEEP SEARCH / KONTROLA ZACHOVANIA
 
-Kontrola bola robená proti pôvodnému GitHub repozitáru 8twk58fzg9-sudo/real a aktuálnemu balíku customer-ready.
+Použitý základ:
+- Pôvodný nahratý index(18).html -> index.html
+- Pôvodný nahratý admin_2(9).html -> admin_2.html
+- Pôvodný nahratý config(3).js -> config.js
+- Pôvodné nahraté informacie/právne/robots/sitemap/manifest/vercel a obrázky -> zachované s normálnymi názvami.
 
-1) Súbory v tomto ZIPe
-- index.html
-- admin_2.html
-- styles.css
-- app.js
-- admin.js
-- config.js
-- product-data.js
-- informacie.html
-- pravne.html
-- computrax-logo.svg
-- favicon.svg
-- site.webmanifest
-- site-enhancements.js
-- README.txt
-- DEEP_SEARCH_REPORT.txt
+Zachované pôvodné admin funkcie:
+- produkty
+- objednávky
+- zákazníci
+- analytika
+- automatizácie
+- audit
+- sklady/inventár
+- e-mailové šablóny
+- Supabase admin zápis
+- exporty/importy
+- obrázky produktov cez Supabase Storage
+- kontrola pred spustením
+- nastavenia webu
 
-2) Pôvodné súbory potvrdené v GitHub repozitári
-- index.html – pôvodný veľký monolitický web, cca 6 900+ riadkov, Supabase, objednávky, účty, právne časti a veľa logiky.
-- admin_2.html – pôvodný veľký admin, Supabase, SQL, zákazníci, objednávky, sklad, audit, e-maily, storage.
-- config.js – pôvodná verejná Supabase konfigurácia.
-- site-enhancements.js – pôvodný doplnkový JS pre responzivitu, admin upload fotiek a doplnky.
-- informacie.html – pôvodná samostatná informačná stránka.
-- pravne.html – pôvodná samostatná právna stránka.
-- site.webmanifest – pôvodný manifest odkazoval na PNG ikony.
+Zmenené:
+- admin heslo je nastavené na Mackbook.neo cez SHA-256 hash.
+- site-enhancements.js je nahradený prémiovou Apple/Allegro vrstvou.
 
-3) Súbory/asset-y, ktoré boli v pôvodnom webe odkazované, ale tento nový balík ich nepoužíva alebo nenahrádza 1:1
-- computrax-logo.png – pôvodný PNG logo súbor. V tomto balíku je nahradený súborom computrax-logo.svg.
-- favicon-32.png – pôvodný PNG favicon. V tomto balíku je nahradený favicon.svg.
-- apple-touch-icon.png – pôvodná Apple ikona. V tomto balíku nie je pridaná ako PNG.
-- og-image.png – pôvodný Open Graph obrázok. Tento nový balík zatiaľ nemá samostatný social preview PNG.
-- icon-192.png a icon-512.png – pôvodný manifest na ne odkazoval. Tento balík používa jednoduchý SVG favicon v manifeste.
+Nezmazané:
+- index.html a admin_2.html nie sú skrátené demo verzie.
+- Sú to veľké pôvodné súbory z tvojho uploadu.
 
-4) Funkcie z pôvodného veľkého webu, ktoré tento statický customer-ready balík NEobsahuje 1:1
-- Supabase databázové objednávky a verejné načítanie skladu.
-- Supabase Auth zákaznícke účty.
-- Supabase Storage upload produktových fotiek.
-- Edge Function e-mailové notifikácie.
-- Pokročilé rate limiting, RPC objednávky, audit logy, skladové pohyby.
-- Pokročilé admin sekcie: zákazníci, audit, automatizácie, iDoklad/GoPay blueprint v plnej pôvodnej forme.
+Záloha:
+- Pôvodný site-enhancements.js je priložený ako site-enhancements.original-backup.js.
+- Stránka ho nenačítava, je iba pre návrat späť.
 
-5) Prečo to nie je chyba v tomto ZIPe
-Tento ZIP je samostatný statický GitHub Pages e-shop. Je jednoduchší, čitateľnejší a pripravený na zákaznícke demo/predaj bez backendu. Ak však chceš plnú pôvodnú funkcionalitu, najlepšia cesta je nepoužiť tento split build, ale upravovať pôvodný monolit cez site-enhancements.js.
-
-6) Odporúčanie
-- Pre rýchle spustenie a pekný zákaznícky web: použi tento ZIP.
-- Pre veľký ostrý e-shop s databázou, účtami, reálnym skladom a emailami: vráť sa k pôvodnému index.html + admin_2.html a upravuj ich opatrne.
-- Pred publikovaním doplň reálne fotky produktov a firemné údaje.
+Poznámka:
+- Súbory app.js, admin.js, styles.css a product-data.js z predošlého samostatného demo balíka tu zámerne nie sú, pretože pôvodný veľký index/admin ich nepoužívajú. Ich pridanie by mohlo mýliť a nie je potrebné.

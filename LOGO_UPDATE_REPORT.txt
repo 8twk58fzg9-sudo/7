@@ -1,0 +1,20 @@
+Computrax logo update
+======================
+
+Použitý bol nový vygenerovaný Computrax logo návrh. Vytvorené boli webové varianty pre navigáciu, favicon, PWA ikony a OG zdieľanie.
+
+Zmenené súbory:
+- computrax-logo.png: hlavné logo v navigácii a admine
+- favicon-32.png: ikonka v tabe
+- apple-touch-icon.png: iPhone/iPad ikona
+- icon-192.png a icon-512.png: PWA ikony z manifestu
+- og-image.png: náhľad pri zdieľaní stránky
+- computrax-logo-large-generated.png: veľká verzia loga na prípadnú ďalšiu úpravu
+
+Zachované:
+- pôvodný veľký index.html
+- pôvodný veľký admin_2.html
+- premium site-enhancements.js
+- config.js, právne/info stránky, robots, sitemap, manifest
+
+Admin heslo: Mackbook.neo

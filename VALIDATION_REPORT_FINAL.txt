@@ -1,0 +1,80 @@
+Computrax final validation report
+Errors: 0
+Warnings: 0
+Checks passed: 64
+
+LIMITS
+- Offline static/functionality checks passed. Live Supabase, GoPay, iDoklad, Brevo/e-mail and database write flows can only be fully verified after deployment with configured secrets and database policies.
+- The ZIP contains a top-level folder; on GitHub upload the CONTENTS of that folder into the repository root.
+
+PASSED CHECKS
+OK required file index.html
+OK required file admin_2.html
+OK required file config.js
+OK required file site-enhancements.js
+OK required file site-enhancements.original-backup.js
+OK required file informacie.html
+OK required file pravne.html
+OK required file robots.txt
+OK required file sitemap.xml
+OK required file site.webmanifest
+OK required file vercel.json
+OK required file computrax-logo.png
+OK required file favicon-32.png
+OK required file apple-touch-icon.png
+OK required file icon-192.png
+OK required file icon-512.png
+OK required file og-image.png
+OK exact match with uploaded original: index.html
+OK exact match with uploaded original: admin_2.html
+OK exact match with uploaded original: site-enhancements.original-backup.js
+OK image valid computrax-logo.png: 420x210
+OK image valid favicon-32.png: 32x32
+OK image valid apple-touch-icon.png: 180x180
+OK image valid icon-192.png: 192x192
+OK image valid icon-512.png: 512x512
+OK image valid og-image.png: 1200x630
+OK image valid computrax-logo-large-generated.png: 1536x1024
+OK local file refs in index.html
+OK local file refs in admin_2.html
+OK local file refs in informacie.html
+OK local file refs in pravne.html
+OK JS syntax config.js
+OK JS syntax site-enhancements.js
+OK JS syntax site-enhancements.original-backup.js
+OK inline JS syntax index.html: 2 script(s)
+OK inline JS syntax admin_2.html: 2 script(s)
+OK inline JS syntax informacie.html: 0 script(s)
+OK inline JS syntax pravne.html: 1 script(s)
+OK admin password hash matches Mackbook.neo
+OK index has function addToCart
+OK index has function openCart
+OK index has function submitOrder
+OK index has function renderProducts
+OK index has function openProductDetail
+OK index has function toggleWish
+OK index has function openAccount
+OK index has function loadProductsFromSupabase
+OK index has function loadSiteSettingsFromSupabase
+OK index has function handleDelegatedActions
+OK admin has function saveProduct
+OK admin has function loadProducts
+OK admin has function renderList
+OK admin has function loadOrders
+OK admin has function saveSiteSettings
+OK admin has function runSupabaseHealthCheck
+OK admin has function exportProductsJson
+OK admin has function importProductsJson
+OK admin has function runAdminAutopilot
+OK admin has function showAdminSection
+OK index.html: 40 action values found in JS
+OK admin_2.html: 85 action values found in JS
+OK JSON site.webmanifest
+OK JSON vercel.json
+OK XML sitemap.xml
+
+WARNINGS
+None
+
+ERRORS
+None
