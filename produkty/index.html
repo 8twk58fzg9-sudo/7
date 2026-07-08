@@ -12,8 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="produkty.css?v=20260709final">
-  <script src="../config.js?v=20260709final"></script>
+  <link rel="stylesheet" href="produkty.css?v=20260709premium1">
+  <script src="../config.js?v=20260709premium1"></script>
   <script src="../assets/js/admin-1-1.js?v=20260708split9"></script>
 </head>
 <body>
@@ -23,7 +23,8 @@
       <div class="navlinks">
         <a href="../">Úvod</a>
         <a href="../sluzba-vyber-pc/">AI výber PC</a>
-        <a href="../kontakt/">Kontakt</a>
+        <a href="../informacie.html">Informácie</a>
+        <a href="../pravne.html">Právne info</a>
         <a class="primary" href="../index.html#kosik">Košík</a>
       </div>
     </nav>
@@ -31,9 +32,9 @@
   <main>
     <section class="hero">
       <div>
-        <span class="kicker">Samostatná ponuka</span>
-        <h1>Všetky počítače na jednom mieste.</h1>
-        <p>Úvod necháva zákazníka rýchlo pochopiť službu. Tu je kompletná ponuka: filtrujte podľa rozpočtu, využitia a dostupnosti.</p>
+        <span class="kicker">Skladové počítače</span>
+        <h1>Vyberte si konkrétny overený počítač.</h1>
+        <p>Filtrujte podľa rozpočtu, výkonu a dostupnosti. Každý produkt má byť konkrétny skladový kus s jasným stavom, fotkami, zárukou a pripravenosťou na odoslanie.</p>
       </div>
       <div class="hero-panel">
         <div class="hero-card"><b>AI poradca ostáva dostupný</b><span>Ak zákazník nevie, čo kúpiť, bot odporučí vhodný kus podľa rozpočtu.</span></div>
@@ -42,15 +43,16 @@
     </section>
     <section class="wrap" aria-label="Filtre a produkty">
       <div class="toolbar">
-        <input id="search" type="search" placeholder="Hľadať podľa modelu, CPU, GPU, RAM...">
+        <input id="search" type="search" placeholder="Hľadať model, CPU, GPU, RAM..." aria-label="Hľadať produkt">
         <select id="category" aria-label="Kategória"><option value="all">Všetky typy</option><option value="gaming">Herné PC</option><option value="office">Práca / škola</option><option value="retro">Retro</option></select>
-        <select id="budget" aria-label="Rozpočet"><option value="99999">Bez limitu</option><option value="300">do 300 €</option><option value="500">do 500 €</option><option value="800">do 800 €</option></select>
+        <select id="budget" aria-label="Rozpočet"><option value="99999">Bez limitu</option><option value="300">do 300 €</option><option value="500">do 500 €</option><option value="800">do 800 €</option><option value="1200">do 1 200 €</option><option value="1500">do 1 500 €</option></select>
         <select id="sort" aria-label="Zoradenie"><option value="recommended">Odporúčané</option><option value="price-asc">Najlacnejšie</option><option value="price-desc">Najdrahšie</option><option value="stock">Skladom prvé</option></select>
       </div>
       <div class="meta"><span id="count">Načítavam...</span><a href="../sluzba-vyber-pc/">Neviete vybrať? Otvoriť službu výberu PC →</a></div>
+      <div class="trust" id="ctrax-products-trustline"><span>✅ Testované kusy</span><span>🧾 Faktúra</span><span>🛡️ Záruka</span><span>🚚 Doručenie po Slovensku</span></div>
       <div class="grid" id="productGrid"></div>
     </section>
   </main>
-  <script src="produkty.js?v=20260709final"></script>
+  <script src="produkty.js?v=20260709premium1"></script>
 </body>
 </html>
