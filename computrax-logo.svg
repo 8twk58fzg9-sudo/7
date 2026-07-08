@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="160" viewBox="0 0 720 160" fill="none">
+  <rect width="720" height="160" rx="34" fill="#F8FAFC"/>
+  <rect x="26" y="26" width="108" height="108" rx="28" fill="#0F172A"/>
+  <path d="M55 81c0-18.8 14.8-33.5 35-33.5 11.5 0 21.4 4.6 27.6 12.2L104.8 71c-3.6-4.2-8.5-6.7-14.5-6.7-9.5 0-16.5 7-16.5 16.7s7 16.7 16.5 16.7c6 0 10.9-2.5 14.5-6.7l12.8 11.3c-6.2 7.6-16.1 12.2-27.6 12.2-20.2 0-35-14.7-35-33.5Z" fill="#fff"/>
+  <path d="M166 59h44v15h-26v12h22v15h-22v25h-18V59Z" fill="#0F172A"/>
+  <text x="225" y="104" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800" letter-spacing="-2" fill="#0F172A">Computrax</text>
+  <circle cx="627" cy="78" r="8" fill="#2563EB"/>
+  <circle cx="654" cy="78" r="8" fill="#22C55E"/>
+</svg>
