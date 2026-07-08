@@ -1,6 +1,7 @@
 -- Computrax final commerce setup for Supabase
 -- Run in Supabase SQL Editor after reviewing with your accountant/developer.
 -- This file contains no secrets. Provider API keys belong in Supabase Edge Function Secrets.
+-- Safe to run more than once: policies are dropped/re-created because PostgreSQL does not support CREATE POLICY IF NOT EXISTS.
 
 -- 1) Orders: payment + invoice readiness
 alter table if exists public.orders add column if not exists payment_status text not null default 'unpaid';
@@ -92,7 +93,8 @@ create table if not exists public.admin_users (
 
 alter table public.admin_users enable row level security;
 
-create policy if not exists "Admin users can read own admin marker"
+drop policy if exists "Admin users can read own admin marker" on public.admin_users;
+create policy "Admin users can read own admin marker"
 on public.admin_users for select to authenticated
 using (user_id = (select auth.uid()));
 
@@ -113,19 +115,23 @@ revoke all on function public.is_admin() from public, anon;
 grant execute on function public.is_admin() to authenticated;
 
 -- 6) Admin policies for commerce logs/settings.
-create policy if not exists "Admins can read payment events"
+drop policy if exists "Admins can read payment events" on public.payment_events;
+create policy "Admins can read payment events"
 on public.payment_events for select to authenticated
 using (public.is_admin());
 
-create policy if not exists "Admins can read invoice events"
+drop policy if exists "Admins can read invoice events" on public.invoice_events;
+create policy "Admins can read invoice events"
 on public.invoice_events for select to authenticated
 using (public.is_admin());
 
-create policy if not exists "Admins can read commerce settings"
+drop policy if exists "Admins can read commerce settings" on public.commerce_settings;
+create policy "Admins can read commerce settings"
 on public.commerce_settings for select to authenticated
 using (public.is_admin());
 
-create policy if not exists "Admins can update commerce settings"
+drop policy if exists "Admins can update commerce settings" on public.commerce_settings;
+create policy "Admins can update commerce settings"
 on public.commerce_settings for update to authenticated
 using (public.is_admin())
 with check (public.is_admin());
@@ -162,15 +168,18 @@ revoke all on function public.reserve_inventory(bigint, int) from public, anon, 
 alter table if exists public.products enable row level security;
 alter table if exists public.orders enable row level security;
 
-create policy if not exists "Public can read active products"
+drop policy if exists "Public can read active products" on public.products;
+create policy "Public can read active products"
 on public.products for select to anon, authenticated
 using (status = 'active' and stock >= 0);
 
-create policy if not exists "Customers can read own orders"
+drop policy if exists "Customers can read own orders" on public.orders;
+create policy "Customers can read own orders"
 on public.orders for select to authenticated
 using (user_id = (select auth.uid()) or public.is_admin());
 
-create policy if not exists "Admins can update orders"
+drop policy if exists "Admins can update orders" on public.orders;
+create policy "Admins can update orders"
 on public.orders for update to authenticated
 using (public.is_admin())
 with check (public.is_admin());
