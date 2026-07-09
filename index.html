@@ -507,9 +507,95 @@ body.ctrax-premium #poradca .section-header {
 
 body.ctrax-premium #poradca .advisor-grid,
 #poradca .advisor-grid {
-  grid-template-columns: 1fr !important;
-  gap: 1.25rem !important;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr) !important;
+  gap: 1.5rem !important;
   align-items: start !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+body.ctrax-premium #poradca .advisor-output,
+#poradca .advisor-output {
+  display: flex !important;
+  flex-direction: column !important;
+  position: sticky !important;
+  top: 130px !important;
+  align-self: start !important;
+}
+
+body.ctrax-premium #poradca .advisor-output-head,
+#poradca .advisor-output-head {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+  margin-bottom: 0.6rem !important;
+}
+
+body.ctrax-premium #poradca .advisor-output-head h3,
+#poradca .advisor-output-head h3 {
+  margin: 0 !important;
+}
+
+body.ctrax-premium #poradca .advisor-output-badge,
+#poradca .advisor-output-badge {
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: #2563eb !important;
+  background: #e7edfc !important;
+  border-radius: 999px !important;
+  padding: 0.25rem 0.7rem !important;
+}
+
+body.ctrax-premium #poradca .advisor-result,
+#poradca .advisor-result {
+  flex: 1 1 auto !important;
+  min-height: 320px !important;
+}
+
+body.ctrax-premium #poradca .usecase-list,
+#poradca .usecase-list {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 0.9rem !important;
+  margin-top: 1.5rem !important;
+}
+
+body.ctrax-premium #poradca .usecase-item,
+#poradca .usecase-item {
+  grid-template-columns: auto 1fr !important;
+  grid-template-areas: "icon title" "cta cta" !important;
+  align-items: start !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(37, 99, 235, 0.14) !important;
+  border-radius: 16px !important;
+  padding: 1rem !important;
+  gap: 0.5rem 0.7rem !important;
+}
+
+body.ctrax-premium #poradca .usecase-item > span,
+#poradca .usecase-item > span {
+  grid-area: icon !important;
+  font-size: 1.4rem !important;
+}
+
+body.ctrax-premium #poradca .usecase-item > div,
+#poradca .usecase-item > div {
+  grid-area: title !important;
+}
+
+body.ctrax-premium #poradca .usecase-item b,
+#poradca .usecase-item b {
+  color: #0f172a !important;
+}
+
+body.ctrax-premium #poradca .usecase-item a,
+#poradca .usecase-item a {
+  grid-area: cta !important;
+  justify-self: start !important;
+  color: #2563eb !important;
+  font-weight: 800 !important;
+  font-size: 0.85rem !important;
 }
 
 body.ctrax-premium #poradca .advisor-panel,
@@ -661,6 +747,31 @@ body.ctrax-premium #poradca .advisor-match p,
   #poradca .advisor-grid,
   body.ctrax-premium #poradca .quiz-needs,
   #poradca .quiz-needs {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.ctrax-premium #poradca .advisor-output,
+  #poradca .advisor-output {
+    position: static !important;
+    top: auto !important;
+  }
+
+  body.ctrax-premium #poradca .advisor-result,
+  #poradca .advisor-result {
+    min-height: 0 !important;
+  }
+
+  body.ctrax-premium #poradca .usecase-list,
+  #poradca .usecase-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  body.ctrax-premium #poradca .usecase-list,
+  #poradca .usecase-list,
+  body.ctrax-premium #poradca .quiz-grid,
+  #poradca .quiz-grid {
     grid-template-columns: 1fr !important;
   }
 }
@@ -1309,13 +1420,13 @@ body.ctrax-premium #poradca .advisor-match p,
 <h2 class="section-title">Odporučíme PC podľa toho, čo reálne potrebujete</h2>
 </div>
 <div class="advisor-grid reveal">
-<div class="advisor-panel">
+<div class="advisor-panel advisor-form">
 <h3>Nájdite vhodný PC za menej než minútu</h3>
 <p>Zadajte využitie, rozpočet a prípadne konkrétne hry alebo programy. Výsledok ukáže percento zhody, dôvody odporúčania aj kompromisy.</p>
 <div class="advisor-tool">
 <div class="quiz-grid">
 <label class="quiz-field">Využitie
-                        <select data-action="advisor-change" id="advisor-use">
+<select data-action="advisor-change" id="advisor-use">
 <option value="office">Škola / kancelária</option>
 <option value="gaming">Hranie hier</option>
 <option value="retro">Retro hry a starší softvér</option>
@@ -1325,7 +1436,7 @@ body.ctrax-premium #poradca .advisor-match p,
 </select>
 </label>
 <label class="quiz-field">Rozpočet za jeden PC
-	                        <select data-action="advisor-change" id="advisor-budget">
+<select data-action="advisor-change" id="advisor-budget">
 <option value="500">do 500€</option>
 <option selected="" value="1000">do 1000€</option>
 <option value="1500">do 1500€</option>
@@ -1335,7 +1446,7 @@ body.ctrax-premium #poradca .advisor-match p,
 </select>
 </label>
 <label class="quiz-field">Počet kusov
-                        <select data-action="advisor-change" id="advisor-quantity">
+<select data-action="advisor-change" id="advisor-quantity">
 <option value="1">1 kus</option>
 <option value="2">2 až 5 kusov</option>
 <option value="6">6 až 20 kusov</option>
@@ -1343,7 +1454,7 @@ body.ctrax-premium #poradca .advisor-match p,
 </select>
 </label>
 <label class="quiz-field">Programy alebo hry (nepovinné)
-                        <input id="advisor-programs" maxlength="160" placeholder="napr. AutoCAD, Fortnite, účtovníctvo" type="text"/>
+<input id="advisor-programs" maxlength="160" placeholder="napr. AutoCAD, Fortnite, účtovníctvo" type="text"/>
 </label>
 <div class="quiz-field full">
 <span>Čo ešte potrebujete?</span>
@@ -1356,9 +1467,14 @@ body.ctrax-premium #poradca .advisor-match p,
 </div>
 </div>
 <button class="quiz-submit" data-action="run-advisor" type="button">Nájsť najlepšiu zhodu</button>
-<div aria-live="polite" class="advisor-result" id="advisor-result">Vyplňte krátky výber a poradca zoradí skladové PC podľa zhody, výkonu a rozpočtu.</div>
 </div>
-<div class="usecase-list">
+</div>
+<aside class="advisor-panel advisor-output">
+<div class="advisor-output-head"><span class="advisor-output-badge">Výsledok</span><h3>Odporúčanie na mieru</h3></div>
+<div aria-live="polite" class="advisor-result" id="advisor-result">Vyplňte krátky výber vľavo a poradca zoradí skladové PC podľa zhody, výkonu a rozpočtu — ukáže percento zhody, dôvody aj kompromisy.</div>
+</aside>
+</div>
+<div class="usecase-list reveal">
 <div class="usecase-item">
 <span>💼</span>
 <div><b>Kancelária a škola</b><small>i5/Ryzen 5, 16GB RAM, SSD, nízka spotreba.</small></div>
@@ -1378,8 +1494,6 @@ body.ctrax-premium #poradca .advisor-match p,
 <span>📦</span>
 <div><b>Potrebujem skladový kus</b><small>Vyberajte iba produkty, ktoré sú momentálne dostupné.</small></div>
 <a data-action="quick-filter" data-filter-type="stock" data-filter-value="skladom" href="#ponuka">Skladom</a>
-</div>
-</div>
 </div>
 </div>
 </section>

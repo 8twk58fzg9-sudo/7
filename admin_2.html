@@ -65,11 +65,13 @@
 <div class="gate" id="gate">
   <div class="gate-box">
     <div class="gate-logo"><img src="computrax-logo.png?v=20260614b" alt="Computrax" width="190" height="95"></div>
-    <div class="gate-sub">Admin Panel — prihlásenie cez Supabase</div>
-    <input class="gate-input" id="gate-email" type="email" placeholder="E-mail" autocomplete="username" spellcheck="false" maxlength="254" data-admin-enter="login">
-    <input class="gate-input" id="gate-password" type="password" placeholder="Heslo" autocomplete="current-password" spellcheck="false" maxlength="128" data-admin-enter="login">
-    <button type="button" class="gate-btn" id="login-btn" data-admin-action="login">Prihlásiť sa</button>
-    <div class="gate-error" id="gate-err" role="alert">Prihlásenie zlyhalo</div>
+    <form id="admin-login-form" novalidate onsubmit="event.preventDefault(); login();">
+      <div class="gate-sub">Admin Panel — prihlásenie cez Supabase</div>
+      <input class="gate-input" id="gate-email" type="email" placeholder="E-mail" autocomplete="username" spellcheck="false" maxlength="254">
+      <input class="gate-input" id="gate-password" type="password" placeholder="Heslo" autocomplete="current-password" spellcheck="false" maxlength="128">
+      <button type="submit" class="gate-btn" id="login-btn">Prihlásiť sa</button>
+      <div class="gate-error" id="gate-err" role="alert">Prihlásenie zlyhalo</div>
+    </form>
   </div>
 </div>
 
@@ -1990,6 +1992,6 @@ USING (bucket_id = 'product-images' AND public.is_admin());</pre>
   </div>
 </div>
 
-<script src="assets/js/admin-2-1.js?v=20260709supabasegate1"></script>
+<script src="assets/js/admin-2-1.js?v=20260709supabasegate2"></script>
 </body>
 </html>
