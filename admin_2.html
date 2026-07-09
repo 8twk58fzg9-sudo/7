@@ -26,6 +26,7 @@
 <script src="config.js?v=20260708nine"></script>
 <script src="assets/js/admin-1-1.js?v=20260708split9"></script>
 <link rel="stylesheet" href="assets/css/admin-1.css?v=20260708split9">
+<link rel="stylesheet" href="assets/css/admin-polish.css?v=20260709a">
 </head>
 <body>
 
@@ -402,10 +403,10 @@ INSERT INTO site_settings(key, settings) VALUES ('main', jsonb_build_object(
   'announcementLink','#ponuka',
   'announcementLinkLabel','Pozrieť ponuku',
   'companyName','Computrax.sk',
-  'companyAddress','Doplň adresu predávajúceho',
-  'companyId','Doplň IČO',
-  'taxId','Doplň DIČ',
-  'vatId','',
+  'companyAddress','Rešov 32, 08621',
+  'companyId','46882812',
+  'taxId','2023703297',
+  'vatId','SK2023703297',
   'bankAccount','',
   'invoiceVatMode','no_vat_note',
   'legalUpdated','06.06.2026',
@@ -551,6 +552,9 @@ DECLARE
   service_price NUMERIC;
   service_total NUMERIC := 0;
   delivery_fee NUMERIC := 0;
+  delivery_days INTEGER := 0;
+  site_settings_json JSONB := '{}'::jsonb;
+  delivery_method JSONB;
   existing_order_id BIGINT;
   recent_order_count INTEGER;
   unexpected_key TEXT;
@@ -658,18 +662,41 @@ BEGIN
     RAISE EXCEPTION 'Invalid customer phone';
   END IF;
 
-  IF submitted_delivery_key = 'kurier' THEN
-    delivery_fee := 5.90;
-    submitted_delivery := 'Kuriér GLS - 5,90 EUR (do 2 dní)';
-  ELSIF submitted_delivery_key = 'packeta' THEN
-    delivery_fee := 3.90;
-    submitted_delivery := 'Packeta - 3,90 EUR (do 3 dní)';
-  ELSIF submitted_delivery_key = 'osobne' THEN
-    delivery_fee := 0;
-    submitted_delivery := 'Osobný odber - zdarma (Bratislava)';
-  ELSE
+  SELECT COALESCE(settings, '{}'::jsonb)
+    INTO site_settings_json
+    FROM public.site_settings
+   WHERE key = 'main'
+   LIMIT 1;
+
+  SELECT method
+    INTO delivery_method
+    FROM jsonb_array_elements(COALESCE(site_settings_json->'deliveryMethods', '[]'::jsonb)) AS method
+	   WHERE method->>'id' = submitted_delivery_key
+	     AND lower(COALESCE(method->>'enabled', 'true')) <> 'false'
+	   LIMIT 1;
+
+  IF delivery_method IS NULL THEN
+    SELECT method
+      INTO delivery_method
+      FROM jsonb_array_elements(
+        '[{"id":"kurier","name":"Kuriér GLS","price":5.90,"days":2},{"id":"packeta","name":"Packeta","price":3.90,"days":3},{"id":"osobne","name":"Osobný odber","price":0,"days":0}]'::jsonb
+      ) AS method
+     WHERE method->>'id' = submitted_delivery_key
+     LIMIT 1;
+  END IF;
+
+  IF delivery_method IS NULL THEN
     RAISE EXCEPTION 'Invalid delivery method';
   END IF;
+
+  delivery_fee := GREATEST(0, LEAST(500, COALESCE((delivery_method->>'price')::NUMERIC, 0)));
+  delivery_days := GREATEST(0, LEAST(60, COALESCE((delivery_method->>'days')::INTEGER, 0)));
+  submitted_delivery := COALESCE(NULLIF(BTRIM(delivery_method->>'name'), ''), submitted_delivery_key)
+    || ' - '
+    || CASE WHEN delivery_fee = 0 THEN 'zdarma' ELSE replace(to_char(delivery_fee, 'FM999990.00'), '.', ',') || ' EUR' END
+    || ' ('
+    || CASE WHEN delivery_days > 0 THEN 'do ' || delivery_days || ' dní' ELSE 'podľa dohody' END
+    || ')';
 
   IF delivery_fee > 0 AND COALESCE(char_length(submitted_address), 0) < 8 THEN
     RAISE EXCEPTION 'Delivery address is required';
@@ -1203,6 +1230,21 @@ USING (bucket_id = 'product-images' AND public.is_admin());</pre>
         <label class="form-label">Dátum právnych textov</label>
         <input class="form-input" id="s-legal-updated" maxlength="40">
       </div>
+      <div class="form-group form-full" style="border:1px solid rgba(59,130,246,0.35);border-radius:14px;padding:1rem;background:rgba(59,130,246,0.06)">
+        <label class="form-label">Doprava - ceny a dodanie</label>
+        <small style="color:var(--muted);display:block;margin-bottom:0.75rem">Tieto ceny sa zobrazia v košíku a použijú sa pri kontrole objednávky. Po zmene v Supabase spusti aj najnovší SQL setup, aby server počítal rovnaké ceny.</small>
+        <div class="form-grid" style="grid-template-columns:1.3fr 0.7fr 0.7fr;gap:0.75rem">
+          <div class="form-group"><label class="form-label">Kuriér - názov</label><input class="form-input" id="s-delivery-kurier-name" maxlength="80"></div>
+          <div class="form-group"><label class="form-label">Cena €</label><input class="form-input" id="s-delivery-kurier-price" type="number" min="0" max="500" step="0.01"></div>
+          <div class="form-group"><label class="form-label">Dodanie dní</label><input class="form-input" id="s-delivery-kurier-days" type="number" min="0" max="60" step="1"></div>
+          <div class="form-group"><label class="form-label">Packeta - názov</label><input class="form-input" id="s-delivery-packeta-name" maxlength="80"></div>
+          <div class="form-group"><label class="form-label">Cena €</label><input class="form-input" id="s-delivery-packeta-price" type="number" min="0" max="500" step="0.01"></div>
+          <div class="form-group"><label class="form-label">Dodanie dní</label><input class="form-input" id="s-delivery-packeta-days" type="number" min="0" max="60" step="1"></div>
+          <div class="form-group"><label class="form-label">Osobný odber - názov</label><input class="form-input" id="s-delivery-osobne-name" maxlength="80"></div>
+          <div class="form-group"><label class="form-label">Cena €</label><input class="form-input" id="s-delivery-osobne-price" type="number" min="0" max="500" step="0.01"></div>
+          <div class="form-group"><label class="form-label">Dodanie dní</label><input class="form-input" id="s-delivery-osobne-days" type="number" min="0" max="60" step="1"></div>
+        </div>
+      </div>
       <div class="form-group">
         <label class="form-label">Platobná brána</label>
         <select class="form-select" id="s-payment-gateway">
@@ -1228,24 +1270,24 @@ USING (bucket_id = 'product-images' AND public.is_admin());</pre>
         <input class="form-input" id="s-gopay-function-url" maxlength="240" placeholder="https://...supabase.co/functions/v1/gopay-create-payment">
       </div>
       <div class="form-group">
-        <label class="form-label">iDoklad režim</label>
+        <label class="form-label">Faktúry</label>
         <select class="form-select" id="s-idoklad-mode">
           <option value="disabled">Vypnuté</option>
           <option value="manual_export">Ručný export / HTML faktúry</option>
-          <option value="edge_function">Supabase Edge Function po zaplatení</option>
+          <option value="edge_function">Automatická faktúra cez Edge Function neskôr</option>
         </select>
       </div>
       <div class="form-group">
-        <label class="form-label">iDoklad Edge Function URL</label>
-        <input class="form-input" id="s-idoklad-function-url" maxlength="240" placeholder="https://...supabase.co/functions/v1/idoklad-create-invoice">
+        <label class="form-label">Fakturačná Edge Function URL (voliteľné)</label>
+        <input class="form-input" id="s-idoklad-function-url" maxlength="240" placeholder="Nechaj prázdne pri ručných HTML faktúrach">
       </div>
       <div class="form-group">
         <label class="form-label">E-mail Edge Function URL</label>
         <input class="form-input" id="s-email-function-url" maxlength="240" placeholder="https://...supabase.co/functions/v1/send-notification">
       </div>
       <div class="form-group form-full" style="border:1px solid rgba(59,130,246,0.35);border-radius:14px;padding:1rem;background:rgba(59,130,246,0.06)">
-        <label class="form-label">Integrácie GoPay + iDoklad</label>
-        <small style="color:var(--muted);display:block;margin-bottom:0.75rem">Tajné API kľúče nepatria do HTML. Sem patria iba verejné URL tvojich Supabase Edge Functions; client secret, GoPay credentials, SMTP a iDoklad tokeny budú uložené ako Supabase secrets.</small>
+        <label class="form-label">Platby a faktúry</label>
+        <small style="color:var(--muted);display:block;margin-bottom:0.75rem">Na spustenie nepotrebuješ fakturačný systém. Faktúry vieš stiahnuť ako HTML/PDF z objednávok. Tajné API kľúče nepatria do HTML; sem patria iba verejné URL Supabase Edge Functions, ak ich neskôr zapneš.</small>
         <button class="btn btn-ghost btn-sm" type="button" data-admin-action="copyIntegrationBlueprint">Kopírovať integračný plán</button>
       </div>
       <div class="form-group">

@@ -1,5 +1,5 @@
 // Copy this file to config.js during deployment.
-// Do not put service_role, secret, GoPay, iDoklad, SMTP, or other private keys here.
+// Do not put service_role, secret, GoPay, fakturačný systém, SMTP, or other private keys here.
 // Browser config may contain only public/publishable values.
 window.COMPUTRAX_CONFIG = Object.freeze({
   SUPABASE_URL: 'https://YOUR_PROJECT_REF.supabase.co',

@@ -1,34 +1,34 @@
 // Computrax public runtime config.
 // This file may be uploaded to GitHub Pages only with public/publishable values.
-// Never paste private backend, SMTP, payment, accounting, warehouse, or provider secret keys here.
+// Never paste service_role, SMTP, GoPay, fakturačný systém, provider private, or other secret keys here.
 window.COMPUTRAX_CONFIG = Object.freeze({
   SUPABASE_URL: 'https://aryjaqexfgalxaiseqtp.supabase.co',
   SUPABASE_ANON_KEY: 'sb_publishable_x6sSWhw3on9bi_C1EQdTCg_nz09VWoX',
   SUPPORT_EMAIL: 'computerax.sk@gmail.com',
   EMAIL_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/send-notification',
-  ORDER_STATUS_EMAIL_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/notify-order-status',
-  CREATE_PAYMENT_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/create-payment',
-  CREATE_INVOICE_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/create-invoice',
   WAREHOUSE_SYNC_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/warehouse-sync',
-  PC_ASSISTANT_ENDPOINT: 'https://aryjaqexfgalxaiseqtp.supabase.co/functions/v1/pc-assistant',
-  // Voliteľné: po vytvorení Microsoft Clarity vlož iba verejné ID projektu.
+  // Optional: after creating Microsoft Clarity, paste only the public project ID here.
   CLARITY_PROJECT_ID: ''
 });
 
-// Spoločná kompatibilná vrstva pre verejnú stránku aj admin na GitHub Pages.
-// Stabilná verzia: pôvodné poradie načítania, ale bez AI picker/bot súborov.
-const computraxRuntimeBase = new URL('.', document.currentScript?.src || location.href).href;
-function loadComputraxScript(file, version) {
-  const script = document.createElement('script');
-  script.src = computraxRuntimeBase + file + '?v=' + version;
-  script.async = false;
-  document.head.appendChild(script);
-}
+// Small compatibility layer shared by the storefront and admin on GitHub Pages.
+const computraxEnhancements = document.createElement('script');
+computraxEnhancements.src = 'site-enhancements.js?v=20260708finalLiveSupabase';
+computraxEnhancements.async = false;
+document.head.appendChild(computraxEnhancements);
 
-loadComputraxScript('site-enhancements.js', '20260709noai1');
-loadComputraxScript('site-hardened.js', '20260709noai1');
-loadComputraxScript('site-9.js', '20260709noai1');
-loadComputraxScript('site-deploy-fix.js', '20260709noai1');
-loadComputraxScript('site-overrides.js', '20260709noai1');
-loadComputraxScript('site-final-polish.js', '20260709noai1');
-loadComputraxScript('site-premium-upgrade.js', '20260709noai1');
+const computraxHardened = document.createElement('script');
+computraxHardened.src = 'site-hardened.js?v=20260708revenueSecurity';
+computraxHardened.async = false;
+document.head.appendChild(computraxHardened);
+
+
+const computraxNine = document.createElement('script');
+computraxNine.src = 'site-9.js?v=20260708nineReady';
+computraxNine.async = false;
+document.head.appendChild(computraxNine);
+
+const computraxDeployFix = document.createElement('script');
+computraxDeployFix.src = 'site-deploy-fix.js?v=20260708deploy95';
+computraxDeployFix.async = false;
+document.head.appendChild(computraxDeployFix);

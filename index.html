@@ -123,6 +123,539 @@
     }
     </script>
 <link href="assets/css/index-1.css?v=20260708split9" rel="stylesheet"/>
+<style id="ctrax-first-view-hero-fix">
+body.ctrax-premium .hero,
+.hero {
+  min-height: 100vh !important;
+  align-items: center !important;
+}
+
+body.ctrax-premium .hero h1,
+.hero h1 {
+  color: #071126 !important;
+}
+
+body.ctrax-premium .hero h1 span,
+.hero h1 span {
+  color: #2563eb !important;
+}
+
+body.ctrax-premium .hero .btn-ghost,
+.hero .btn-ghost {
+  color: #1d4ed8 !important;
+  background: rgba(255, 255, 255, 0.74) !important;
+  border-color: rgba(37, 99, 235, 0.22) !important;
+}
+
+body.ctrax-premium .hero .btn-primary,
+body.ctrax-premium .hero .btn-ghost,
+.hero .btn-primary,
+.hero .btn-ghost {
+  min-height: 74px !important;
+  min-width: clamp(260px, 20vw, 380px) !important;
+  padding: 1.3rem 2.6rem !important;
+  font-size: clamp(1.2rem, 1.45vw, 1.65rem) !important;
+  font-weight: 900 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+body.ctrax-premium .hero .hero-btns,
+.hero .hero-btns {
+  gap: 1.2rem !important;
+}
+
+body.ctrax-premium .hero .btn-ghost:hover,
+.hero .btn-ghost:hover {
+  color: #0f172a !important;
+  border-color: #2563eb !important;
+}
+
+body.ctrax-premium .ctrax-featured-hero,
+.ctrax-featured-hero {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+body.ctrax-premium .ctrax-featured-device,
+.ctrax-featured-device {
+  order: 1 !important;
+  width: 100% !important;
+  min-height: clamp(260px, 36vw, 520px) !important;
+}
+
+body.ctrax-premium .ctrax-featured-copy,
+.ctrax-featured-copy {
+  order: 2 !important;
+  width: 100% !important;
+}
+
+body.ctrax-premium .ctrax-featured-eyebrow,
+body.ctrax-premium .ctrax-featured-sub,
+.ctrax-featured-eyebrow,
+.ctrax-featured-sub {
+  display: none !important;
+}
+
+body.ctrax-premium .ctrax-featured-name,
+.ctrax-featured-name {
+  font-size: clamp(1.45rem, 2.1vw, 2.25rem) !important;
+  margin: 0 0 0.85rem !important;
+  color: #0f172a !important;
+}
+
+body.ctrax-premium .hero p,
+body.ctrax-premium .hero .trust-item,
+body.ctrax-premium .ctrax-featured-spec span,
+body.ctrax-premium .ctrax-featured-note,
+.hero p,
+.hero .trust-item,
+.ctrax-featured-spec span,
+.ctrax-featured-note {
+  color: #526174 !important;
+}
+
+body.ctrax-premium .ctrax-featured-spec b,
+body.ctrax-premium .ctrax-featured-price,
+body.ctrax-premium .ctrax-featured-actions .detail-btn,
+body.ctrax-premium .ctrax-featured-actions a.detail-btn,
+body.ctrax-premium .ctrax-featured-actions button.detail-btn,
+.ctrax-featured-spec b,
+.ctrax-featured-price,
+.ctrax-featured-actions .detail-btn,
+.ctrax-featured-actions a.detail-btn,
+.ctrax-featured-actions button.detail-btn {
+  color: #0f172a !important;
+}
+
+body.ctrax-premium .ctrax-featured-actions .detail-btn,
+body.ctrax-premium .ctrax-featured-actions a.detail-btn,
+body.ctrax-premium .ctrax-featured-actions button.detail-btn,
+.ctrax-featured-actions .detail-btn,
+.ctrax-featured-actions a.detail-btn,
+.ctrax-featured-actions button.detail-btn {
+  background: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+body.ctrax-premium .ctrax-featured-actions .btn-primary,
+.ctrax-featured-actions .btn-primary {
+  color: #ffffff !important;
+}
+
+:root[data-theme="light"] .qty-btn,
+body.ctrax-premium .qty-btn,
+.qty-btn {
+  color: #0f172a !important;
+  background: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.16) !important;
+}
+
+:root[data-theme="light"] .qty-btn:hover,
+body.ctrax-premium .qty-btn:hover,
+.qty-btn:hover {
+  color: #ffffff !important;
+  background: #2563eb !important;
+  border-color: #2563eb !important;
+}
+
+body.ctrax-premium .legal-card,
+:root[data-theme="light"] .legal-card,
+body.ctrax-premium .faq-item,
+:root[data-theme="light"] .faq-item,
+body.ctrax-premium .process-card,
+:root[data-theme="light"] .process-card,
+body.ctrax-premium .trust-card,
+:root[data-theme="light"] .trust-card,
+body.ctrax-premium .service-market-card,
+:root[data-theme="light"] .service-market-card,
+body.ctrax-premium .b2b-card,
+:root[data-theme="light"] .b2b-card,
+body.ctrax-premium .seo-card,
+:root[data-theme="light"] .seo-card {
+  background: #ffffff !important;
+  color: #526174 !important;
+  border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+body.ctrax-premium .legal-card h3,
+:root[data-theme="light"] .legal-card h3,
+body.ctrax-premium .faq-q,
+:root[data-theme="light"] .faq-q,
+body.ctrax-premium .process-card strong,
+:root[data-theme="light"] .process-card strong,
+body.ctrax-premium .trust-card h3,
+:root[data-theme="light"] .trust-card h3,
+body.ctrax-premium .trust-card strong,
+:root[data-theme="light"] .trust-card strong,
+body.ctrax-premium .service-market-card h3,
+:root[data-theme="light"] .service-market-card h3,
+body.ctrax-premium .service-market-card strong,
+:root[data-theme="light"] .service-market-card strong,
+body.ctrax-premium .b2b-card strong,
+:root[data-theme="light"] .b2b-card strong,
+body.ctrax-premium .seo-card h3,
+:root[data-theme="light"] .seo-card h3,
+body.ctrax-premium .seo-card strong,
+:root[data-theme="light"] .seo-card strong {
+  color: #0f172a !important;
+}
+
+body.ctrax-premium .legal-card p,
+:root[data-theme="light"] .legal-card p,
+body.ctrax-premium .faq-a,
+:root[data-theme="light"] .faq-a,
+body.ctrax-premium .process-card p,
+:root[data-theme="light"] .process-card p,
+body.ctrax-premium .trust-card p,
+:root[data-theme="light"] .trust-card p,
+body.ctrax-premium .service-market-card p,
+:root[data-theme="light"] .service-market-card p,
+body.ctrax-premium .b2b-card span,
+:root[data-theme="light"] .b2b-card span,
+body.ctrax-premium .seo-card p,
+:root[data-theme="light"] .seo-card p {
+  color: #526174 !important;
+}
+
+body.ctrax-premium .legal-card a,
+:root[data-theme="light"] .legal-card a,
+body.ctrax-premium .seo-card a,
+:root[data-theme="light"] .seo-card a {
+  color: #1d4ed8 !important;
+}
+
+#pravne-info .legal-card,
+.legal-card {
+  color: #f4f7fb !important;
+}
+
+#pravne-info .legal-card h1,
+#pravne-info .legal-card h2,
+#pravne-info .legal-card h3,
+#pravne-info .legal-card h4,
+#pravne-info .legal-card strong,
+.legal-card h1,
+.legal-card h2,
+.legal-card h3,
+.legal-card h4,
+.legal-card strong {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+#pravne-info .legal-card p,
+#pravne-info .legal-card li,
+#pravne-info .legal-card span,
+.legal-card p,
+.legal-card li,
+.legal-card span {
+  color: #b8c4d8 !important;
+  opacity: 1 !important;
+}
+
+#pravne-info .legal-card a,
+.legal-card a {
+  color: #93c5fd !important;
+}
+
+.legal-card[style*="background"],
+.faq-item[style*="background"],
+.process-card[style*="background"],
+.trust-card[style*="background"],
+.service-market-card[style*="background"],
+.b2b-card[style*="background"],
+.seo-card[style*="background"],
+.info-card[style*="background"],
+.policy-card[style*="background"],
+.dark-card,
+[class*="dark"] {
+  color: #f8fbff !important;
+}
+
+.legal-card[style*="background"] h1,
+.legal-card[style*="background"] h2,
+.legal-card[style*="background"] h3,
+.legal-card[style*="background"] h4,
+.faq-item[style*="background"] h1,
+.faq-item[style*="background"] h2,
+.faq-item[style*="background"] h3,
+.faq-item[style*="background"] h4,
+.process-card[style*="background"] h1,
+.process-card[style*="background"] h2,
+.process-card[style*="background"] h3,
+.process-card[style*="background"] h4,
+.trust-card[style*="background"] h1,
+.trust-card[style*="background"] h2,
+.trust-card[style*="background"] h3,
+.trust-card[style*="background"] h4,
+.service-market-card[style*="background"] h1,
+.service-market-card[style*="background"] h2,
+.service-market-card[style*="background"] h3,
+.service-market-card[style*="background"] h4,
+.b2b-card[style*="background"] h1,
+.b2b-card[style*="background"] h2,
+.b2b-card[style*="background"] h3,
+.b2b-card[style*="background"] h4,
+.seo-card[style*="background"] h1,
+.seo-card[style*="background"] h2,
+.seo-card[style*="background"] h3,
+.seo-card[style*="background"] h4,
+.info-card[style*="background"] h1,
+.info-card[style*="background"] h2,
+.info-card[style*="background"] h3,
+.info-card[style*="background"] h4,
+.policy-card[style*="background"] h1,
+.policy-card[style*="background"] h2,
+.policy-card[style*="background"] h3,
+.policy-card[style*="background"] h4,
+.dark-card h1,
+.dark-card h2,
+.dark-card h3,
+.dark-card h4,
+[class*="dark"] h1,
+[class*="dark"] h2,
+[class*="dark"] h3,
+[class*="dark"] h4 {
+  color: #ffffff !important;
+}
+
+.legal-card[style*="background"] p,
+.legal-card[style*="background"] span,
+.legal-card[style*="background"] li,
+.faq-item[style*="background"] p,
+.faq-item[style*="background"] span,
+.faq-item[style*="background"] li,
+.process-card[style*="background"] p,
+.process-card[style*="background"] span,
+.process-card[style*="background"] li,
+.trust-card[style*="background"] p,
+.trust-card[style*="background"] span,
+.trust-card[style*="background"] li,
+.service-market-card[style*="background"] p,
+.service-market-card[style*="background"] span,
+.service-market-card[style*="background"] li,
+.b2b-card[style*="background"] p,
+.b2b-card[style*="background"] span,
+.b2b-card[style*="background"] li,
+.seo-card[style*="background"] p,
+.seo-card[style*="background"] span,
+.seo-card[style*="background"] li,
+.info-card[style*="background"] p,
+.info-card[style*="background"] span,
+.info-card[style*="background"] li,
+.policy-card[style*="background"] p,
+.policy-card[style*="background"] span,
+.policy-card[style*="background"] li,
+.dark-card p,
+.dark-card span,
+.dark-card li,
+[class*="dark"] p,
+[class*="dark"] span,
+[class*="dark"] li {
+  color: #cbd5e1 !important;
+}
+
+.legal-card[style*="background"] a,
+.faq-item[style*="background"] a,
+.process-card[style*="background"] a,
+.trust-card[style*="background"] a,
+.service-market-card[style*="background"] a,
+.b2b-card[style*="background"] a,
+.seo-card[style*="background"] a,
+.info-card[style*="background"] a,
+.policy-card[style*="background"] a,
+.dark-card a,
+[class*="dark"] a {
+  color: #93c5fd !important;
+}
+
+body.ctrax-premium .ctrax-featured-specs,
+.ctrax-featured-specs {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+body.ctrax-premium .ctrax-featured-actions,
+.ctrax-featured-actions {
+  margin-top: 1rem !important;
+}
+
+html {
+  scroll-padding-top: 118px !important;
+}
+
+#ponuka,
+#poradca,
+[data-product-card] {
+  scroll-margin-top: 118px !important;
+}
+
+body.ctrax-premium #poradca .section-header {
+  max-width: 880px !important;
+}
+
+body.ctrax-premium #poradca .advisor-grid,
+#poradca .advisor-grid {
+  grid-template-columns: minmax(280px, 0.85fr) minmax(360px, 1.15fr) !important;
+  gap: 1.25rem !important;
+  align-items: start !important;
+}
+
+body.ctrax-premium #poradca .advisor-panel,
+#poradca .advisor-panel {
+  background: #ffffff !important;
+  border: 1px solid rgba(37, 99, 235, 0.16) !important;
+  border-radius: 22px !important;
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.06) !important;
+  color: #526174 !important;
+}
+
+body.ctrax-premium #poradca .advisor-panel h3,
+#poradca .advisor-panel h3 {
+  color: #0f172a !important;
+  font-size: clamp(1.35rem, 2vw, 2rem) !important;
+}
+
+body.ctrax-premium #poradca .advisor-panel p,
+#poradca .advisor-panel p,
+body.ctrax-premium #poradca .condition-grade span,
+#poradca .condition-grade span,
+body.ctrax-premium #poradca .usecase-item small,
+#poradca .usecase-item small,
+body.ctrax-premium #poradca .advisor-result,
+#poradca .advisor-result {
+  color: #526174 !important;
+}
+
+body.ctrax-premium #poradca .condition-grade,
+#poradca .condition-grade,
+body.ctrax-premium #poradca .test-check,
+#poradca .test-check,
+body.ctrax-premium #poradca .usecase-item,
+#poradca .usecase-item {
+  background: #f8fbff !important;
+  border-color: rgba(37, 99, 235, 0.14) !important;
+  color: #526174 !important;
+}
+
+body.ctrax-premium #poradca .condition-grade strong,
+#poradca .condition-grade strong,
+body.ctrax-premium #poradca .usecase-item b,
+#poradca .usecase-item b {
+  color: #0f172a !important;
+}
+
+body.ctrax-premium #poradca .advisor-tool,
+#poradca .advisor-tool {
+  background: linear-gradient(180deg, #f8fbff 0%, #edf5ff 100%) !important;
+  border: 1px solid rgba(37, 99, 235, 0.16) !important;
+  border-radius: 24px !important;
+  padding: clamp(1rem, 2vw, 1.35rem) !important;
+}
+
+body.ctrax-premium #poradca .quiz-grid,
+#poradca .quiz-grid {
+  gap: 1rem !important;
+}
+
+body.ctrax-premium #poradca .quiz-field,
+#poradca .quiz-field {
+  color: #526174 !important;
+  font-size: 0.95rem !important;
+  font-weight: 850 !important;
+}
+
+body.ctrax-premium #poradca select,
+#poradca select,
+body.ctrax-premium #poradca input[type="text"],
+#poradca input[type="text"] {
+  min-height: 54px !important;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: rgba(15, 23, 42, 0.14) !important;
+  border-radius: 14px !important;
+  font-weight: 750 !important;
+}
+
+body.ctrax-premium #poradca input::placeholder,
+#poradca input::placeholder {
+  color: #8a94a3 !important;
+}
+
+body.ctrax-premium #poradca .quiz-needs,
+#poradca .quiz-needs {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0.75rem !important;
+}
+
+body.ctrax-premium #poradca .quiz-need,
+#poradca .quiz-need {
+  min-height: 64px !important;
+  background: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+  border-radius: 16px !important;
+  color: #526174 !important;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+}
+
+body.ctrax-premium #poradca .quiz-need input,
+#poradca .quiz-need input {
+  width: 24px !important;
+  height: 24px !important;
+  accent-color: #2563eb !important;
+}
+
+body.ctrax-premium #poradca .quiz-submit,
+#poradca .quiz-submit {
+  min-height: 64px !important;
+  border-radius: 18px !important;
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem) !important;
+}
+
+body.ctrax-premium #poradca .advisor-match,
+#poradca .advisor-match {
+  background: #ffffff !important;
+  border-color: rgba(37, 99, 235, 0.18) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.05) !important;
+  padding: 1rem !important;
+}
+
+body.ctrax-premium #poradca .advisor-match strong,
+#poradca .advisor-match strong,
+body.ctrax-premium #poradca .advisor-match-head strong,
+#poradca .advisor-match-head strong {
+  color: #0f172a !important;
+}
+
+body.ctrax-premium #poradca .advisor-match p,
+#poradca .advisor-match p {
+  color: #526174 !important;
+}
+
+.ctrax-search-hit {
+  outline: 4px solid rgba(37, 99, 235, 0.36) !important;
+  box-shadow: 0 18px 60px rgba(37, 99, 235, 0.18) !important;
+  transition: outline-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+@media (max-width: 980px) {
+  body.ctrax-premium .hero,
+  .hero {
+    min-height: auto;
+  }
+
+  body.ctrax-premium #poradca .advisor-grid,
+  #poradca .advisor-grid,
+  body.ctrax-premium #poradca .quiz-needs,
+  #poradca .quiz-needs {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
 <link href="sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml"/>
 <link href="https://computrax.sk/repasovane-pc/" rel="alternate" title="Repasované PC"/>
 <link href="https://computrax.sk/lacne-pc/" rel="alternate" title="Lacné PC"/>
@@ -394,24 +927,12 @@
 <!-- HERO -->
 <section class="hero">
 <div class="hero-content">
-<div class="badge"><span class="badge-dot"></span> <span id="hero-badge-text">Testované repasované PC skladom</span></div>
 <div class="site-announcement" id="site-announcement"></div>
-<h1 id="hero-title">Nájdi si počítač <span>za pár klikov.</span></h1>
+<h1 id="hero-title">Vyber si svoj <span>ďalší PC.</span></h1>
 <p id="hero-text">Herné a repasované PC — otestované, so zárukou a jasnou cenou.</p>
-<div aria-label="Vyber si cestu" class="hero-paths" role="group">
-<a class="hero-path" href="#ponuka">
-<span aria-hidden="true" class="hero-path-icon">🖥️</span>
-<strong>Kúpiť hotový PC</strong>
-<span class="hero-path-sub">Vyber si zo skladu — pripravené na odoslanie.</span>
-<span class="hero-path-cta">Prezrieť ponuku →</span>
-</a>
-<span aria-hidden="true" class="hero-path-or">alebo</span>
-<a class="hero-path" href="#poradca">
-<span aria-hidden="true" class="hero-path-icon">🛠️</span>
-<strong>PC na mieru</strong>
-<span class="hero-path-sub">Povedz nám, na čo ho chceš — poradíme a poskladáme.</span>
-<span class="hero-path-cta">Poradiť sa →</span>
-</a>
+<div class="hero-btns">
+<a class="btn-primary" href="#ponuka">Pozrieť počítače</a>
+<a class="btn-ghost" href="#poradca">Poradiť s výberom</a>
 </div>
 <div class="trust-row hero-cols" id="hero-trust-row">
 <div class="trust-item"><span>✓</span> Otestované pred odoslaním</div>
@@ -788,7 +1309,7 @@
 <p>Zákazník sa vie prihlásiť, pozrieť objednávky, stav platby, faktúru a pripraviť vrátenie alebo reklamáciu.</p>
 </div>
 <div class="trust-card">
-<strong>Pripravené na GoPay a iDoklad</strong>
+<strong>Pripravené na online platby a faktúry</strong>
 <p>Platba, fakturačné údaje a stav dokladu sú pripravené tak, aby bol priebeh objednávky zrozumiteľný.</p>
 </div>
 </div>
@@ -1425,5 +1946,97 @@
 </div>
 <script src="assets/js/index-2-1.js?v=20260708split9"></script>
 <script defer="" src="assets/js/performance-polish.js?v=20260708split9"></script>
+<script>
+(function () {
+  var lastSearchTerm = "";
+  var searchTimer = 0;
+
+  function normalise(value) {
+    return String(value || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim();
+  }
+
+  function productCards() {
+    return Array.prototype.slice.call(document.querySelectorAll("[data-product-card]"));
+  }
+
+  function productText(card) {
+    return normalise([
+      card.getAttribute("data-product-name"),
+      card.getAttribute("data-name"),
+      card.textContent
+    ].filter(Boolean).join(" "));
+  }
+
+  function visibleCard(card) {
+    return card.offsetParent !== null && getComputedStyle(card).display !== "none";
+  }
+
+  function findSearchCard(term) {
+    var query = normalise(term);
+    if (!query) return null;
+    var cards = productCards().filter(visibleCard);
+    return cards.find(function (card) {
+      return normalise(card.getAttribute("data-product-name") || card.getAttribute("data-name")).includes(query);
+    }) || cards.find(function (card) {
+      return productText(card).includes(query);
+    }) || null;
+  }
+
+  function scrollToMatch(term) {
+    var query = String(term || "").trim();
+    if (query.length < 2) return;
+    var target = findSearchCard(query) || document.getElementById("ponuka");
+    if (!target) return;
+    document.querySelectorAll(".ctrax-search-hit").forEach(function (card) {
+      card.classList.remove("ctrax-search-hit");
+    });
+    var navHeight = Math.max(96, document.querySelector("nav")?.getBoundingClientRect().height || 0);
+    var top = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 22;
+    window.scrollTo({
+      top: Math.max(0, top),
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+    });
+    if (target.matches("[data-product-card]")) {
+      target.classList.add("ctrax-search-hit");
+      setTimeout(function () {
+        target.classList.remove("ctrax-search-hit");
+      }, 2200);
+    }
+  }
+
+  function scheduleSearchScroll(value, delay) {
+    clearTimeout(searchTimer);
+    lastSearchTerm = value;
+    searchTimer = setTimeout(function () {
+      scrollToMatch(lastSearchTerm);
+    }, delay);
+  }
+
+  function installSearchScrollFix() {
+    var input = document.getElementById("nav-search-input");
+    if (!input || input.dataset.ctraxSearchScrollFix) return;
+    input.dataset.ctraxSearchScrollFix = "1";
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        scheduleSearchScroll(input.value, 120);
+      }
+    }, true);
+    input.addEventListener("input", function () {
+      scheduleSearchScroll(input.value, 520);
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", installSearchScrollFix);
+  } else {
+    installSearchScrollFix();
+  }
+})();
+</script>
 </body>
 </html>
