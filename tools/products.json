@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "alienware-aurora-r14",
+    "name": "Alienware Aurora R14",
+    "price": 949,
+    "category": "gaming",
+    "badge": "Skladový kus · Herný PC",
+    "cpu": "Ryzen 9 5900X",
+    "gpu": "RTX 3080 10GB",
+    "ram": "32GB DDR4",
+    "disk": "1TB NVMe",
+    "os": "Windows 11 Pro",
+    "stock": 2,
+    "forWho": "Náročné hranie v 1440p/4K, streamovanie a tvorba obsahu. Výkonná zostava pre hráčov, ktorí nechcú robiť kompromisy."
+  },
+  {
+    "slug": "hp-omen-40l",
+    "name": "HP Omen 40L",
+    "price": 829,
+    "category": "gaming",
+    "badge": "Skladový kus · Herný PC",
+    "cpu": "Intel i7-12700K",
+    "gpu": "RTX 3070 Ti",
+    "ram": "16GB DDR4",
+    "disk": "512GB + 1TB HDD",
+    "os": "Windows 11 Pro",
+    "stock": 5,
+    "forWho": "Plynulé hranie v 1080p aj 1440p, multitasking a bežná tvorba. Najlepší pomer cena/výkon z našej ponuky."
+  },
+  {
+    "slug": "dell-optiplex-7090",
+    "name": "Dell OptiPlex 7090",
+    "price": 349,
+    "category": "office",
+    "badge": "Skladový kus · Kancelársky PC",
+    "cpu": "Intel i5-10500",
+    "gpu": "UHD Graphics",
+    "ram": "16GB DDR4",
+    "disk": "256GB SSD",
+    "os": "Windows 11 Pro",
+    "stock": 8,
+    "forWho": "Kancelária, škola, účtovníctvo a domáce použitie. Tichý, úsporný a spoľahlivý počítač na každý deň."
+  }
+]
