@@ -15,18 +15,46 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://aryjaqexfgalxaiseqtp.supabase.co https://*.supabase.co; media-src 'self'; object-src 'none'; frame-src 'none'; child-src 'none'; worker-src 'self'; manifest-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https: blob:; connect-src 'self' https://aryjaqexfgalxaiseqtp.supabase.co https://*.supabase.co; media-src 'self'; object-src 'none'; frame-src 'none'; child-src 'none'; worker-src 'self'; manifest-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
 <title>Admin Panel | NANOERA s.r.o.</title>
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="computrax-logo.png?v=20260614b" as="image" type="image/png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
 <script src="config.js?v=20260708nine"></script>
 <script src="assets/js/admin-1-1.js?v=20260708split9"></script>
 <link rel="stylesheet" href="assets/css/admin-1.css?v=20260708split9">
 <link rel="stylesheet" href="assets/css/admin-polish.css?v=20260709a">
+<style id="admin-readable-fields-fix">
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea,
+  .form-input,
+  .gate-input,
+  .search-box {
+    background: #fff !important;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    caret-color: #2563eb !important;
+    border-color: rgba(15, 23, 42, 0.2) !important;
+  }
+  input::placeholder,
+  textarea::placeholder,
+  .form-input::placeholder,
+  .gate-input::placeholder,
+  .search-box::placeholder {
+    color: #64748b !important;
+    -webkit-text-fill-color: #64748b !important;
+    opacity: 1 !important;
+  }
+  select option {
+    background: #fff !important;
+    color: #0f172a !important;
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    accent-color: #2563eb !important;
+  }
+</style>
 </head>
 <body>
 
@@ -37,10 +65,11 @@
 <div class="gate" id="gate">
   <div class="gate-box">
     <div class="gate-logo"><img src="computrax-logo.png?v=20260614b" alt="Computrax" width="190" height="95"></div>
-    <div class="gate-sub">Admin Panel — zadaj heslo</div>
-    <input class="gate-input" id="pw-input" type="password" placeholder="Heslo" autocomplete="current-password" spellcheck="false" maxlength="128" data-admin-enter="login">
+    <div class="gate-sub">Admin Panel — prihlásenie cez Supabase</div>
+    <input class="gate-input" id="gate-email" type="email" placeholder="E-mail" autocomplete="username" spellcheck="false" maxlength="254" data-admin-enter="login">
+    <input class="gate-input" id="gate-password" type="password" placeholder="Heslo" autocomplete="current-password" spellcheck="false" maxlength="128" data-admin-enter="login">
     <button type="button" class="gate-btn" id="login-btn" data-admin-action="login">Prihlásiť sa</button>
-    <div class="gate-error" id="gate-err" role="alert">Nesprávne heslo</div>
+    <div class="gate-error" id="gate-err" role="alert">Prihlásenie zlyhalo</div>
   </div>
 </div>
 
@@ -1222,7 +1251,7 @@ USING (bucket_id = 'product-images' AND public.is_admin());</pre>
         <label class="form-label">DPH režim faktúr</label>
         <select class="form-select" id="s-invoice-vat-mode">
           <option value="non_payer">Nie som platiteľ DPH</option>
-          <option value="vat_included">Ceny obsahujú DPH 20%</option>
+          <option value="vat_included">Ceny obsahujú DPH 23%</option>
         </select>
       </div>
       <div class="form-group">
@@ -1239,6 +1268,9 @@ USING (bucket_id = 'product-images' AND public.is_admin());</pre>
           <div class="form-group"><label class="form-label">Packeta - názov</label><input class="form-input" id="s-delivery-packeta-name" maxlength="80"></div>
           <div class="form-group"><label class="form-label">Cena €</label><input class="form-input" id="s-delivery-packeta-price" type="number" min="0" max="500" step="0.01"></div>
           <div class="form-group"><label class="form-label">Dodanie dní</label><input class="form-input" id="s-delivery-packeta-days" type="number" min="0" max="60" step="1"></div>
+          <div class="form-group"><label class="form-label">DPD - názov</label><input class="form-input" id="s-delivery-dpd-name" maxlength="80"></div>
+          <div class="form-group"><label class="form-label">Cena €</label><input class="form-input" id="s-delivery-dpd-price" type="number" min="0" max="500" step="0.01"></div>
+          <div class="form-group"><label class="form-label">Dodanie dní</label><input class="form-input" id="s-delivery-dpd-days" type="number" min="0" max="60" step="1"></div>
           <div class="form-group"><label class="form-label">Osobný odber - názov</label><input class="form-input" id="s-delivery-osobne-name" maxlength="80"></div>
           <div class="form-group"><label class="form-label">Cena €</label><input class="form-input" id="s-delivery-osobne-price" type="number" min="0" max="500" step="0.01"></div>
           <div class="form-group"><label class="form-label">Dodanie dní</label><input class="form-input" id="s-delivery-osobne-days" type="number" min="0" max="60" step="1"></div>
@@ -1958,6 +1990,6 @@ USING (bucket_id = 'product-images' AND public.is_admin());</pre>
   </div>
 </div>
 
-<script src="assets/js/admin-2-1.js?v=20260708split9"></script>
+<script src="assets/js/admin-2-1.js?v=20260709supabasegate1"></script>
 </body>
 </html>

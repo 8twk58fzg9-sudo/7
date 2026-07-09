@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0"><channel><title>Computrax produkty</title><link>https://computrax.sk/</link><description>Repasované PC Computrax</description>
-  <item><g:id>alienware-aurora-r14</g:id><g:title>Alienware Aurora R14</g:title><g:description>Výkonný repasovaný herný PC pre 1440p hranie, streaming a náročnejšie programy.</g:description><g:link>https://computrax.sk/produkt/alienware-aurora-r14/</g:link><g:image_link>https://computrax.sk/og-image.png</g:image_link><g:availability>in_stock</g:availability><g:price>949.00 EUR</g:price><g:condition>refurbished</g:condition><g:brand>Computrax</g:brand></item>
-  <item><g:id>hp-omen-40l</g:id><g:title>HP Omen 40L</g:title><g:description>Prémiový herný repasovaný počítač s vysokým výkonom a pripraveným Windows 11 Pro.</g:description><g:link>https://computrax.sk/produkt/hp-omen-40l/</g:link><g:image_link>https://computrax.sk/og-image.png</g:image_link><g:availability>in_stock</g:availability><g:price>829.00 EUR</g:price><g:condition>refurbished</g:condition><g:brand>Computrax</g:brand></item>
-  <item><g:id>dell-optiplex-7090</g:id><g:title>Dell OptiPlex 7090</g:title><g:description>Spoľahlivý repasovaný kancelársky PC pre školu, firmu, faktúry, Office a web.</g:description><g:link>https://computrax.sk/produkt/dell-optiplex-7090/</g:link><g:image_link>https://computrax.sk/og-image.png</g:image_link><g:availability>in_stock</g:availability><g:price>349.00 EUR</g:price><g:condition>refurbished</g:condition><g:brand>Computrax</g:brand></item>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0"><channel>
+  <title>Computrax produkty</title>
+  <link>https://computrax.sk/</link>
+  <description>Repasované PC Computrax od NANOERA s.r.o.</description>
+  <item>
+    <g:id>alienware-aurora-r14</g:id>
+    <g:title>Alienware Aurora R14</g:title>
+    <g:description>Repasovaný PC Alienware Aurora R14: Ryzen 9 5900X, RTX 3080 10GB, 32GB DDR4, 1TB NVMe, Windows 11 Pro. Otestované, so zárukou a faktúrou od NANOERA s.r.o.</g:description>
+    <g:link>https://computrax.sk/index.html?pc=Alienware%20Aurora%20R14#ponuka</g:link>
+    <g:image_link>https://computrax.sk/og-image.png</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>949.00 EUR</g:price>
+    <g:condition>refurbished</g:condition>
+    <g:brand>Computrax</g:brand>
+    <g:google_product_category>Electronics &gt; Computers &gt; Desktop Computers</g:google_product_category>
+  </item>
+  <item>
+    <g:id>hp-omen-40l</g:id>
+    <g:title>HP Omen 40L</g:title>
+    <g:description>Repasovaný PC HP Omen 40L: Intel i7-12700K, RTX 3070 Ti, 16GB DDR4, 512GB + 1TB HDD, Windows 11 Pro. Otestované, so zárukou a faktúrou od NANOERA s.r.o.</g:description>
+    <g:link>https://computrax.sk/index.html?pc=HP%20Omen%2040L#ponuka</g:link>
+    <g:image_link>https://computrax.sk/og-image.png</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>829.00 EUR</g:price>
+    <g:condition>refurbished</g:condition>
+    <g:brand>Computrax</g:brand>
+    <g:google_product_category>Electronics &gt; Computers &gt; Desktop Computers</g:google_product_category>
+  </item>
+  <item>
+    <g:id>dell-optiplex-7090</g:id>
+    <g:title>Dell OptiPlex 7090</g:title>
+    <g:description>Repasovaný PC Dell OptiPlex 7090: Intel i5-10500, UHD Graphics, 16GB DDR4, 256GB SSD, Windows 11 Pro. Otestované, so zárukou a faktúrou od NANOERA s.r.o.</g:description>
+    <g:link>https://computrax.sk/index.html?pc=Dell%20OptiPlex%207090#ponuka</g:link>
+    <g:image_link>https://computrax.sk/og-image.png</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>349.00 EUR</g:price>
+    <g:condition>refurbished</g:condition>
+    <g:brand>Computrax</g:brand>
+    <g:google_product_category>Electronics &gt; Computers &gt; Desktop Computers</g:google_product_category>
+  </item>
 </channel></rss>

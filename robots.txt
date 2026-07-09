@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin_2.html
+Disallow: /admin-set-password.html
 Disallow: /supabase/
 Disallow: /*.sql$
 Disallow: /SECURITY.md

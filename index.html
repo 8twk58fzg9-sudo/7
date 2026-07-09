@@ -13,7 +13,7 @@
 <meta content="#f4f6fb" name="theme-color"/>
 <meta content="index,follow,max-image-preview:large" name="robots"/>
 <meta content="camera=(), microphone=(), geolocation=(), payment=()" http-equiv="Permissions-Policy"/>
-<meta content="default-src 'self'; script-src 'self' 'unsafe-inline'; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://aryjaqexfgalxaiseqtp.supabase.co https://*.supabase.co; media-src 'self'; object-src 'none'; frame-src 'none'; child-src 'none'; worker-src 'self'; manifest-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" http-equiv="Content-Security-Policy"/>
+<meta content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https: blob: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://aryjaqexfgalxaiseqtp.supabase.co https://*.supabase.co https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://*.clarity.ms; media-src 'self'; object-src 'none'; frame-src https://widget.packeta.com; child-src https://widget.packeta.com; worker-src 'self'; manifest-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" http-equiv="Content-Security-Policy"/>
 <title>Repasované PC a lacné počítače so zárukou | Computrax</title>
 <!-- Open Graph / SEO -->
 <meta content="Repasované PC a lacné počítače na prácu, školu aj hranie. Otestované kusy so zárukou, faktúrou, jasnou cenou a doručením po celom Slovensku." name="description"/>
@@ -36,16 +36,16 @@
 <meta content="https://computrax.sk/og-image.png" name="twitter:image"/>
 <meta content="Computrax - repasované počítače so skladom a zárukou" name="twitter:image:alt"/>
 <link href="https://computrax.sk/" rel="canonical"/>
+<link href="https://computrax.sk/product-feed.xml" rel="alternate" title="Computrax produktový feed pre Google Merchant Center" type="application/rss+xml"/>
+<link href="https://computrax.sk/merchant-feed.csv" rel="alternate" title="Computrax CSV feed pre porovnávače" type="text/csv"/>
 <link href="favicon-32.png" rel="icon" type="image/png"/>
 <link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="apple-touch-icon.png" rel="apple-touch-icon"/>
 <link as="image" href="computrax-logo.png?v=20260614b" rel="preload" type="image/png"/>
 <link href="site.webmanifest" rel="manifest"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Outfit:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
 <script src="config.js?v=20260708nine"></script>
 <script src="assets/js/index-1-1.js?v=20260708split9"></script>
+<script defer="" src="assets/js/commerce-integrations.js?v=20260709privacy1"></script>
 <script id="website-search-structured-data" type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -69,6 +69,15 @@
       "description": "Repasované herné a kancelárske počítače, komponenty a servisné doplnkové služby.",
       "email": "computerax.sk@gmail.com",
       "telephone": "+421949835923",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rešov 32",
+        "postalCode": "08621",
+        "addressCountry": "SK"
+      },
+      "taxID": "SK2023703297",
+      "vatID": "SK2023703297",
+      "openingHours": "Mo-Fr 12:00-18:00",
       "areaServed": "SK",
       "sameAs": []
     }
@@ -498,7 +507,7 @@ body.ctrax-premium #poradca .section-header {
 
 body.ctrax-premium #poradca .advisor-grid,
 #poradca .advisor-grid {
-  grid-template-columns: minmax(280px, 0.85fr) minmax(360px, 1.15fr) !important;
+  grid-template-columns: 1fr !important;
   gap: 1.25rem !important;
   align-items: start !important;
 }
@@ -656,6 +665,200 @@ body.ctrax-premium #poradca .advisor-match p,
   }
 }
 </style>
+<style id="advisor-search-polish">
+.billing-details{margin:1rem 0;border:1px solid #c7d8ff;border-radius:18px;background:#f8fbff;color:#0f172a;overflow:hidden}
+.billing-details summary{cursor:pointer;list-style:none;padding:1rem 1.1rem;font-weight:900;color:#1e40af;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.billing-details summary::-webkit-details-marker{display:none}
+.billing-details summary::after{content:"+";font-size:1.35rem;line-height:1;color:#2563eb}
+.billing-details[open] summary::after{content:"−"}
+.billing-details .wizard-row{padding:0 1rem 1rem;margin:0}
+.billing-details .wizard-input{background:#fff!important;color:#0f172a!important;-webkit-text-fill-color:#0f172a!important}
+.smart-fit-row{display:flex;flex-wrap:wrap;gap:.45rem;margin:.75rem 0 0}
+.smart-fit-chip{display:inline-flex;align-items:center;gap:.3rem;border:1px solid #c7d8ff;background:#eef5ff;color:#1d4ed8;border-radius:999px;padding:.34rem .58rem;font-size:.78rem;font-weight:850;line-height:1}
+.search-help-note{margin-top:.65rem;color:#475569;font-size:.9rem}
+.compare-bar{background:#0f172a!important;color:#f8fafc!important;border-color:#334155!important}
+.compare-bar span,.compare-bar b{color:#f8fafc!important}
+.compare-bar a,.compare-bar button{color:#0f172a}
+.compare-bar .compare-clear{background:#334155!important;color:#f8fafc!important;border-color:#475569!important}
+.ctrax-proof-lab{background:#0f172a!important;color:#f8fafc!important}
+.ctrax-proof-lab h2,.ctrax-proof-card b{color:#fff!important}
+.ctrax-proof-lab p,.ctrax-proof-card span{color:#dbeafe!important}
+.ctrax-proof-card{background:#172033!important;border-color:#334155!important}
+.stock-badge.stock-low{background:#fff1f2!important;color:#be123c!important;border-color:#fecdd3!important}
+.pc-tag{color:#047857!important}
+.whatsapp-fab{background:#15803d!important;color:#fff!important}
+@media(max-width:640px){.billing-details summary{font-size:.98rem}.smart-fit-chip{font-size:.74rem}}
+</style>
+<style id="advisor-pro-upgrade">
+  .advisor-pro-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid rgba(37, 99, 235, 0.18);
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(20, 184, 166, 0.08));
+    margin-bottom: 1rem;
+  }
+  .advisor-pro-header span {
+    display: block;
+    color: #2563eb;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .advisor-pro-header strong {
+    display: block;
+    color: #0f172a;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    margin: 0.18rem 0;
+  }
+  .advisor-pro-header p,
+  .advisor-pro-header small {
+    display: block;
+    color: #56606f;
+    margin: 0;
+    line-height: 1.45;
+  }
+  .advisor-pro-score {
+    flex: 0 0 auto;
+    min-width: 112px;
+    text-align: center;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid rgba(37, 99, 235, 0.18);
+    padding: 0.75rem;
+  }
+  .advisor-pro-score b {
+    display: block;
+    color: #2563eb;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.65rem;
+    line-height: 1;
+  }
+  .advisor-pro-score span {
+    color: #56606f;
+    font-size: 0.7rem;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .advisor-result-pro {
+    display: grid;
+    gap: 1rem;
+  }
+  .advisor-match-pro {
+    position: relative;
+    padding: 1.15rem;
+    overflow: hidden;
+  }
+  .advisor-match-topline,
+  .advisor-chip-row,
+  .advisor-spec-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    align-items: center;
+  }
+  .advisor-match-topline {
+    justify-content: space-between;
+    margin-bottom: 0.55rem;
+  }
+  .advisor-rank {
+    color: #0f766e;
+    font-size: 0.76rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .advisor-score {
+    color: #2563eb;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 900;
+  }
+  .advisor-score-bar {
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.1);
+    overflow: hidden;
+    margin-bottom: 0.9rem;
+  }
+  .advisor-score-bar span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #2563eb, #14b8a6);
+  }
+  .advisor-level {
+    color: #56606f;
+    font-weight: 800;
+    margin: 0.25rem 0 0.75rem;
+  }
+  .advisor-chip-row span,
+  .advisor-spec-line span {
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    background: #f8fafc;
+    color: #0f172a;
+    border-radius: 999px;
+    padding: 0.32rem 0.62rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+  .advisor-reasons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin: 0.9rem 0;
+  }
+  .advisor-reasons-grid > div {
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 14px;
+    background: #fff;
+    padding: 0.8rem;
+  }
+  .advisor-reasons-grid b {
+    display: block;
+    color: #0f172a;
+    margin-bottom: 0.35rem;
+  }
+  .advisor-reasons-grid ul {
+    margin: 0;
+    padding-left: 1.05rem;
+    color: #56606f;
+    line-height: 1.45;
+  }
+  .advisor-reasons-grid p {
+    margin: 0;
+    color: #56606f;
+    line-height: 1.45;
+  }
+  .advisor-spec-line {
+    margin-bottom: 1rem;
+  }
+  .advisor-next-step,
+  .advisor-empty {
+    border: 1px solid rgba(20, 184, 166, 0.22);
+    background: rgba(20, 184, 166, 0.07);
+    color: #0f172a;
+    border-radius: 16px;
+    padding: 0.9rem 1rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+  @media (max-width: 720px) {
+    .advisor-pro-header,
+    .advisor-reasons-grid {
+      grid-template-columns: 1fr;
+      display: grid;
+    }
+    .advisor-pro-score {
+      width: 100%;
+    }
+  }
+</style>
 <style id="ctrax-readable-checkout-fields">
   :root[data-theme="light"] .cart-panel input:not([type="checkbox"]):not([type="radio"]),
   :root[data-theme="light"] .cart-panel select,
@@ -721,6 +924,19 @@ body.ctrax-premium #poradca .advisor-match p,
     -webkit-text-fill-color: #0f172a !important;
     border-color: rgba(15, 23, 42, 0.18) !important;
   }
+  :root[data-theme="light"] input:not([type="checkbox"]):not([type="radio"]),
+  :root[data-theme="light"] select,
+  :root[data-theme="light"] textarea {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    caret-color: #2563eb !important;
+  }
+  :root[data-theme="light"] input::placeholder,
+  :root[data-theme="light"] textarea::placeholder {
+    color: #64748b !important;
+    -webkit-text-fill-color: #64748b !important;
+    opacity: 1 !important;
+  }
 </style>
 <link href="sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml"/>
 <link href="https://computrax.sk/repasovane-pc/" rel="alternate" title="Repasované PC"/>
@@ -747,7 +963,7 @@ body.ctrax-premium #poradca .advisor-match p,
 <div class="nav-right">
 <div class="nav-search">
 <span class="search-icon">🔍</span>
-<input aria-label="Hľadať produkty" autocapitalize="none" autocomplete="off" data-action="search-products" enterkeyhint="search" id="nav-search-input" placeholder="Hľadať PC..." spellcheck="false" type="search"/>
+<input aria-label="Hľadať produkty" autocapitalize="none" autocomplete="off" data-action="search-products" enterkeyhint="search" id="nav-search-input" placeholder="napr. Fortnite do 1000€" spellcheck="false" type="search"/>
 </div>
 <button aria-label="Otvoriť obľúbené produkty" class="cart-btn" data-action="open-wishlist" style="background:rgba(251,113,133,0.1);border-color:#fb7185;" type="button">
 <span class="btn-icon">♥</span><span class="btn-label" data-short="Obľúb.">Obľúbené</span>
@@ -815,7 +1031,8 @@ body.ctrax-premium #poradca .advisor-match p,
 </div>
 <label class="wizard-label" for="d-city">Mesto</label>
 <input autocomplete="address-level2" class="wizard-input" id="d-city" maxlength="80" placeholder="Žilina"/>
-<label class="wizard-label">Fakturačné údaje pre firmu (voliteľné)</label>
+<details class="billing-details" id="billing-details">
+<summary>Fakturačné údaje pre firmu (voliteľné)</summary>
 <div class="wizard-row">
 <div>
 <input aria-label="Názov firmy" autocomplete="organization" class="wizard-input" id="d-billing-company" maxlength="140" placeholder="Názov firmy"/>
@@ -832,13 +1049,19 @@ body.ctrax-premium #poradca .advisor-match p,
 <input aria-label="IČ DPH" class="wizard-input" id="d-billing-vat" maxlength="24" placeholder="IČ DPH"/>
 </div>
 </div>
+</details>
 <input aria-hidden="true" autocomplete="off" id="d-company" style="position:absolute;left:-10000px;width:1px;height:1px;opacity:0;" tabindex="-1" type="text"/>
 <label class="wizard-label" for="d-delivery">Spôsob doručenia</label>
 <select class="wizard-input" id="d-delivery">
 <option value="kurier">Kuriér GLS – 5,90€ (do 2 dní)</option>
 <option value="packeta">Packeta – 3,90€ (do 3 dní)</option>
+<option value="dpd">DPD kuriér – 6,90€ (do 2 dní)</option>
 <option value="osobne">Osobný odber – zdarma (Bratislava)</option>
 </select>
+<div class="delivery-extra" id="packeta-point-wrap" hidden="">
+<label class="wizard-label" for="d-packeta-point">Výdajné miesto Packeta / Z-BOX</label>
+<input class="wizard-input" id="d-packeta-point" maxlength="140" placeholder="napr. Z-BOX alebo adresa výdajného miesta"/>
+</div>
 <label class="wizard-label">Doplnkové služby</label>
 <div class="service-options" id="service-options"></div>
 <div style="display: flex; gap: 0.8rem; margin-top: 1rem;">
@@ -1034,6 +1257,133 @@ body.ctrax-premium #poradca .advisor-match p,
 </div>
 </div>
 </section>
+<!-- TOP 3 -->
+<section aria-label="Tri odporúčané počítače" id="top-vyber">
+<div class="section-header reveal">
+<div class="section-label">Začnite tu</div>
+<h2 class="section-title">3 najlepšie voľby zo skladu</h2>
+</div>
+<div class="top-picks-grid reveal">
+<article class="top-pick-card">
+<span class="top-pick-badge">🏆 Najlepší pomer cena/výkon</span>
+<h3>HP Omen 40L</h3>
+<p class="top-pick-specs">Intel i7-12700K · RTX 3070 Ti · 16GB DDR4 · 512GB + 1TB HDD</p>
+<div class="top-pick-footer">
+<span class="top-pick-price">829€</span>
+<div class="top-pick-cta">
+<button aria-label="Kúpiť HP Omen 40L" class="add-cart-btn" data-action="add-cart" data-name="HP Omen 40L" data-price="829" type="button">Kúpiť</button>
+<a class="detail-btn" href="produkt/hp-omen-40l/index.html">Detail</a>
+</div>
+</div>
+</article>
+<article class="top-pick-card">
+<span class="top-pick-badge">💼 Najlacnejší office PC</span>
+<h3>Dell OptiPlex 7090</h3>
+<p class="top-pick-specs">Intel i5-10500 · UHD Graphics · 16GB DDR4 · 256GB SSD</p>
+<div class="top-pick-footer">
+<span class="top-pick-price">349€</span>
+<div class="top-pick-cta">
+<button aria-label="Kúpiť Dell OptiPlex 7090" class="add-cart-btn" data-action="add-cart" data-name="Dell OptiPlex 7090" data-price="349" type="button">Kúpiť</button>
+<a class="detail-btn" href="produkt/dell-optiplex-7090/index.html">Detail</a>
+</div>
+</div>
+</article>
+<article class="top-pick-card">
+<span class="top-pick-badge">🎮 Najlepší gaming PC</span>
+<h3>Alienware Aurora R14</h3>
+<p class="top-pick-specs">Ryzen 9 5900X · RTX 3080 10GB · 32GB DDR4 · 1TB NVMe</p>
+<div class="top-pick-footer">
+<span class="top-pick-price">949€</span>
+<div class="top-pick-cta">
+<button aria-label="Kúpiť Alienware Aurora R14" class="add-cart-btn" data-action="add-cart" data-name="Alienware Aurora R14" data-price="949" type="button">Kúpiť</button>
+<a class="detail-btn" href="produkt/alienware-aurora-r14/index.html">Detail</a>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- BUYING ADVISOR -->
+<section id="poradca">
+<div class="section-header reveal">
+<div class="section-label">Inteligentný výber PC</div>
+<h2 class="section-title">Odporučíme PC podľa toho, čo reálne potrebujete</h2>
+</div>
+<div class="advisor-grid reveal">
+<div class="advisor-panel">
+<h3>Nájdite vhodný PC za menej než minútu</h3>
+<p>Zadajte využitie, rozpočet a prípadne konkrétne hry alebo programy. Výsledok ukáže percento zhody, dôvody odporúčania aj kompromisy.</p>
+<div class="advisor-tool">
+<div class="quiz-grid">
+<label class="quiz-field">Využitie
+                        <select data-action="advisor-change" id="advisor-use">
+<option value="office">Škola / kancelária</option>
+<option value="gaming">Hranie hier</option>
+<option value="retro">Retro hry a starší softvér</option>
+<option value="creative">Foto / video</option>
+<option value="home">Bežné domáce použitie</option>
+<option value="business">Firma / učebňa</option>
+</select>
+</label>
+<label class="quiz-field">Rozpočet za jeden PC
+	                        <select data-action="advisor-change" id="advisor-budget">
+<option value="500">do 500€</option>
+<option selected="" value="1000">do 1000€</option>
+<option value="1500">do 1500€</option>
+<option value="2000">do 2000€</option>
+<option value="2500">do 2500€</option>
+<option value="10000">2500€ a viac</option>
+</select>
+</label>
+<label class="quiz-field">Počet kusov
+                        <select data-action="advisor-change" id="advisor-quantity">
+<option value="1">1 kus</option>
+<option value="2">2 až 5 kusov</option>
+<option value="6">6 až 20 kusov</option>
+<option value="20">Viac ako 20 kusov</option>
+</select>
+</label>
+<label class="quiz-field">Programy alebo hry (nepovinné)
+                        <input id="advisor-programs" maxlength="160" placeholder="napr. AutoCAD, Fortnite, účtovníctvo" type="text"/>
+</label>
+<div class="quiz-field full">
+<span>Čo ešte potrebujete?</span>
+<div class="quiz-needs">
+<label class="quiz-need"><input class="advisor-need" data-action="advisor-change" type="checkbox" value="monitor"/> Monitor</label>
+<label class="quiz-need"><input class="advisor-need" data-action="advisor-change" type="checkbox" value="peripherals"/> Klávesnica / myš</label>
+<label class="quiz-need"><input class="advisor-need" data-action="advisor-change" type="checkbox" value="windows"/> Windows</label>
+<label class="quiz-need"><input class="advisor-need" data-action="advisor-change" type="checkbox" value="multiple"/> Podobné konfigurácie</label>
+</div>
+</div>
+</div>
+<button class="quiz-submit" data-action="run-advisor" type="button">Nájsť najlepšiu zhodu</button>
+<div aria-live="polite" class="advisor-result" id="advisor-result">Vyplňte krátky výber a poradca zoradí skladové PC podľa zhody, výkonu a rozpočtu.</div>
+</div>
+<div class="usecase-list">
+<div class="usecase-item">
+<span>💼</span>
+<div><b>Kancelária a škola</b><small>i5/Ryzen 5, 16GB RAM, SSD, nízka spotreba.</small></div>
+<a data-action="quick-filter" data-filter-type="cat" data-filter-value="office" href="#ponuka">Filtrovať</a>
+</div>
+<div class="usecase-item">
+<span>🎮</span>
+<div><b>Hranie hier</b><small>dedikovaná RTX grafika, 16-32GB RAM, rýchle NVMe.</small></div>
+<a data-action="quick-filter" data-filter-type="cat" data-filter-value="gaming" href="#ponuka">Filtrovať</a>
+</div>
+<div class="usecase-item">
+<span>🧰</span>
+<div><b>Práca a tvorba</b><small>silnejší i7/Ryzen 7+, viac RAM a väčšie úložisko.</small></div>
+<a href="#kontakt">Poradiť sa</a>
+</div>
+<div class="usecase-item">
+<span>📦</span>
+<div><b>Potrebujem skladový kus</b><small>Vyberajte iba produkty, ktoré sú momentálne dostupné.</small></div>
+<a data-action="quick-filter" data-filter-type="stock" data-filter-value="skladom" href="#ponuka">Skladom</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
 <div aria-label="Rýchly vstup do ponuky" class="shop-entry">
 <div class="shop-promo">
 <div>
@@ -1408,109 +1758,6 @@ body.ctrax-premium #poradca .advisor-match p,
 </div>
 </div>
 </section>
-<!-- BUYING ADVISOR -->
-<section id="poradca">
-<div class="section-header reveal">
-<div class="section-label">Poradca výberom</div>
-<h2 class="section-title">Vyberte repasovaný PC bez hádania</h2>
-</div>
-<div class="advisor-grid reveal">
-<div class="advisor-panel">
-<h3>Triedy stavu, ktoré dávajú zmysel</h3>
-<p>Pri repasovaných zariadeniach zákazníci najviac riešia funkčnosť, kozmetický stav a záruku. Preto pri každom PC zobrazujeme stav kusu a poznámku priamo na karte aj v detaile.</p>
-<div class="condition-grade-grid">
-<div class="condition-grade">
-<strong>Výborný</strong>
-<span>Minimálne známky používania, vhodné aj na viditeľné pracovisko.</span>
-</div>
-<div class="condition-grade">
-<strong>Veľmi dobrý</strong>
-<span>Bežné jemné známky používania, plne funkčný a pripravený na prácu.</span>
-</div>
-<div class="condition-grade">
-<strong>Dobrý</strong>
-<span>Viditeľnejšie kozmetické stopy, výhodnejšia cena, rovnaká funkčná kontrola.</span>
-</div>
-</div>
-<div class="test-checklist">
-<div class="test-check">✓ kontrola CPU, RAM, disku a grafiky</div>
-<div class="test-check">✓ čistenie a príprava systému</div>
-<div class="test-check">✓ skladový kus sa rezervuje pri objednávke</div>
-<div class="test-check">✓ záruka a doklad k nákupu</div>
-</div>
-</div>
-<div class="advisor-panel">
-<h3>Nájdite vhodný PC za menej než minútu</h3>
-<p>Poradca vyberá iba z aktuálne dostupných produktov. Odporúčanie je orientačné a vychádza z parametrov uvedených pri produktoch.</p>
-<div class="advisor-tool">
-<div class="quiz-grid">
-<label class="quiz-field">Využitie
-                        <select data-action="advisor-change" id="advisor-use">
-<option value="office">Škola / kancelária</option>
-<option value="gaming">Hranie hier</option>
-<option value="retro">Retro hry a starší softvér</option>
-<option value="creative">Foto / video</option>
-<option value="home">Bežné domáce použitie</option>
-<option value="business">Firma / učebňa</option>
-</select>
-</label>
-<label class="quiz-field">Rozpočet za jeden PC
-                        <select data-action="advisor-change" id="advisor-budget">
-<option value="300">do 300€</option>
-<option value="500">do 500€</option>
-<option selected="" value="800">do 800€</option>
-<option value="10000">bez limitu</option>
-</select>
-</label>
-<label class="quiz-field">Počet kusov
-                        <select data-action="advisor-change" id="advisor-quantity">
-<option value="1">1 kus</option>
-<option value="2">2 až 5 kusov</option>
-<option value="6">6 až 20 kusov</option>
-<option value="20">Viac ako 20 kusov</option>
-</select>
-</label>
-<label class="quiz-field">Programy alebo hry (nepovinné)
-                        <input id="advisor-programs" maxlength="160" placeholder="napr. AutoCAD, Fortnite, účtovníctvo" type="text"/>
-</label>
-<div class="quiz-field full">
-<span>Čo ešte potrebujete?</span>
-<div class="quiz-needs">
-<label class="quiz-need"><input class="advisor-need" data-action="advisor-change" type="checkbox" value="monitor"/> Monitor</label>
-<label class="quiz-need"><input class="advisor-need" data-action="advisor-change" type="checkbox" value="peripherals"/> Klávesnica / myš</label>
-<label class="quiz-need"><input class="advisor-need" data-action="advisor-change" type="checkbox" value="windows"/> Windows</label>
-<label class="quiz-need"><input class="advisor-need" data-action="advisor-change" type="checkbox" value="multiple"/> Podobné konfigurácie</label>
-</div>
-</div>
-</div>
-<button class="quiz-submit" data-action="run-advisor" type="button">Zobraziť odporúčania</button>
-<div aria-live="polite" class="advisor-result" id="advisor-result">Vyplňte krátky výber a zobrazíme najbližšie skladové zhody.</div>
-</div>
-<div class="usecase-list">
-<div class="usecase-item">
-<span>💼</span>
-<div><b>Kancelária a škola</b><small>i5/Ryzen 5, 16GB RAM, SSD, nízka spotreba.</small></div>
-<a data-action="quick-filter" data-filter-type="cat" data-filter-value="office" href="#ponuka">Filtrovať</a>
-</div>
-<div class="usecase-item">
-<span>🎮</span>
-<div><b>Hranie hier</b><small>dedikovaná RTX grafika, 16-32GB RAM, rýchle NVMe.</small></div>
-<a data-action="quick-filter" data-filter-type="cat" data-filter-value="gaming" href="#ponuka">Filtrovať</a>
-</div>
-<div class="usecase-item">
-<span>🧰</span>
-<div><b>Práca a tvorba</b><small>silnejší i7/Ryzen 7+, viac RAM a väčšie úložisko.</small></div>
-<a href="#kontakt">Poradiť sa</a>
-</div>
-<div class="usecase-item">
-<span>📦</span>
-<div><b>Potrebujem skladový kus</b><small>Vyberajte iba produkty, ktoré sú momentálne dostupné.</small></div>
-<a data-action="quick-filter" data-filter-type="stock" data-filter-value="skladom" href="#ponuka">Skladom</a>
-</div>
-</div>
-</div>
-</div>
-</section>
 <!-- GAMING PERFORMANCE GUIDE -->
 <section id="herny-vykon">
 <div class="section-header reveal">
@@ -1564,23 +1811,6 @@ body.ctrax-premium #poradca .advisor-match p,
 <div class="section-label">Skúsenosti zákazníkov</div>
 <h2 class="section-title">Recenzie a hodnotenia</h2>
 <p style="color:var(--muted);max-width:720px;margin-top:0.8rem;">Zobrazujeme iba skutočné recenzie od overených zákazníkov. Prvé hodnotenia práve zbierame – miesto nižšie patrí im.</p>
-</div>
-<div class="reviews-grid reveal">
-<article class="review-card">
-<span class="review-placeholder-tag">Pripravené pre recenziu</span>
-<div aria-hidden="true" class="review-stars">★★★★★</div>
-<p>Tu pribudne hodnotenie od overeného zákazníka po dokončenej objednávke.</p>
-</article>
-<article class="review-card">
-<span class="review-placeholder-tag">Pripravené pre recenziu</span>
-<div aria-hidden="true" class="review-stars">★★★★★</div>
-<p>Pracujeme na prepojení s Google recenziami, aby ste videli hodnotenia priamo zo zdroja.</p>
-</article>
-<article class="review-card">
-<span class="review-placeholder-tag">Pripravené pre recenziu</span>
-<div aria-hidden="true" class="review-stars">★★★★★</div>
-<p>Po nákupe vás poprosíme o krátke hodnotenie – pomôže ďalším zákazníkom pri výbere.</p>
-</article>
 </div>
 <div class="reviews-invite reveal">
 <div>
@@ -1942,8 +2172,8 @@ body.ctrax-premium #poradca .advisor-match p,
 </article>
 <article class="legal-card" id="cookies">
 <h3>Cookies a lokálne úložisko</h3>
-<p>Používame iba nevyhnutné cookies, localStorage a sessionStorage na fungovanie košíka, obľúbených položiek, zákazníckeho prihlásenia, skladových funkcií, bezpečnostných kontrol a zapamätanie voľby v cookie lište.</p>
-<p>Stránka používa technické služby Supabase, serverové e-mailové notifikácie a Google Fonts. Nepoužívame reklamné ani analytické cookies. Ak ich v budúcnosti zapneme, stránka musí najprv zobraziť samostatný súhlas pre konkrétne účely.</p>
+<p>Nevyhnutné cookies a lokálne úložisko používame na košík, obľúbené položky, prihlásenie, skladové funkcie, bezpečnostné kontroly a uloženie voľby v cookie lište.</p>
+<p>Voliteľná analytika cez Google Analytics 4, Google Tag Manager alebo Microsoft Clarity sa spúšťa iba po dobrovoľnom súhlase. Výber môžete kedykoľvek zmeniť cez Nastavenia cookies v pätičke.</p>
 </article>
 <article class="legal-card" id="alternativne-riesenie-sporov">
 <h3>Alternatívne riešenie sporov</h3>
@@ -2005,14 +2235,6 @@ body.ctrax-premium #poradca .advisor-match p,
 <span class="wa-icon">💬</span>
 <span class="wa-label">Napísať na WhatsApp</span>
 </a>
-<!-- COOKIE BANNER -->
-<div class="cookie-banner" id="cookie-banner">
-<p>🍪 Táto stránka používa nevyhnutné cookies a localStorage na fungovanie košíka a obľúbených položiek. Nezbierame žiadne analytické ani reklamné údaje. Viac informácií v našich <a href="pravne.html#ochrana-udajov">Zásadách ochrany súkromia</a>.</p>
-<div class="cookie-btns">
-<button class="cookie-accept" data-action="accept-cookies" type="button">Rozumiem</button>
-<button class="cookie-decline" data-action="decline-cookies" type="button">Zavrieť</button>
-</div>
-</div>
 <script src="assets/js/index-2-1.js?v=20260708split9"></script>
 <script defer="" src="assets/js/performance-polish.js?v=20260708split9"></script>
 <script>
@@ -2064,12 +2286,15 @@ body.ctrax-premium #poradca .advisor-match p,
       card.classList.remove("ctrax-search-hit");
     });
     var navHeight = Math.max(96, document.querySelector("nav")?.getBoundingClientRect().height || 0);
-    var top = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 22;
+    var foundCard = target.matches("[data-product-card]");
+    var top = foundCard
+      ? target.getBoundingClientRect().top + window.pageYOffset - Math.max(130, window.innerHeight * 0.22)
+      : target.getBoundingClientRect().top + window.pageYOffset - navHeight - 22;
     window.scrollTo({
       top: Math.max(0, top),
       behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
     });
-    if (target.matches("[data-product-card]")) {
+    if (foundCard) {
       target.classList.add("ctrax-search-hit");
       setTimeout(function () {
         target.classList.remove("ctrax-search-hit");
@@ -2105,6 +2330,22 @@ body.ctrax-premium #poradca .advisor-match p,
   } else {
     installSearchScrollFix();
   }
+
+  function keepAdvisorNearTop() {
+    var hero = document.querySelector(".hero");
+    var advisor = document.getElementById("poradca");
+    if (!hero || !advisor || hero.nextElementSibling === advisor) return;
+    hero.insertAdjacentElement("afterend", advisor);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", keepAdvisorNearTop);
+  } else {
+    keepAdvisorNearTop();
+  }
+  [80, 500, 1500, 3200].forEach(function (delay) {
+    setTimeout(keepAdvisorNearTop, delay);
+  });
 })();
 </script>
 </body>
