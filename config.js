@@ -16,7 +16,7 @@ window.COMPUTRAX_CONFIG = Object.freeze({
 });
 
 // Spoločná kompatibilná vrstva pre verejnú stránku aj admin na GitHub Pages.
-// Kritické opravy načítame hneď, vizuálne/AI doplnky až po prvom vykreslení.
+// First viewport layout scripts load early; AI and heavier extras load after interaction/idle.
 const computraxRuntimeBase = new URL('.', document.currentScript?.src || location.href).href;
 const computraxLoadedScripts = new Set();
 
@@ -47,21 +47,21 @@ function afterFirstPaint(callback) {
 }
 
 function loadAiToolsOnce() {
-  loadComputraxScript('site-ai-picker.js', '20260709perf1');
-  loadComputraxScript('site-ai-bot.js', '20260709perf1');
+  loadComputraxScript('site-ai-picker.js', '20260709layoutfix1');
+  loadComputraxScript('site-ai-bot.js', '20260709layoutfix1');
 }
 
-// Small compatibility fixes that affect initial layout/navigation.
-loadComputraxScript('site-deploy-fix.js', '20260709perf1', { ordered: true });
-loadComputraxScript('site-overrides.js', '20260709perf1', { ordered: true });
+// These affect the first screen and must not be delayed, otherwise the hero appears broken.
+loadComputraxScript('site-deploy-fix.js', '20260709layoutfix1', { ordered: true });
+loadComputraxScript('site-overrides.js', '20260709layoutfix1', { ordered: true });
+loadComputraxScript('site-final-polish.js', '20260709layoutfix1', { ordered: true });
+loadComputraxScript('site-premium-upgrade.js', '20260709layoutfix1', { ordered: true });
 
-// Non-critical polish after first render. These should not block first paint.
+// Nice-to-have extras after the page is usable.
 afterFirstPaint(() => {
-  loadComputraxScript('site-enhancements.js', '20260709perf1');
-  loadComputraxScript('site-9.js', '20260709perf1');
-  loadComputraxScript('site-final-polish.js', '20260709perf1');
-  loadComputraxScript('site-premium-upgrade.js', '20260709perf1');
-  window.setTimeout(() => loadComputraxScript('site-hardened.js', '20260709perf1'), 500);
+  loadComputraxScript('site-enhancements.js', '20260709layoutfix1');
+  loadComputraxScript('site-9.js', '20260709layoutfix1');
+  window.setTimeout(() => loadComputraxScript('site-hardened.js', '20260709layoutfix1'), 500);
 });
 
 // AI is useful, but heavy. Load it on intent, or after the page is already usable.
