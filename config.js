@@ -16,21 +16,29 @@ window.COMPUTRAX_CONFIG = Object.freeze({
 });
 
 // Spoločná kompatibilná vrstva pre verejnú stránku aj admin na GitHub Pages.
-// First viewport layout scripts load early; AI and heavier extras load after interaction/idle.
+// Stabilita je dôležitejšia než agresívny lazy-load: doplnky štartujú až po DOMContentLoaded,
+// aby nerozbili základné klikacie funkcie z hlavných scriptov.
 const computraxRuntimeBase = new URL('.', document.currentScript?.src || location.href).href;
 const computraxLoadedScripts = new Set();
 
-function loadComputraxScript(file, version, options = {}) {
+function loadComputraxScript(file, version) {
   if (computraxLoadedScripts.has(file)) return;
   computraxLoadedScripts.add(file);
   const script = document.createElement('script');
   script.src = computraxRuntimeBase + file + '?v=' + version;
-  script.async = options.ordered ? false : true;
-  script.defer = true;
-  document.head.appendChild(script);
+  script.async = false;
+  document.body.appendChild(script);
 }
 
-function onComputraxIdle(callback, timeout = 1200) {
+function onComputraxReady(callback) {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', callback, { once: true });
+  } else {
+    callback();
+  }
+}
+
+function onComputraxIdle(callback, timeout = 1400) {
   if ('requestIdleCallback' in window) {
     window.requestIdleCallback(callback, { timeout: Math.max(1200, timeout) });
     return;
@@ -38,34 +46,27 @@ function onComputraxIdle(callback, timeout = 1200) {
   window.setTimeout(callback, timeout);
 }
 
-function afterFirstPaint(callback) {
-  if (document.readyState === 'complete') {
-    onComputraxIdle(callback, 900);
-    return;
-  }
-  window.addEventListener('load', () => onComputraxIdle(callback, 900), { once: true });
-}
-
 function loadAiToolsOnce() {
-  loadComputraxScript('site-ai-picker.js', '20260709layoutfix1');
-  loadComputraxScript('site-ai-bot.js', '20260709layoutfix1');
+  loadComputraxScript('site-ai-picker.js', '20260709stable1');
+  loadComputraxScript('site-ai-bot.js', '20260709stable1');
 }
 
-// These affect the first screen and must not be delayed, otherwise the hero appears broken.
-loadComputraxScript('site-deploy-fix.js', '20260709layoutfix1', { ordered: true });
-loadComputraxScript('site-overrides.js', '20260709layoutfix1', { ordered: true });
-loadComputraxScript('site-final-polish.js', '20260709layoutfix1', { ordered: true });
-loadComputraxScript('site-premium-upgrade.js', '20260709layoutfix1', { ordered: true });
+onComputraxReady(() => {
+  // Layout and compatibility layers, loaded in deterministic order after base DOM exists.
+  loadComputraxScript('site-deploy-fix.js', '20260709stable1');
+  loadComputraxScript('site-overrides.js', '20260709stable1');
+  loadComputraxScript('site-final-polish.js', '20260709stable1');
+  loadComputraxScript('site-premium-upgrade.js', '20260709stable1');
 
-// Nice-to-have extras after the page is usable.
-afterFirstPaint(() => {
-  loadComputraxScript('site-enhancements.js', '20260709layoutfix1');
-  loadComputraxScript('site-9.js', '20260709layoutfix1');
-  window.setTimeout(() => loadComputraxScript('site-hardened.js', '20260709layoutfix1'), 500);
-});
+  // Nice-to-have extras after the page has had a moment to become interactive.
+  onComputraxIdle(() => {
+    loadComputraxScript('site-enhancements.js', '20260709stable1');
+    loadComputraxScript('site-9.js', '20260709stable1');
+    window.setTimeout(() => loadComputraxScript('site-hardened.js', '20260709stable1'), 600);
+  });
 
-// AI is useful, but heavy. Load it on intent, or after the page is already usable.
-['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach((eventName) => {
-  window.addEventListener(eventName, loadAiToolsOnce, { once: true, passive: true });
+  ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach((eventName) => {
+    window.addEventListener(eventName, loadAiToolsOnce, { once: true, passive: true });
+  });
+  window.setTimeout(loadAiToolsOnce, 4500);
 });
-window.setTimeout(loadAiToolsOnce, 4200);
