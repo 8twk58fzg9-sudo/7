@@ -109,5 +109,11 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/produkt/:path*",
+      "destination": "/404.html"
+    }
   ]
 }
