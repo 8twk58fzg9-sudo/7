@@ -13,7 +13,7 @@
 <meta content="#f4f6fb" name="theme-color"/>
 <meta content="index,follow,max-image-preview:large" name="robots"/>
 <meta content="camera=(), microphone=(), geolocation=(), payment=()" http-equiv="Permissions-Policy"/>
-<meta content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https: blob: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://aryjaqexfgalxaiseqtp.supabase.co https://*.supabase.co https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://*.clarity.ms; media-src 'self'; object-src 'none'; frame-src https://widget.packeta.com; child-src https://widget.packeta.com; worker-src 'self'; manifest-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" http-equiv="Content-Security-Policy"/>
+<meta content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https: blob: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://aryjaqexfgalxaiseqtp.supabase.co https://*.supabase.co https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://*.clarity.ms; media-src 'self'; object-src 'none'; frame-src https://widget.packeta.com; child-src https://widget.packeta.com; worker-src 'self'; manifest-src 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" http-equiv="Content-Security-Policy"/>
 <title>Repasované PC a lacné počítače so zárukou | Computrax</title>
 <!-- Open Graph / SEO -->
 <meta content="Repasované PC a lacné počítače na prácu, školu aj hranie. Otestované kusy so zárukou, faktúrou, jasnou cenou a doručením po celom Slovensku." name="description"/>
@@ -27,14 +27,14 @@
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="Computrax - repasované počítače so skladom a zárukou" property="og:image:alt"/>
+<meta content="Computrax - repasované počítače s overenou dostupnosťou a zárukou" property="og:image:alt"/>
 <meta content="https://computrax.sk/" property="og:url"/>
 <meta content="website" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Repasované PC a lacné počítače so zárukou | Computrax" name="twitter:title"/>
 <meta content="Repasované PC na prácu, školu aj hranie. Testované kusy, záruka, faktúra a výber podľa potreby." name="twitter:description"/>
 <meta content="https://computrax.sk/og-image.png" name="twitter:image"/>
-<meta content="Computrax - repasované počítače so skladom a zárukou" name="twitter:image:alt"/>
+<meta content="Computrax - repasované počítače s overenou dostupnosťou a zárukou" name="twitter:image:alt"/>
 <link href="https://computrax.sk/" rel="canonical"/>
 <link href="https://computrax.sk/product-feed.xml" rel="alternate" title="Computrax produktový feed pre Google Merchant Center" type="application/rss+xml"/>
 <link href="https://computrax.sk/merchant-feed.csv" rel="alternate" title="Computrax CSV feed pre porovnávače" type="text/csv"/>
@@ -43,9 +43,9 @@
 <link href="apple-touch-icon.png" rel="apple-touch-icon"/>
 <link as="image" href="computrax-logo.png?v=20260614b" rel="preload" type="image/png"/>
 <link href="site.webmanifest" rel="manifest"/>
-<script src="config.js?v=20260708nine"></script>
-<script src="assets/js/index-1-1.js?v=20260708split9"></script>
-<script defer="" src="assets/js/commerce-integrations.js?v=20260709privacy1"></script>
+<script src="config.js?v=20260712consent3"></script>
+<script defer="" src="assets/js/index-1-1.js?v=20260719live1"></script>
+<script defer="" src="assets/js/commerce-integrations.js?v=20260713lead5"></script>
 <script id="website-search-structured-data" type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -75,7 +75,7 @@
         "postalCode": "08621",
         "addressCountry": "SK"
       },
-      "taxID": "SK2023703297",
+      "taxID": "2023703297",
       "vatID": "SK2023703297",
       "openingHours": "Mo-Fr 12:00-18:00",
       "areaServed": "SK",
@@ -131,17 +131,47 @@
       ]
     }
     </script>
-<link href="assets/css/index-1.css?v=20260708split9" rel="stylesheet"/>
+<link href="assets/css/index-1.css?v=20260712brand10" rel="stylesheet"/>
+<style>
+nav .logo {
+  width: 140px;
+  height: 64px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+nav .logo img {
+  width: 420px;
+  max-width: none;
+  height: auto;
+  transform: translate(-135px, -24px);
+}
+@media (max-width: 560px) {
+  nav .logo {
+    width: 140px;
+    height: 56px;
+  }
+  nav .logo img {
+    width: 390px;
+    transform: translate(-125px, -20px);
+  }
+}
+</style>
 <style id="ctrax-first-view-hero-fix">
 body.ctrax-premium .hero,
 .hero {
-  min-height: 100vh !important;
+  min-height: calc(100svh - 72px) !important;
   align-items: center !important;
 }
 
 body.ctrax-premium .hero h1,
 .hero h1 {
   color: #071126 !important;
+  animation: none !important;
+}
+
+.hero-monitor-logo {
+  aspect-ratio: 15 / 4;
 }
 
 body.ctrax-premium .hero h1 span,
@@ -491,14 +521,10 @@ body.ctrax-premium .ctrax-featured-actions,
   margin-top: 1rem !important;
 }
 
-html {
-  scroll-padding-top: 118px !important;
-}
-
 #ponuka,
 #poradca,
 [data-product-card] {
-  scroll-margin-top: 118px !important;
+  scroll-margin-top: 0 !important;
 }
 
 body.ctrax-premium #poradca .section-header {
@@ -740,7 +766,7 @@ body.ctrax-premium #poradca .advisor-match p,
 @media (max-width: 980px) {
   body.ctrax-premium .hero,
   .hero {
-    min-height: auto;
+    min-height: auto !important;
   }
 
   body.ctrax-premium #poradca .advisor-grid,
@@ -768,6 +794,83 @@ body.ctrax-premium #poradca .advisor-match p,
 }
 
 @media (max-width: 560px) {
+  body.ctrax-premium .hero,
+  .hero {
+    min-height: auto !important;
+    padding: 9.25rem 1.25rem 2.5rem !important;
+    gap: 1.35rem !important;
+    align-items: stretch !important;
+  }
+
+  body.ctrax-premium .hero h1,
+  .hero h1 {
+    font-size: 3rem !important;
+    line-height: 1.03 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  body.ctrax-premium .hero p,
+  .hero p {
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  body.ctrax-premium .hero .hero-btns,
+  .hero .hero-btns {
+    margin-bottom: 0 !important;
+  }
+
+  body.ctrax-premium .hero .hero-btns .btn-primary,
+  .hero .hero-btns .btn-primary {
+    min-width: 0 !important;
+    width: 100% !important;
+    min-height: 58px !important;
+    padding: 0.95rem 1.25rem !important;
+    font-size: 1.08rem !important;
+  }
+
+  body.ctrax-premium .hero .trust-row,
+  .hero .trust-row {
+    display: none !important;
+  }
+
+  body.ctrax-premium .hero .hero-btns .btn-ghost,
+  .hero .hero-btns .btn-ghost {
+    display: inline-flex !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    min-height: 54px !important;
+    padding: 0.85rem 1.25rem !important;
+    font-size: 1rem !important;
+  }
+
+  body.ctrax-premium .ctrax-featured-device,
+  .ctrax-featured-device {
+    min-height: 210px !important;
+    max-height: 280px !important;
+  }
+
+  body.ctrax-premium .ctrax-featured-name,
+  .ctrax-featured-name {
+    font-size: 1.45rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  body.ctrax-premium .ctrax-featured-actions a[href="#ponuka"],
+  .ctrax-featured-actions a[href="#ponuka"] {
+    display: none !important;
+  }
+
+  body.ctrax-premium .ctrax-featured-actions .btn-primary,
+  body.ctrax-premium .ctrax-featured-actions .detail-btn,
+  .ctrax-featured-actions .btn-primary,
+  .ctrax-featured-actions .detail-btn {
+    min-width: 0 !important;
+    min-height: 50px !important;
+    padding: 0.8rem 1rem !important;
+    font-size: 1rem !important;
+  }
+
   body.ctrax-premium #poradca .usecase-list,
   #poradca .usecase-list,
   body.ctrax-premium #poradca .quiz-grid,
@@ -1062,19 +1165,18 @@ body.ctrax-premium #poradca .advisor-match p,
 <div aria-atomic="true" aria-live="polite" class="toast" id="toast" role="status">🛒 <span id="toast-msg">Produkt pridaný</span></div>
 <!-- NAV -->
 <nav>
-<a class="logo" href="#"><img alt="Computrax" height="75" src="computrax-logo.png?v=20260614b" width="150"/></a>
+<a class="logo" href="#"><img alt="Computrax" height="240" src="computrax-logo.png?v=20260614b" width="900"/></a>
 <button aria-expanded="false" aria-label="Menu" class="nav-menu-btn" data-action="toggle-mobile-menu" type="button">☰</button>
 <ul id="main-nav-links">
 <li><a data-action="quick-filter" data-filter-type="cat" data-filter-value="gaming" href="#ponuka">Herné PC</a></li>
 <li><a data-action="quick-filter" data-filter-type="cat" data-filter-value="office" href="#ponuka">Kancelárske PC</a></li>
 <li><a data-action="quick-filter" data-filter-type="cat" data-filter-value="vsetko" href="#ponuka">Všetky produkty</a></li>
 <li><a href="informacie.html">Služby a informácie</a></li>
-<li><a class="nav-cta" href="#poradca">Nájsť PC</a></li>
 </ul>
 <div class="nav-right">
 <div class="nav-search">
 <span class="search-icon">🔍</span>
-<input aria-label="Hľadať produkty" autocapitalize="none" autocomplete="off" data-action="search-products" enterkeyhint="search" id="nav-search-input" placeholder="napr. Fortnite do 1000€" spellcheck="false" type="search"/>
+<input aria-label="Hľadať produkty" autocapitalize="none" autocomplete="off" data-action="search-products" enterkeyhint="search" id="nav-search-input" placeholder="Hľadať PC…" spellcheck="false" type="search"/>
 </div>
 <button aria-label="Otvoriť obľúbené produkty" class="cart-btn" data-action="open-wishlist" style="background:rgba(251,113,133,0.1);border-color:#fb7185;" type="button">
 <span class="btn-icon">♥</span><span class="btn-label" data-short="Obľúb.">Obľúbené</span>
@@ -1167,13 +1269,14 @@ body.ctrax-premium #poradca .advisor-match p,
 <option value="kurier">Kuriér GLS – 5,90€ (do 2 dní)</option>
 <option value="packeta">Packeta – 3,90€ (do 3 dní)</option>
 <option value="dpd">DPD kuriér – 6,90€ (do 2 dní)</option>
-<option value="osobne">Osobný odber – zdarma (Bratislava)</option>
+<option value="osobne">Osobný odber – zdarma (Rešov)</option>
 </select>
 <div class="delivery-extra" id="packeta-point-wrap" hidden="">
 <label class="wizard-label" for="d-packeta-point">Výdajné miesto Packeta / Z-BOX</label>
 <input class="wizard-input" id="d-packeta-point" maxlength="140" placeholder="napr. Z-BOX alebo adresa výdajného miesta"/>
 </div>
-<label class="wizard-label">Doplnkové služby</label>
+<label class="wizard-label">Doplnkové služby (voliteľné)</label>
+<p class="checkout-standalone-note" style="margin:0.35rem 0 0.85rem;padding:0.8rem 0.9rem;border:1px solid rgba(96,165,250,0.3);border-radius:10px;background:rgba(37,99,235,0.08);color:var(--muted);font-size:0.86rem;line-height:1.45;"><strong style="color:var(--text);">Počítač môžete kúpiť samostatne.</strong> Službu pridajte iba vtedy, keď ju naozaj chcete.</p>
 <div class="service-options" id="service-options"></div>
 <div style="display: flex; gap: 0.8rem; margin-top: 1rem;">
 <button class="wizard-btn wizard-btn-ghost" data-action="go-step" data-step="1" style="flex: 0.4;" type="button">← Späť</button>
@@ -1193,7 +1296,7 @@ body.ctrax-premium #poradca .advisor-match p,
 <div class="checkout-assurance">
 <div><b>Kontrola pred odoslaním:</b> objednávku pred expedíciou ešte manuálne skontrolujeme.</div>
 <div><b>Sklad:</b> pri odoslaní objednávky sa kus rezervuje, aby ho nekúpil niekto ďalší.</div>
-<div><b>Doklad:</b> fakturačné údaje môžeš doplniť vyššie alebo ich pošleš v odpovedi na potvrdenie.</div>
+<div><b>Doklad:</b> fakturačné údaje skontrolujte pred odoslaním. Po vystavení faktúry sa doklad nemení; oprava sa rieši opravným dokladom.</div>
 </div>
 <label style="display:flex;gap:0.7rem;align-items:flex-start;font-size:0.86rem;color:var(--muted);line-height:1.45;margin-top:1rem;">
 <input id="terms-accepted" style="margin-top:0.2rem;accent-color:var(--accent);" type="checkbox"/>
@@ -1295,7 +1398,7 @@ body.ctrax-premium #poradca .advisor-match p,
 <button class="auth-link" data-action="auth-mode" data-mode="login" type="button">Späť na prihlásenie</button>
 </div>
 <div aria-atomic="true" aria-live="polite" class="sr-only" id="auth-status" role="status"></div>
-<p class="auth-note">Heslo neukladáme do stránky. Prihlásenie spracuje Supabase Auth. Ak email nepríde, skontrolujte Spam a neposielajte ho opakovane; viac pokusov za sebou dočasne zablokuje odosielanie.</p>
+<p class="auth-note">Heslo bezpečne spracúva prihlasovacia služba a na stránke ho neukladáme. Ak e-mail nepríde, skontrolujte Spam; opakované požiadavky môžu odosielanie na krátky čas pozastaviť.</p>
 </div>
 <div id="account-view" style="display:none;">
 <h3 style="margin-bottom:1rem;">Môj účet</h3>
@@ -1334,6 +1437,7 @@ body.ctrax-premium #poradca .advisor-match p,
 <a class="btn-primary" href="#ponuka">Pozrieť počítače</a>
 <a class="btn-ghost" href="#poradca">Poradiť s výberom</a>
 </div>
+<p class="hero-cta-note">Každý počítač môžete kúpiť samostatne. Nastavenie, programy a ďalšie služby sú vždy voliteľné.</p>
 <div class="trust-row hero-cols" id="hero-trust-row">
 <div class="trust-item"><span>✓</span> Otestované pred odoslaním</div>
 <div class="trust-item"><span>✓</span> 12 mesiacov záruka</div>
@@ -1345,13 +1449,13 @@ body.ctrax-premium #poradca .advisor-match p,
 <div class="hero-showcase-inner">
 <div class="hero-monitor">
 <div class="hero-monitor-top">
-<img alt="Computrax" class="hero-monitor-logo" height="66" src="computrax-logo.png?v=20260614b" width="132"/>
-<span>Live sklad</span>
+<img alt="Computrax" class="hero-monitor-logo" height="240" src="computrax-logo.png?v=20260614b" width="900"/>
+<span>Online ponuka</span>
 </div>
 <div>
 <div class="hero-spec-grid">
 <div class="hero-spec"><span>Kategórie</span><b>Herné · Office · Retro</b></div>
-<div class="hero-spec"><span>Sklad</span><b>Reálne kusy</b></div>
+<div class="hero-spec"><span>Dostupnosť</span><b>Overujeme pri každom PC</b></div>
 <div class="hero-spec"><span>Parametre</span><b>CPU · GPU · RAM</b></div>
 <div class="hero-spec"><span>Stav</span><b>Transparentne</b></div>
 </div>
@@ -1359,58 +1463,13 @@ body.ctrax-premium #poradca .advisor-match p,
 </div>
 <div class="hero-stock-card">
 <div>
-<strong>Konkrétne skladové kusy</strong>
-<span>Po objednávke sa zásoba automaticky rezervuje a odpočíta.</span>
+<strong>Jasná dostupnosť každého PC</strong>
+<span>Skladový kus kúpite priamo. Pri ostatných konfiguráciách dostupnosť rýchlo overíme.</span>
 </div>
-<div class="hero-stock-pill">Skladom</div>
-</div>
-</div>
+<div class="hero-stock-pill">Aktuálne</div>
 </div>
 </div>
-</section>
-<!-- TOP 3 -->
-<section aria-label="Tri odporúčané počítače" id="top-vyber">
-<div class="section-header reveal">
-<div class="section-label">Začnite tu</div>
-<h2 class="section-title">3 najlepšie voľby zo skladu</h2>
 </div>
-<div class="top-picks-grid reveal">
-<article class="top-pick-card">
-<span class="top-pick-badge">🏆 Najlepší pomer cena/výkon</span>
-<h3>HP Omen 40L</h3>
-<p class="top-pick-specs">Intel i7-12700K · RTX 3070 Ti · 16GB DDR4 · 512GB + 1TB HDD</p>
-<div class="top-pick-footer">
-<span class="top-pick-price">829€</span>
-<div class="top-pick-cta">
-<button aria-label="Kúpiť HP Omen 40L" class="add-cart-btn" data-action="add-cart" data-name="HP Omen 40L" data-price="829" type="button">Kúpiť</button>
-<a class="detail-btn" href="produkt/hp-omen-40l/index.html">Detail</a>
-</div>
-</div>
-</article>
-<article class="top-pick-card">
-<span class="top-pick-badge">💼 Najlacnejší office PC</span>
-<h3>Dell OptiPlex 7090</h3>
-<p class="top-pick-specs">Intel i5-10500 · UHD Graphics · 16GB DDR4 · 256GB SSD</p>
-<div class="top-pick-footer">
-<span class="top-pick-price">349€</span>
-<div class="top-pick-cta">
-<button aria-label="Kúpiť Dell OptiPlex 7090" class="add-cart-btn" data-action="add-cart" data-name="Dell OptiPlex 7090" data-price="349" type="button">Kúpiť</button>
-<a class="detail-btn" href="produkt/dell-optiplex-7090/index.html">Detail</a>
-</div>
-</div>
-</article>
-<article class="top-pick-card">
-<span class="top-pick-badge">🎮 Najlepší gaming PC</span>
-<h3>Alienware Aurora R14</h3>
-<p class="top-pick-specs">Ryzen 9 5900X · RTX 3080 10GB · 32GB DDR4 · 1TB NVMe</p>
-<div class="top-pick-footer">
-<span class="top-pick-price">949€</span>
-<div class="top-pick-cta">
-<button aria-label="Kúpiť Alienware Aurora R14" class="add-cart-btn" data-action="add-cart" data-name="Alienware Aurora R14" data-price="949" type="button">Kúpiť</button>
-<a class="detail-btn" href="produkt/alienware-aurora-r14/index.html">Detail</a>
-</div>
-</div>
-</article>
 </div>
 </section>
 <!-- BUYING ADVISOR -->
@@ -1471,7 +1530,7 @@ body.ctrax-premium #poradca .advisor-match p,
 </div>
 <aside class="advisor-panel advisor-output">
 <div class="advisor-output-head"><span class="advisor-output-badge">Výsledok</span><h3>Odporúčanie na mieru</h3></div>
-<div aria-live="polite" class="advisor-result" id="advisor-result">Vyplňte krátky výber vľavo a poradca zoradí skladové PC podľa zhody, výkonu a rozpočtu — ukáže percento zhody, dôvody aj kompromisy.</div>
+<div aria-live="polite" class="advisor-result" id="advisor-result">Vyplňte krátky výber vľavo a poradca zoradí dostupné PC a konfigurácie na overenie podľa zhody, výkonu a rozpočtu — ukáže percento zhody, dôvody aj kompromisy.</div>
 </aside>
 </div>
 <div class="usecase-list reveal">
@@ -1490,10 +1549,10 @@ body.ctrax-premium #poradca .advisor-match p,
 <div><b>Práca a tvorba</b><small>silnejší i7/Ryzen 7+, viac RAM a väčšie úložisko.</small></div>
 <a href="#kontakt">Poradiť sa</a>
 </div>
-<div class="usecase-item">
+<div class="usecase-item" id="stock-usecase">
 <span>📦</span>
-<div><b>Potrebujem skladový kus</b><small>Vyberajte iba produkty, ktoré sú momentálne dostupné.</small></div>
-<a data-action="quick-filter" data-filter-type="stock" data-filter-value="skladom" href="#ponuka">Skladom</a>
+<div><b id="stock-usecase-title">Potrebujem skladový kus</b><small id="stock-usecase-text">Vyberajte iba produkty, ktoré sú momentálne dostupné.</small></div>
+<a data-action="quick-filter" data-filter-type="stock" data-filter-value="skladom" href="#ponuka" id="stock-usecase-link">Skladom</a>
 </div>
 </div>
 </section>
@@ -1543,13 +1602,13 @@ body.ctrax-premium #poradca .advisor-match p,
 <!-- PRODUCTS -->
 <section id="ponuka">
 <div class="section-header reveal">
-<div class="section-label">Aktuálny stav skladu</div>
+<div class="section-label" id="offer-section-label">Aktuálny stav skladu</div>
 <h2 class="section-title">Vyberte si svoj nový stroj</h2>
 </div>
 <div aria-label="Výhody nákupu" class="buy-confidence-strip reveal">
 <div class="buy-confidence-item"><strong>12M záruka</strong><span>Jasná záruka na predané repasované kusy.</span></div>
 <div class="buy-confidence-item"><strong>Kontrola kusu</strong><span>Kontrola parametrov a príprava pred odoslaním.</span></div>
-<div class="buy-confidence-item"><strong>Skladové kusy</strong><span>Objednávka pracuje s reálnou zásobou.</span></div>
+<div class="buy-confidence-item"><strong id="stock-confidence-title">Skladové kusy</strong><span id="stock-confidence-text">Objednávka pracuje s reálnou zásobou.</span></div>
 <div class="buy-confidence-item"><strong>14 dní vrátenie</strong><span>Pri nákupe na diaľku podľa podmienok.</span></div>
 </div>
 <div class="filter-panel reveal">
@@ -1595,7 +1654,7 @@ body.ctrax-premium #poradca .advisor-match p,
 </div>
 <!-- GPU -->
 <div class="filter-item">
-<label class="filter-label">Grafická karta</label>
+<label class="filter-label" for="filter-gpu">Grafická karta</label>
 <select class="filter-select" data-action="apply-filters" id="filter-gpu">
 <option value="">Všetky</option>
 <option value="RTX 3080">RTX 3080</option>
@@ -1605,7 +1664,7 @@ body.ctrax-premium #poradca .advisor-match p,
 </div>
 <!-- CPU -->
 <div class="filter-item">
-<label class="filter-label">Procesor</label>
+<label class="filter-label" for="filter-cpu">Procesor</label>
 <select class="filter-select" data-action="apply-filters" id="filter-cpu">
 <option value="">Všetky</option>
 <option value="amd">AMD (Ryzen)</option>
@@ -1614,7 +1673,7 @@ body.ctrax-premium #poradca .advisor-match p,
 </div>
 <!-- CPU generation -->
 <div class="filter-item">
-<label class="filter-label">Generácia CPU</label>
+<label class="filter-label" for="filter-cpu-gen">Generácia CPU</label>
 <select class="filter-select" data-action="apply-filters" id="filter-cpu-gen">
 <option value="">Všetky</option>
 </select>
@@ -1630,26 +1689,26 @@ body.ctrax-premium #poradca .advisor-match p,
 </div>
 <!-- Storage -->
 <div class="filter-item">
-<label class="filter-label">Úložisko</label>
+<label class="filter-label" for="filter-storage">Úložisko</label>
 <select class="filter-select" data-action="apply-filters" id="filter-storage">
 <option value="">Všetky</option>
 </select>
 </div>
 <div class="filter-item">
-<label class="filter-label">Typ úložiska</label>
+<label class="filter-label" for="filter-storage-type">Typ úložiska</label>
 <select class="filter-select" data-action="apply-filters" id="filter-storage-type">
 <option value="">Všetky</option>
 </select>
 </div>
 <div class="filter-item">
-<label class="filter-label">Operačný systém</label>
+<label class="filter-label" for="filter-os">Operačný systém</label>
 <select class="filter-select" data-action="apply-filters" id="filter-os">
 <option value="">Všetky</option>
 </select>
 </div>
 <!-- Renovation condition -->
 <div class="filter-item">
-<label class="filter-label">Stav PC</label>
+<label class="filter-label" for="filter-condition">Stav PC</label>
 <select class="filter-select" data-action="apply-filters" id="filter-condition">
 <option value="">Všetky</option>
 </select>
@@ -1692,7 +1751,7 @@ body.ctrax-premium #poradca .advisor-match p,
 <div style="font-size: 3rem; margin-bottom: 1rem;">🔍</div>
 <p id="no-results-text">Žiadne PC nezodpovedá filtru. Skúste iné nastavenie.</p>
 <div aria-label="Rýchle alternatívy" class="empty-suggestions">
-<a class="empty-suggestion" href="#poradca"><strong>Nájsť vhodný PC</strong>Poradca vyberie najbližšie skladové zhody.</a>
+<a class="empty-suggestion" href="#poradca"><strong>Nájsť vhodný PC</strong>Poradca vyberie najbližšie vhodné konfigurácie.</a>
 <a class="empty-suggestion" href="#skoly-firmy"><strong>Pre firmy a školy</strong>Pošlite požiadavku na viac kusov alebo podobné konfigurácie.</a>
 <a class="empty-suggestion" href="#kontakt"><strong>Nevidíte vhodný kus?</strong>Napíšte rozpočet a použitie, ozveme sa s možnosťami.</a>
 </div>
@@ -1937,8 +1996,9 @@ body.ctrax-premium #poradca .advisor-match p,
 <!-- SERVICES -->
 <section class="info-section-collapsed" data-info-section="" id="servisne-sluzby">
 <div class="section-header reveal">
-<div class="section-label">Doplnkové a servisné služby</div>
-<h2 class="section-title">Nielen kúpa PC, ale pripravený počítač na používanie</h2>
+<div class="section-label">Voliteľné služby k PC</div>
+<h2 class="section-title">Pomoc navyše iba vtedy, keď ju chcete</h2>
+<p style="color:var(--muted);max-width:760px;margin-top:0.8rem;">Počítač si môžete objednať aj bez ktorejkoľvek z týchto služieb. V košíku nie je žiadna služba vybraná automaticky.</p>
 </div>
 <div class="services-market reveal" id="services-market">
 <div class="service-market-card">
@@ -2059,21 +2119,6 @@ body.ctrax-premium #poradca .advisor-match p,
 <span aria-live="polite" class="b2b-form-status" hidden="" id="b2b-status" role="status"></span>
 </div>
 </form>
-</div>
-</section>
-<!-- PAYMENTS / INVOICES -->
-<section class="info-section-collapsed" data-info-section="" id="platby-faktury">
-<div class="section-header reveal">
-<div class="section-label">Platby a faktúry</div>
-<h2 class="section-title">Pripravené na ostrý e-shop režim</h2>
-</div>
-<div class="order-track-box reveal">
-<p style="color:var(--muted);margin:0;">Objednávka podporuje manuálnu platbu, pripravené online platby, rezerváciu zásoby a firemné fakturačné údaje.</p>
-<div class="integration-strip">
-<div class="integration-pill"><strong>GoPay</strong>Platobný link sa vytvorí cez serverovú funkciu, nie cez tajný kľúč v prehliadači.</div>
-<div class="integration-pill"><strong>Faktúry</strong>Objednávka nesie firemné údaje, variabilný symbol a stav dokladu.</div>
-<div class="integration-pill"><strong>Sklad</strong>Po objednávke sa kus rezervuje a zásoba sa odpočíta.</div>
-</div>
 </div>
 </section>
 <!-- ORDER TRACKING -->
@@ -2202,22 +2247,19 @@ body.ctrax-premium #poradca .advisor-match p,
 </div>
 <div class="contact-form">
 <form id="contact-form">
-<div class="form-group"><label>Vaše meno</label><input autocomplete="name" enterkeyhint="next" id="c-name" maxlength="80" placeholder="Jozef Mrkvička" required="" type="text"/></div>
-<div class="form-group"><label>Váš E-mail</label><input autocapitalize="none" autocomplete="email" enterkeyhint="next" id="c-email" inputmode="email" maxlength="254" placeholder="email@priklad.sk" required="" spellcheck="false" type="email"/></div>
+<div class="form-group"><label for="c-name">Vaše meno</label><input autocomplete="name" enterkeyhint="next" id="c-name" maxlength="80" placeholder="Jozef Mrkvička" required="" type="text"/></div>
+<div class="form-group"><label for="c-email">Váš E-mail</label><input autocapitalize="none" autocomplete="email" enterkeyhint="next" id="c-email" inputmode="email" maxlength="254" placeholder="email@priklad.sk" required="" spellcheck="false" type="email"/></div>
 <input aria-hidden="true" autocomplete="off" id="c-company" style="position:absolute;left:-10000px;width:1px;height:1px;opacity:0;" tabindex="-1" type="text"/>
 <div class="form-group">
-<label>Typ dopytu / model PC</label>
+<label for="model-select">Typ dopytu / model PC</label>
 <select id="model-select">
 <option value="">Všeobecná otázka</option>
 <option value="Škola/firma - hromadný dopyt">Škola/firma - hromadný dopyt</option>
 <option value="Firma - kancelárske PC">Firma - kancelárske PC</option>
 <option value="Škola - učebňa alebo klub">Škola - učebňa alebo klub</option>
-<option value="Alienware Aurora R14">Alienware Aurora R14</option>
-<option value="HP Omen 40L">HP Omen 40L</option>
-<option value="Dell OptiPlex 7090">Dell OptiPlex 7090</option>
 </select>
 </div>
-<div class="form-group"><label>Správa</label><textarea enterkeyhint="send" id="c-msg" maxlength="1200" placeholder="Dobrý deň, mal by som záujem o..." rows="4"></textarea></div>
+<div class="form-group"><label for="c-msg">Správa</label><textarea enterkeyhint="send" id="c-msg" maxlength="1200" placeholder="Dobrý deň, mal by som záujem o..." rows="4"></textarea></div>
 <button aria-describedby="contact-fallback" class="send-btn" type="submit">Odoslať dopyt ✉️</button>
 <div aria-live="polite" class="contact-fallback" hidden="" id="contact-fallback" role="status"></div>
 </form>
@@ -2229,24 +2271,25 @@ body.ctrax-premium #poradca .advisor-match p,
 <div class="section-header" style="margin-bottom:2rem;">
 <div class="section-label">Právne info</div>
 <h2>Podmienky, súkromie a cookies</h2>
-<p>Prehľad základných pravidiel nákupu, reklamácie a spracovania údajov. Firemné údaje sa zobrazia po ich riadnom doplnení.</p>
+<p>Prehľad pravidiel nákupu, reklamácie a spracovania údajov spoločnosti NANOERA s.r.o.</p>
 </div>
 <div class="legal-grid">
 <article class="legal-card" id="predavajuci">
 <h3>Predávajúci</h3>
 <p><strong id="legal-company-name">NANOERA s.r.o.</strong></p>
-<p>Adresa: <span id="legal-company-address">Rešov 32, 08621</span></p>
+<p>Adresa: <span id="legal-company-address">Rešov 32, 086 21 Rešov</span></p>
 <p>IČO: <span id="legal-company-id">46882812</span></p>
 <p>DIČ: <span id="legal-tax-id">2023703297</span></p>
 <p id="legal-vat-row">IČ DPH: <span id="legal-vat-id">SK2023703297</span></p>
+<p>Zapísaná v Obchodnom registri Okresného súdu Prešov, oddiel Sro, vložka č. 31775/P.</p>
 <p>E-mail: <a href="mailto:computerax.sk@gmail.com" id="legal-email">computerax.sk@gmail.com</a></p>
 <p>Telefón: <a href="tel:+421949835923" id="legal-phone">0949 835 923</a></p>
-<p class="legal-muted">Posledná aktualizácia: <span id="legal-updated">09.07.2026</span></p>
+<p class="legal-muted">Posledná aktualizácia: <span id="legal-updated">12.07.2026</span></p>
 </article>
 <article class="legal-card" id="obchodne-podmienky">
 <h3>Obchodné podmienky</h3>
 <p>Objednávka sa považuje za odoslanú po stlačení tlačidla „Objednávka s povinnosťou platby“. Pred odoslaním objednávky zákazník vidí cenu produktov, doplnkových služieb, dopravy a celkovú sumu.</p>
-<p>Tovar je repasovaný alebo použitý, vždy s uvedeným stavom a parametrami. Cena pri produkte je konečná cena produktu vrátane DPH; doprava a doplnkové služby sa zobrazia v košíku pred odoslaním objednávky.</p>
+<p>Tovar je repasovaný alebo použitý, vždy s uvedeným stavom a parametrami. Pri skladovom produkte určenom na objednanie je uvedená cena konečná cena vrátane DPH; doprava a doplnkové služby sa zobrazia v košíku pred odoslaním objednávky. Pri konfigurácii označenej „Dostupnosť na overenie“ je cena orientačná a záväznú dostupnosť, stav konkrétneho kusu a cenu potvrdíme pred objednávkou.</p>
 <p>Ak sa produkt vypredá alebo nastane chyba skladovej dostupnosti, zákazníka kontaktujeme s náhradným riešením, zrušením objednávky alebo vrátením prijatej platby.</p>
 <p>Pri repasovanom alebo použitom tovare môže byť bežné kozmetické opotrebenie. Podstatné vady, chýbajúce príslušenstvo alebo obmedzenia konkrétneho kusu majú byť uvedené pri produkte alebo potvrdené pred odoslaním.</p>
 </article>
@@ -2282,7 +2325,7 @@ body.ctrax-premium #poradca .advisor-match p,
 <p>Spracúvané môžu byť najmä meno, e-mail, telefón, adresa, obsah objednávky, stav platby, stav doručenia a technické údaje potrebné pre fungovanie stránky. Právnym základom je najmä plnenie zmluvy, zákonná povinnosť a oprávnený záujem na bezpečnosti.</p>
 <p>Údaje môžu spracúvať technickí poskytovatelia potrební pre fungovanie e-shopu, najmä Supabase pre databázu a zákaznícke účty, serverová e-mailová služba pre notifikácie, dopravca pre doručenie a prípadná platobná brána pre platby.</p>
 <p>Účtovné a objednávkové údaje uchovávame po dobu vyžadovanú právnymi predpismi. Účet a technické údaje uchovávame len primerane dlho podľa účelu. O prístup, opravu, výmaz, obmedzenie spracovania alebo prenos údajov môžete požiadať cez kontaktný e-mail.</p>
-<p>Ak si myslíte, že s údajmi nakladáme nesprávne, môžete podať sťažnosť dozornému orgánu na ochranu osobných údajov. Údaje nepredávame marketingovým tretím stranám.</p>
+<p>Podľa okolností máte aj právo namietať spracúvanie založené na oprávnenom záujme a odvolať súhlas bez vplyvu na zákonnosť spracúvania pred jeho odvolaním. Ak si myslíte, že s údajmi nakladáme nesprávne, môžete podať návrh na začatie konania na <a href="https://www.dataprotection.gov.sk/sk/dotknute-osoby/" rel="noopener" target="_blank">Úrade na ochranu osobných údajov SR</a>. Údaje nepredávame marketingovým tretím stranám.</p>
 </article>
 <article class="legal-card" id="cookies">
 <h3>Cookies a lokálne úložisko</h3>
@@ -2292,7 +2335,8 @@ body.ctrax-premium #poradca .advisor-match p,
 <article class="legal-card" id="alternativne-riesenie-sporov">
 <h3>Alternatívne riešenie sporov</h3>
 <p>Ak zákazník nie je spokojný s vybavením objednávky, reklamácie alebo odpoveďou predávajúceho, môže podať návrh na alternatívne riešenie spotrebiteľského sporu príslušnému subjektu ARS.</p>
-<p>Pre Slovensko je príslušným subjektom najmä Slovenská obchodná inšpekcia, Bajkalská 21/A, 827 99 Bratislava 27, <a href="https://www.soi.sk/alternativne-riesenie-spotrebitelskych-sporov" rel="noopener" target="_blank">www.soi.sk</a>. Zoznam subjektov ARS vedie Ministerstvo hospodárstva SR.</p>
+<p>Pre Slovensko je príslušným subjektom najmä Slovenská obchodná inšpekcia, Bajkalská 21/A, 827 99 Bratislava 27. Elektronické podania prijíma na <a href="mailto:ars@soi.sk">ars@soi.sk</a> a <a href="mailto:adr@soi.sk">adr@soi.sk</a>; postup a formulár sú na <a href="https://www.soi.sk/alternativne-riesenie-spotrebitelskych-sporov" rel="noopener" target="_blank">oficiálnej stránke SOI</a>.</p>
+<p>Európska platforma RSO/ODR ukončila činnosť 20. júla 2025. Aktuálny celoeurópsky zoznam subjektov ARS je na <a href="https://consumer-redress.ec.europa.eu/dispute-resolution-bodies" rel="noopener" target="_blank">portáli Európskej komisie</a>.</p>
 </article>
 </div>
 </section>
@@ -2304,7 +2348,7 @@ body.ctrax-premium #poradca .advisor-match p,
 <p>Prémiové repasované počítače so zárukou a podporou. Výkon bez kompromisov za rozumnú cenu.</p>
 </div>
 <div class="footer-col">
-<h4>Navigácia</h4>
+<h2 class="footer-heading">Navigácia</h2>
 <a href="#ponuka">Ponuka</a>
 <a href="#preco-my">O nás</a>
 <a href="informacie.html#kontrola">Kontrola kvality</a>
@@ -2316,7 +2360,7 @@ body.ctrax-premium #poradca .advisor-match p,
 <a data-action="open-info-section" data-info-target="kontakt" href="#kontakt">Kontakt</a>
 </div>
 <div class="footer-col">
-<h4>Právne info</h4>
+<h2 class="footer-heading">Právne info</h2>
 <a href="pravne.html#obchodne-podmienky">Obchodné podmienky</a>
 <a href="pravne.html#ochrana-udajov">Ochrana údajov (GDPR)</a>
 <a href="pravne.html#doprava-platba">Doprava a platba</a>
@@ -2326,7 +2370,7 @@ body.ctrax-premium #poradca .advisor-match p,
 <a href="pravne.html#cookies">Cookies</a>
 </div>
 <div class="footer-col footer-contact">
-<h4>Kontakt</h4>
+<h2 class="footer-heading">Kontakt</h2>
 <a href="tel:+421949835923">📞 0949 835 923</a>
 <a href="mailto:computerax.sk@gmail.com">✉️ computerax.sk@gmail.com</a>
 <a href="https://wa.me/421949835923" rel="noopener noreferrer" target="_blank">💬 WhatsApp poradenstvo</a>
@@ -2349,8 +2393,20 @@ body.ctrax-premium #poradca .advisor-match p,
 <span class="wa-icon">💬</span>
 <span class="wa-label">Napísať na WhatsApp</span>
 </a>
-<script src="assets/js/index-2-1.js?v=20260708split9"></script>
+<script defer="" src="assets/js/storefront-bootstrap-gate.js?v=20260711b"></script>
+<script defer="" src="assets/js/storefront-focus.js?v=20260712perf2"></script>
+<script defer="" src="assets/js/contact-phone.js?v=20260712c"></script>
+<script defer="" src="assets/js/index-2-1.js?v=20260719snapshot1"></script>
+<script defer="" src="assets/js/strict-live-catalog.js?v=20260719e"></script>
+<script defer="" src="assets/js/product-detail-commerce.js?v=20260719a"></script>
+<script defer="" src="assets/js/advisor-alternatives.js?v=20260719a"></script>
+<script defer="" src="assets/js/payment-return.js?v=20260713a"></script>
+<script defer="" src="assets/js/product-alerts.js?v=20260718a"></script>
+<style>
+.product-alert-dialog{border:0;padding:0;background:transparent;color:#0b1630;max-width:min(92vw,520px);width:100%}.product-alert-dialog::backdrop{background:rgba(7,16,36,.66);backdrop-filter:blur(3px)}.product-alert-box{position:relative;display:grid;gap:14px;padding:32px;background:#fff;border:1px solid #c9d8f5;border-radius:8px;box-shadow:0 24px 70px rgba(7,20,50,.28)}.product-alert-box h2,.product-alert-box p{margin:0}.product-alert-eyebrow{color:#1764e8;font-weight:800;font-size:.85rem;text-transform:uppercase}.product-alert-box label{font-weight:800}.product-alert-box input{width:100%;box-sizing:border-box;border:1px solid #9aa9bf;border-radius:7px;padding:14px;color:#0b1630;background:#fff;font:inherit}.product-alert-box input:focus{outline:3px solid rgba(38,105,235,.22);border-color:#1764e8}.product-alert-close{position:absolute;right:12px;top:12px;border:0;background:transparent;color:#334155;font-size:28px;line-height:1;cursor:pointer}.product-alert-box .btn-primary{border:0;border-radius:7px;padding:14px;background:#1764e8;color:#fff;font:inherit;font-weight:800;cursor:pointer}.product-alert-box .btn-primary:disabled{opacity:.65;cursor:wait}#product-alert-status{min-height:24px;font-weight:700;color:#334155}.product-alert-box small{color:#58677d}
+</style>
 <script defer="" src="assets/js/performance-polish.js?v=20260708split9"></script>
+<script defer="" src="assets/js/anchor-navigation.js?v=20260712inquiry2"></script>
 <script>
 (function () {
   var lastSearchTerm = "";

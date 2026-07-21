@@ -4,6 +4,7 @@
   var config = window.COMPUTRAX_CONFIG || {};
   var currency = "EUR";
   var trackingInstalled = false;
+  var productDetailTracked = false;
 
   function hasAnalyticsConsent() {
     return typeof window.ctraxHasAnalyticsConsent === "function" && window.ctraxHasAnalyticsConsent();
@@ -21,7 +22,8 @@
   function getConfig() {
     return {
       gtmId: clean(config.GOOGLE_TAG_MANAGER_ID || config.googleTagManagerId || config.gtmId),
-      ga4Id: clean(config.GA4_MEASUREMENT_ID || config.googleAnalyticsId || config.ga4Id || config.measurementId)
+      ga4Id: clean(config.GA4_MEASUREMENT_ID || config.googleAnalyticsId || config.ga4Id || config.measurementId),
+      clarityId: clean(config.CLARITY_PROJECT_ID || config.clarityProjectId || config.clarityId)
     };
   }
 
@@ -41,6 +43,18 @@
     window.gtag = window.gtag || function () {
       window.dataLayer.push(arguments);
     };
+    window.gtag("consent", "default", {
+      analytics_storage: "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied"
+    });
+    window.gtag("consent", "update", {
+      analytics_storage: "granted",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied"
+    });
 
     if (ids.gtmId) {
       window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
@@ -51,6 +65,10 @@
       injectScript("https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(ids.ga4Id));
       window.gtag("js", new Date());
       window.gtag("config", ids.ga4Id, { send_page_view: true });
+    }
+
+    if (/^[a-z0-9]{4,}$/i.test(ids.clarityId)) {
+      injectScript("https://www.clarity.ms/tag/" + encodeURIComponent(ids.clarityId));
     }
   }
 
@@ -89,6 +107,7 @@
 
   function track(eventName, params) {
     if (!hasAnalyticsConsent()) return;
+    document.documentElement.dataset.ctraxLastAnalyticsEvent = eventName;
     var payload = Object.assign({ event: eventName }, params || {});
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(payload);
@@ -112,6 +131,31 @@
     }
   }
 
+  function trackProductDetail() {
+    if (productDetailTracked || !hasAnalyticsConsent()) return;
+    var product = null;
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(function (script) {
+      if (product) return;
+      try {
+        var data = JSON.parse(script.textContent || "null");
+        if (data && data["@type"] === "Product") product = data;
+      } catch (error) {
+        // Ignore unrelated or invalid structured data blocks.
+      }
+    });
+    if (!product) return;
+    var offer = Array.isArray(product.offers) ? product.offers[0] : product.offers || {};
+    var item = itemFromProduct({
+      id: product.sku || product.name,
+      name: product.name,
+      category: product.category,
+      price: offer.price
+    });
+    if (!item || !item.item_name) return;
+    productDetailTracked = true;
+    track("view_item", { currency: offer.priceCurrency || currency, value: number(offer.price), items: [item] });
+  }
+
   function trackCartEvent(eventName) {
     var items = cartItems();
     track(eventName, {
@@ -127,6 +171,16 @@
     document.addEventListener("click", function (event) {
       var action = event.target.closest("[data-action]")?.getAttribute("data-action") || "";
       var card = event.target.closest("[data-product-card], .pc-card");
+      var leadLink = event.target.closest("[data-ctrax-lead-source], a[href^='https://wa.me/'], a[href^='mailto:']");
+
+      if (leadLink && action !== "advisor-inquiry" && !leadLink.hasAttribute("data-advisor-inquiry")) {
+        var href = leadLink.getAttribute("href") || "";
+        var source = leadLink.dataset.ctraxLeadSource || (href.indexOf("wa.me/") >= 0 ? "whatsapp" : "email");
+        track("generate_lead", {
+          lead_source: source,
+          link_context: clean(leadLink.textContent).slice(0, 80)
+        });
+      }
 
       if (/add.*cart|cart.*add|addToCart/i.test(action) || event.target.closest(".add-cart, .add-to-cart")) {
         setTimeout(function () {
@@ -157,21 +211,29 @@
   window.addEventListener("ctrax:analytics-consent", function (event) {
     if (event.detail && event.detail.analytics) {
       installGoogleTracking();
+      trackProductDetail();
       trackProductList();
       return;
     }
     if (typeof window.gtag === "function") {
-      window.gtag("consent", "update", { analytics_storage: "denied", ad_storage: "denied" });
+      window.gtag("consent", "update", {
+        analytics_storage: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied"
+      });
     }
   });
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () {
       installEventDelegates();
+      setTimeout(trackProductDetail, 700);
       setTimeout(trackProductList, 800);
     });
   } else {
     installEventDelegates();
+    setTimeout(trackProductDetail, 700);
     setTimeout(trackProductList, 800);
   }
 })();
